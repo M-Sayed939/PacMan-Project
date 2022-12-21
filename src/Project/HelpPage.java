@@ -144,7 +144,7 @@ public class HelpPage extends JFrame {
             jLabel15.setBounds(0, 190, 90, 90);
 
             jLabel14.setForeground(new java.awt.Color(255, 255, 0));
-            jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project/Help.jpg"))); // NOI18N
+            jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project/Assets/Help.jpg"))); // NOI18N
             jLabel14.setText("Controllers");
             getContentPane().add(jLabel14);
             jLabel14.setBounds(-10, -20, 730, 540);

@@ -1,7 +1,6 @@
 package Project;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 
 
@@ -62,7 +61,7 @@ public class ChooseMap extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(210, 180, 280, 58);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project/Mapp.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project/Assets/Mapp.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(-120, 0, 840, 640);
