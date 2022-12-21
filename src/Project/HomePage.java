@@ -58,7 +58,7 @@ public class HomePage extends JFrame {
             getContentPane().add(play1);
             play1.setBounds(30, 360, 160, 50);
 
-            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project/PacManH.jpg"))); // NOI18N
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project/Assets/PacManH.jpg"))); // NOI18N
             getContentPane().add(jLabel2);
             jLabel2.setBounds(0, -20, 770, 540);
 
