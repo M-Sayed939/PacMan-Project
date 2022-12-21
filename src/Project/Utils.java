@@ -1,5 +1,7 @@
 package Project;
 
+import javax.media.opengl.GL;
+
 public class Utils {
     public Utils() {
         this(5);
@@ -25,6 +27,22 @@ public class Utils {
 
     public static double arcTrY(double j) {
         return (j + 1) * 10.0 - r;
+    }
+
+
+    public static void drawRect(GL gl, int x, int y) {
+        gl.glColor3f(1.0f, 0.0f, 0.0f);
+        gl.glBegin(GL.GL_LINE_LOOP);
+        x -= r;
+        y -= r;
+
+        gl.glVertex2i(x, y);
+        gl.glVertex2i(x + 10, y);
+
+        gl.glVertex2i(x + 10, y + 10);
+        gl.glVertex2i(x, y + 10);
+
+        gl.glEnd();
     }
 
 

@@ -5,36 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="clean archect">
-      <change afterPath="$PROJECT_DIR$/src/Project/AnimListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/texture/BitmapLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/texture/ResourceRetriever.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/texture/TextureReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib64.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib64.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PacMan-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PacMan-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/ChooseMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Help.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Assets/Help.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/HelpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/HelpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Map.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Assets/Map.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Map1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Map2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Map3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Mapp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Assets/Mapp.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/PacManH.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Assets/PacManH.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="farah" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -51,8 +47,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/hp/IdeaProjects/ms/PacMan-Project/src/Project",
-    "project.structure.last.edited": "Global Libraries",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/JOGLwin/lib64/jogl_cg.dll",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "Errors"
