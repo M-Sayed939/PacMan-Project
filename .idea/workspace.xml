@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="add map 4">
-      <change afterPath="$PROJECT_DIR$/src/Project/Directions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Eating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pacman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +109,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671579963392</updated>
-      <workItem from="1671647966705" duration="8918000" />
+      <workItem from="1671647966705" duration="9485000" />
     </task>
     <task id="LOCAL-00001" summary="first Pages">
       <created>1671580409361</created>
@@ -132,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671636070106</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add map 4 without ghosts logic and draw">
+      <created>1671658294444</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671658294445</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +158,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first Pages" />
     <MESSAGE value="add map 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="add map 4" />
+    <MESSAGE value="add map 4 without ghosts logic and draw" />
+    <option name="LAST_COMMIT_MESSAGE" value="add map 4 without ghosts logic and draw" />
   </component>
 </project>
