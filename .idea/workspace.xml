@@ -4,17 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="first Pages">
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Add Buttons and Change some Fonts">
+      <change afterPath="$PROJECT_DIR$/src/Project/Directions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/ChooseMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/HelpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/HelpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pacman.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -77,7 +82,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671580409361</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Buttons and Change some Fonts">
+      <created>1671630349045</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671630349045</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add Buttons and Change some Fonts">
+      <created>1671630638398</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671630638398</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +118,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first Pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="first Pages" />
+    <MESSAGE value="Add Buttons and Change some Fonts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Buttons and Change some Fonts" />
   </component>
 </project>
