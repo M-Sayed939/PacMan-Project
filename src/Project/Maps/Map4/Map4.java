@@ -16,13 +16,16 @@ public class Map4 extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         glcanvas = new GLCanvas();
         glcanvas.addGLEventListener(listener);
-        animator = new FPSAnimator(glcanvas, 60);
+        glcanvas.addKeyListener(listener);
+        glcanvas.setSize(400, 400);
+        animator = new FPSAnimator(glcanvas, 9);
 
         add(glcanvas, BorderLayout.CENTER);
         setSize(400, 400);
         setLocationRelativeTo(this);
         setResizable(false);
         setVisible(true);
+        requestFocus();
     }
 
     public static void main(String[] args) {
