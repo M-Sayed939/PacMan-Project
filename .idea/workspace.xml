@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,7 @@
       <map>
         <entry key="$PROJECT_DIR$" value="farah" />
       </map>
+
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -50,21 +52,12 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "Errors"
+
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project" />
-      <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\texture" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\Assets" />
       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Project.Map5" />
-      <recent name="Project.Map4" />
-      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Map4">
@@ -73,7 +66,7 @@
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Maps.Map1.*" />
+          <option name="PATTERN" value="Project.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,6 +126,7 @@
       <updated>1671658294445</updated>
     </task>
     <option name="localTasksCounter" value="4" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,5 +154,6 @@
     <MESSAGE value="add map 4" />
     <MESSAGE value="add map 4 without ghosts logic and draw" />
     <option name="LAST_COMMIT_MESSAGE" value="add map 4 without ghosts logic and draw" />
+
   </component>
 </project>

@@ -38,7 +38,7 @@ public class HelpPage extends JFrame {
             setTitle("Pac-Man Game");
             getContentPane().setLayout(null);
 
-            jButton1.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+            jButton1.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
             jButton1.setText("Back");
             jButton1.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,7 +130,7 @@ public class HelpPage extends JFrame {
             getContentPane().add(jLabel13);
             jLabel13.setBounds(10, 380, 40, 100);
 
-            jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+            jLabel2.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
             jLabel2.setForeground(new java.awt.Color(255, 255, 0));
             jLabel2.setText("Controllers");
             jLabel2.setToolTipText("");
