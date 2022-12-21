@@ -1,72 +1,64 @@
 package Project.Maps.Map4;
 
 import Project.AnimListener;
-import Project.texture.TextureReader;
+
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
-import javax.media.opengl.glu.GLU;
 import java.awt.event.KeyEvent;
-import java.io.IOException;
+
+import static Project.Utils.*;
 
 public class Map4Listener extends AnimListener {
+    private static final int MAX_X = 100;
+    private static final int MIN_X = 0;
+    private static final int MAX_Y = 100;
+    private static final int MIN_Y = 0;
 
     int[][] map = new int[][]{
-            {1,1,0,1,1,1,0,1,1,1},
-            {0,1,0,1,0,1,0,1,0,0},
-            {0,1,1,1,0,1,1,1,1,0},
-            {0,1,0,1,1,1,0,0,1,0},
-            {0,1,1,0,1,1,0,1,1,0},
-            {0,0,1,0,0,0,0,1,0,0},
-            {0,1,1,1,1,1,1,1,1,0},
-            {0,1,0,1,0,0,0,1,0,0},
-            {0,1,0,1,0,0,0,1,0,0},
-            {0,1,1,1,1,1,1,1,1,0},
+            {1, 1, 0, 1, 1, 1, 0, 1, 1, 1},
+            {0, 1, 0, 1, 0, 1, 0, 1, 0, 0},
+            {0, 1, 1, 1, 0, 1, 1, 1, 1, 0},
+            {0, 1, 0, 1, 1, 1, 0, 0, 1, 0},
+            {0, 1, 1, 0, 1, 1, 0, 1, 1, 0},
+            {0, 0, 1, 0, 0, 0, 0, 1, 0, 0},
+            {0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+            {0, 1, 0, 1, 0, 0, 0, 1, 0, 0},
+            {0, 1, 0, 1, 0, 0, 0, 1, 0, 0},
+            {0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
     };
 
-    String textureName = "";
-    TextureReader.Texture texture;
-    int textureIndex[] = new int[1];
-
-    /*
-     5 means gun in array pos
-     x and y coordinate for gun
-     */
     public void init(GLAutoDrawable gld) {
 
         GL gl = gld.getGL();
-        gl.glClearColor(1.0f, 1.0f, 1.0f, 1.0f);    //This Will Clear The Background Color To Black
 
-        gl.glEnable(GL.GL_TEXTURE_2D);  // Enable Texture Mapping
-        gl.glBlendFunc(GL.GL_SRC_ALPHA, GL.GL_ONE_MINUS_SRC_ALPHA);
+        gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
-        //number of textures,array to hold the indeces
-        gl.glGenTextures(1, textureIndex, 0);
+        gl.glMatrixMode(GL.GL_PROJECTION);
+        gl.glLoadIdentity();
 
-        try {
-            texture = TextureReader.readTexture(assetsFolderName + "//" + textureName , true);
-            gl.glBindTexture(GL.GL_TEXTURE_2D, textureIndex[0]);
-
-//                mipmapsFromPNG(gl, new GLU(), texture[i]);
-            new GLU().gluBuild2DMipmaps(
-                    GL.GL_TEXTURE_2D,
-                    GL.GL_RGBA, // Internal Texel Format,
-                    texture.getWidth(), texture.getHeight(),
-                    GL.GL_RGBA, // External format from image,
-                    GL.GL_UNSIGNED_BYTE,
-                    texture.getPixels() // Imagedata
-            );
-        } catch( IOException e ) {
-            System.out.println(e);
-            e.printStackTrace();
-        }
+        gl.glOrtho(MIN_X, MAX_X, MIN_Y, MAX_Y, -1.0, 1.0);
     }
 
     @Override
     public void display(GLAutoDrawable gld) {
         GL gl = gld.getGL();
-        gl.glClear(GL.GL_COLOR_BUFFER_BIT);       //Clear The Screen And The Depth Buffer
+        gl.glClear(GL.GL_COLOR_BUFFER_BIT);
         gl.glLoadIdentity();
+
+        drawBackground(gl);
+    }
+
+
+    private void drawBackground(GL gl) {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (map[i][j] == 1) {
+                    System.out.println((int) arcTrX(i)+" "+ (int) arcTrY(j));
+                    drawRect(gl, 1.01, 0.0);
+                }
+            }
+        }
     }
 
     @Override

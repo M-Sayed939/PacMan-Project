@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="clean archect">
-      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib64.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib64.xml" afterDir="false" />
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="add map 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PacMan-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PacMan-Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/AnimListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/AnimListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +69,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Map4">
     <configuration name="HomePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Project.HomePage" />
       <module name="PacMan-Project" />
@@ -84,8 +83,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Map4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map4.Map4" />
+      <module name="PacMan-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Project.Maps.Map4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Map4" />
         <item itemvalue="Application.HomePage" />
       </list>
     </recent_temporary>
@@ -106,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671580409361</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add map 4">
+      <created>1671636070105</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671636070106</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,6 +148,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first Pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="first Pages" />
+    <MESSAGE value="add map 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="add map 4" />
   </component>
 </project>
