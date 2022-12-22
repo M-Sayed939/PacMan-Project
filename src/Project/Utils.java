@@ -3,6 +3,7 @@ package Project;
 import javax.media.opengl.GL;
 import java.awt.*;
 
+
 import static javax.media.opengl.GL.*;
 
 public class Utils {
@@ -16,14 +17,22 @@ public class Utils {
         return (int) ((y + r) / 10) - 1;
     }
 
-    public static double arcTrX(double i) {
+    public static double arcTrX(int i) {
         return (i + 1) * 10.0 - r;
     }
 
-    public static double arcTrY(double j) {
+    public static double arcTrY(int j) {
         return (j + 1) * 10.0 - r;
     }
 
+    public static void drawRect(GL gl, int x, int y) {
+        gl.glColor3f(1.0f, 0.0f, 0.0f);
+        gl.glBegin(GL.GL_LINE_LOOP);
+        x -= r;
+        y -= r;
+
+        gl.glVertex2i(x, y);
+        gl.glVertex2i(x + 10, y);
 
     public static void drawRect(GL gl, double x, double y, int size) {
         gl.glColor3f(0.0f, 0.0f, 1.0f);
@@ -39,6 +48,5 @@ public class Utils {
 
         gl.glEnd();
     }
-
 
 }

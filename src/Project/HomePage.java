@@ -21,13 +21,13 @@ public class HomePage extends JFrame {
             jLabel2 = new javax.swing.JLabel();
 
             setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-            setMinimumSize(new Dimension(715,520));
+            setMinimumSize(new Dimension(700,520));
             setResizable(false);
             setTitle("Pac-Man Game");
             getContentPane().setLayout(null);
             getContentPane().setLayout(null);
 
-            exit.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+            exit.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
             exit.setText("Exit");
             exit.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -37,7 +37,7 @@ public class HomePage extends JFrame {
             getContentPane().add(exit);
             exit.setBounds(500, 360, 160, 50);
 
-            play.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+            play.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
             play.setText("Help");
             play.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,7 +47,7 @@ public class HomePage extends JFrame {
             getContentPane().add(play);
             play.setBounds(270, 360, 160, 50);
 
-            play1.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+            play1.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
             play1.setText("Play");
             play1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
             play1.addActionListener(new java.awt.event.ActionListener() {
