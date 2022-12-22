@@ -18,14 +18,14 @@ public class Map4 extends JFrame {
         glcanvas.addGLEventListener(listener);
         glcanvas.addKeyListener(listener);
         glcanvas.setSize(800, 800);
-        animator = new FPSAnimator(glcanvas, 14);
+        animator = new FPSAnimator(glcanvas, 12);
 
         add(glcanvas, BorderLayout.CENTER);
         setSize(800, 800);
+        requestFocus();
         setLocationRelativeTo(this);
         setResizable(false);
         setVisible(true);
-        requestFocus();
     }
 
     public static void main(String[] args) {
