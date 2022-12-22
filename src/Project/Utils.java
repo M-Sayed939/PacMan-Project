@@ -33,6 +33,7 @@ public class Utils {
 
         gl.glVertex2i(x, y);
         gl.glVertex2i(x + 10, y);
+    }
 
     public static void drawRect(GL gl, double x, double y, int size) {
         gl.glColor3f(0.0f, 0.0f, 1.0f);
