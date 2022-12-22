@@ -18,7 +18,7 @@ public class Map4 extends JFrame {
         glcanvas.addGLEventListener(listener);
         glcanvas.addKeyListener(listener);
         glcanvas.setSize(800, 800);
-        animator = new FPSAnimator(glcanvas, 9);
+        animator = new FPSAnimator(glcanvas, 14);
 
         add(glcanvas, BorderLayout.CENTER);
         setSize(800, 800);

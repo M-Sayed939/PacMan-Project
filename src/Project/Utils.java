@@ -6,7 +6,7 @@ import java.awt.*;
 import static javax.media.opengl.GL.*;
 
 public class Utils {
-    static int r=5;
+    static int r = 5;
 
     public static int trX(double x) {
         return (int) ((x + r) / 10) - 1;
@@ -25,17 +25,17 @@ public class Utils {
     }
 
 
-    public static void drawRect(GL gl, double x, double y) {
+    public static void drawRect(GL gl, double x, double y, int size) {
         gl.glColor3f(0.0f, 0.0f, 1.0f);
         gl.glBegin(GL_POLYGON);
         x -= r;
         y -= r;
 
         gl.glVertex2d(x, y);
-        gl.glVertex2d(x + 10, y);
+        gl.glVertex2d(x + size, y);
 
-        gl.glVertex2d(x + 10, y + 10);
-        gl.glVertex2d(x, y + 10);
+        gl.glVertex2d(x + size, y + size);
+        gl.glVertex2d(x, y + size);
 
         gl.glEnd();
     }

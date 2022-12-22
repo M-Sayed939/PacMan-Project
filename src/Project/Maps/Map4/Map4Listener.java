@@ -11,6 +11,7 @@ import javax.media.opengl.GLAutoDrawable;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+import java.util.BitSet;
 
 import static Project.Utils.*;
 import static java.awt.event.KeyEvent.*;
@@ -43,7 +44,7 @@ public class Map4Listener extends AnimListener {
         gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
         gl.glMatrixMode(GL.GL_PROJECTION);
-        gl.glLoadIdentity();
+//        gl.glLoadIdentity();
 
         gl.glOrtho(0, 100, 100, 0, 0, 1.0);
 
@@ -78,9 +79,9 @@ public class Map4Listener extends AnimListener {
     }
 
     private void handelWinning() {
-        if (eating.isEmpty()){ // Winning
+        if (eating.isEmpty()) { // Winning
             System.out.println("Win");
-            System.exit(0);
+//            System.exit(0);
         }
     }
 
@@ -95,6 +96,22 @@ public class Map4Listener extends AnimListener {
     }
 
     private void handelPacmanMove() {
+        if (isKeyPressed(VK_UP)) {
+            pacman.direction = Directions.UP;
+        }
+        if (isKeyPressed(VK_DOWN)) {
+            pacman.direction = Directions.DOWN;
+        }
+        if (isKeyPressed(VK_RIGHT)) {
+            pacman.direction = Directions.RIGHT;
+        }
+        if (isKeyPressed(VK_LEFT)) {
+            pacman.direction = Directions.LEFT;
+        }
+        if (!(isKeyPressed(VK_UP) || isKeyPressed(VK_DOWN) || isKeyPressed(VK_RIGHT) || isKeyPressed(VK_LEFT))) {
+            pacman.direction = Directions.IDEAL;
+        }
+
         switch (pacman.direction) {
             case IDEAL -> {
             }
@@ -147,31 +164,29 @@ public class Map4Listener extends AnimListener {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 if (map[i][j] == 0) { // blocks
-                    drawRect(gl, arcTrX(i), arcTrY(j));
+                    drawRect(gl, arcTrX(i), arcTrY(j), 10);
                 }
             }
         }
     }
 
+
+    public BitSet keyBits = new BitSet(256);
+
     @Override
-    public void keyPressed(KeyEvent e) {
-        switch (e.getKeyCode()) {
-            case VK_UP -> pacman.direction = Directions.UP;
-            case VK_DOWN -> pacman.direction = Directions.DOWN;
-            case VK_RIGHT -> pacman.direction = Directions.RIGHT;
-            case VK_LEFT -> pacman.direction = Directions.LEFT;
-            default -> pacman.direction = Directions.IDEAL;
-        }
+    public void keyPressed(final KeyEvent event) {
+        int keyCode = event.getKeyCode();
+        keyBits.set(keyCode);
     }
 
     @Override
-    public void keyReleased(KeyEvent e) {
-        switch (e.getKeyCode()) {
-            case VK_UP, VK_DOWN, VK_RIGHT, VK_LEFT -> {
-                pacman.reset();
-            }
-        }
+    public void keyReleased(final KeyEvent event) {
+        int keyCode = event.getKeyCode();
+        keyBits.clear(keyCode);
+    }
 
+    public boolean isKeyPressed(final int keyCode) {
+        return keyBits.get(keyCode);
     }
 
     @Override
