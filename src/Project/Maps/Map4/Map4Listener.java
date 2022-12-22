@@ -55,7 +55,7 @@ public class Map4Listener extends AnimListener {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 if (map[i][j] == 1) { // eat
-                    eating.add(new Eating(i, j));
+                    eating.add(new Eating(j, i));
                 }
             }
         }
@@ -116,19 +116,19 @@ public class Map4Listener extends AnimListener {
             case IDEAL -> {
             }
             case UP -> {
-                if (pacman.y - pacman.step < 0 || map[pacman.ii][pacman.jj - 1] == 0) return;
+                if (pacman.y - pacman.step < 0 || map[pacman.jj - 1][pacman.ii] == 0) return;
                 pacman.moveUP();
             }
             case DOWN -> {
-                if (pacman.y + pacman.step > 100 || map[pacman.ii][pacman.jj + 1] == 0) return;
+                if (pacman.y + pacman.step > 100 || map[pacman.jj + 1][pacman.ii] == 0) return;
                 pacman.moveDown();
             }
             case RIGHT -> {
-                if (pacman.x + pacman.step > 100 || map[pacman.ii + 1][pacman.jj] == 0) return;
+                if (pacman.x + pacman.step > 100 || map[pacman.jj][pacman.ii + 1] == 0) return;
                 pacman.moveRight();
             }
             case LEFT -> {
-                if (pacman.x - pacman.step < 0 || map[pacman.ii - 1][pacman.jj] == 0) return;
+                if (pacman.x - pacman.step < 0 || map[pacman.jj][pacman.ii - 1] == 0) return;
                 pacman.moveLeft();
             }
         }
@@ -164,7 +164,7 @@ public class Map4Listener extends AnimListener {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 if (map[i][j] == 0) { // blocks
-                    drawRect(gl, arcTrX(i), arcTrY(j), 10);
+                    drawRect(gl, arcTrX(j), arcTrY(i), 10);
                 }
             }
         }
