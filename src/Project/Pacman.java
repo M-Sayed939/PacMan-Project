@@ -5,7 +5,7 @@ import static Project.Utils.*;
 
 public class Pacman {
     public int step = 10;
-    public static final int R = 3;
+    public static final int R = 5;
     public double x = 5, y = 5;
     public int ii = 0, jj = 0;
 
