@@ -1,38 +1,28 @@
 package Project;
 
-
-import static Project.Utils.*;
-
 public class Pacman {
     public int step = 10;
-    public static final int R = 5;
-    public double x = 15, y = 15;
-    public int ii = 1, jj = 1;
+    public int r = 5;
+    public double x = 5, y = 5;
 
     public Directions direction = Directions.IDEAL;
 
-    public void moveUP() {
+
+    public void moveUp(){
         direction = Directions.UP;
-        y -= step;
-        jj = trY(y);
+        y-=step;
     }
-
-    public void moveDown() {
+    public void moveDown(){
         direction = Directions.DOWN;
-        y += step;
-        jj = trY(y);
+        y+=step;
     }
-
-    public void moveRight() {
+    public void moveRight(){
         direction = Directions.RIGHT;
-        x += step;
-        ii = trX(x);
+        x+=step;
     }
-
-    public void moveLeft() {
+    public void moveLeft(){
         direction = Directions.LEFT;
-        x -= step;
-        ii = trX(x);
+        x-=step;
     }
 
     public void reset(){
