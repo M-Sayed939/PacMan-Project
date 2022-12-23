@@ -4,6 +4,7 @@ import Project.*;
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
+import javax.sound.sampled.Clip;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
@@ -11,9 +12,9 @@ import java.util.BitSet;
 
 import static Project.Utils.*;
 import static java.awt.event.KeyEvent.*;
-import static java.lang.Math.*;
 
 public class Map1Listener extends AnimListener {
+    Clip eatingSound, losingSound, winningSound;
 
     Pacman pacman = new Pacman();
     Ghost ghost = new Ghost();
@@ -115,9 +116,17 @@ public class Map1Listener extends AnimListener {
     }
 
     private void handelLose() {
-        if (ghost.ii == pacman.ii && ghost.jj == pacman.jj){
-            System.out.println("Loser");
-            System.exit(0);
+        if (ghost.ii == pacman.ii && ghost.jj == pacman.jj) {
+            synchronized (this) {
+                try {
+                    if (eatingSound != null) eatingSound.stop();
+                    losingSound = playMusic("src/Project/Assets/loser.wav", false);
+                    wait(3000);
+                    System.exit(0); // Show try again Frame
+                } catch (InterruptedException e) {
+                    System.out.println(e.getMessage());
+                }
+            }
         }
     }
 
@@ -158,23 +167,40 @@ public class Map1Listener extends AnimListener {
     }
 
     private void drawGhost(GL gl) {
-        drawRect(gl, ghost.x-5, ghost.y-5, Ghost.R, Ghost.R, 1, 0, 0);
+        drawRect(gl, ghost.x - 5, ghost.y - 5, Ghost.R, Ghost.R, 1, 0, 0);
 
     }
 
     private void handelWinning() {
         if (eating.isEmpty()) { // Winning
             System.out.println("Winner");
+            if (eatingSound != null) eatingSound.stop();
+            synchronized (this) {
+                winningSound = playMusic("src/Project/Assets/pacman-victory.wav", false);
+                if (winningSound != null) {
+                    try {
+                        wait(winningSound.getMicrosecondLength()/1000);
+                        System.exit(1); // Go Winning Frame
+                    } catch (InterruptedException e) {
+                        System.out.println(e.getMessage());
+                    }
+                }
+            }
             System.exit(1);
         }
     }
 
+
+    int cnt;
     private void handelPacmanEating() {
 
         for (int i = 0; i < eating.size(); i++) {
             if (pacman.ii == eating.get(i).ii && pacman.jj == eating.get(i).jj) {
-//                System.out.println(i);
                 System.out.println(eating.size());
+                if (cnt == 0) {
+                    eatingSound = playMusic("src/Project/Assets/eating.wav", true);
+                }
+                cnt++;
                 eating.remove(i--);
             }
         }
@@ -231,22 +257,6 @@ public class Map1Listener extends AnimListener {
         drawCircle(gl, Pacman.R, new Color(255, 255, 1), pacman.x, pacman.y);
     }
 
-    private void drawCircle(GL gl, int r, Color color, double x, double y) {
-        drawRegularRibs(gl, r, color, x, y);
-    }
-
-    private void drawRegularRibs(GL gl, int r, Color color, double x, double y) {
-        gl.glColor3fv(color.getColorComponents(null), 0);
-        gl.glBegin(GL.GL_POLYGON);
-        int step = 1;
-        for (int i = 0; i < 360; i += step)
-            gl.glVertex2d(x + r * cos(toRadians(i)),
-                    y + r * sin(toRadians(i)));
-
-        gl.glEnd();
-    }
-
-
     private void drawBackground(GL gl) {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
@@ -262,7 +272,6 @@ public class Map1Listener extends AnimListener {
 
 
     public BitSet keyBits = new BitSet(256);
-
     @Override
     public void keyPressed(final KeyEvent event) {
         int keyCode = event.getKeyCode();
