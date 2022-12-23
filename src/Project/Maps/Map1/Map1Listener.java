@@ -1,9 +1,6 @@
 package Project.Maps.Map1;
 
-import Project.AnimListener;
-import Project.Directions;
-import Project.Eating;
-import Project.Pacman;
+import Project.*;
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
@@ -19,6 +16,7 @@ import static java.lang.Math.*;
 public class Map1Listener extends AnimListener {
 
     Pacman pacman = new Pacman();
+    Ghost ghost = new Ghost();
     ArrayList<Eating> eating = new ArrayList<>();
 
     static final int MAX_X = 400;
@@ -64,8 +62,6 @@ public class Map1Listener extends AnimListener {
             {0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0},
             {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-
-
     };
     int row = map.length;
     int col = map[0].length;
@@ -83,6 +79,7 @@ public class Map1Listener extends AnimListener {
         gl.glOrtho(0, MAX_X, MAX_Y, 0, 0, 1.0);
 
         fillEating();
+        ghost.randMove();
     }
 
     private void fillEating() {
@@ -102,25 +99,73 @@ public class Map1Listener extends AnimListener {
         gl.glClear(GL.GL_COLOR_BUFFER_BIT);
 
 
-        gl.glPushMatrix();
-//        gl.glScaled(0.5,0.5,1);
-        {
-            drawBackground(gl);
-            drawEating(gl);
-            drawPacman(gl);
+        drawBackground(gl);
+        drawEating(gl);
+        drawPacman(gl);
+        drawGhost(gl);
 
-            handelPacmanMove();
-            handelPacmanEating();
+        handelPacmanMove();
+        handelPacmanEating();
 
-            handelWinning();
+        handelGhostMove();
+        handelLose();
+
+        handelWinning();
+
+    }
+
+    private void handelLose() {
+        if (ghost.ii == pacman.ii && ghost.jj == pacman.jj){
+            System.out.println("Loser");
+            System.exit(0);
         }
-        gl.glPopMatrix();
+    }
+
+    private void handelGhostMove() {
+
+        switch (ghost.direction) {
+            case IDEAL -> {
+            }
+            case UP -> {
+                if (ghost.y - ghost.step < 0 || ghost.jj - 1 < 0 || map[ghost.jj - 1][ghost.ii] == 0) {
+                    ghost.randMove();
+                    return;
+                }
+                ghost.moveUP();
+            }
+            case DOWN -> {
+                if (ghost.y + ghost.step > MAX_Y || ghost.jj + 1 >= row || map[ghost.jj + 1][ghost.ii] == 0) {
+                    ghost.randMove();
+                    return;
+                }
+                ghost.moveDown();
+            }
+            case RIGHT -> {
+                if (ghost.x + ghost.step > MAX_X || ghost.ii + 1 >= col || map[ghost.jj][ghost.ii + 1] == 0) {
+                    ghost.randMove();
+                    return;
+                }
+                ghost.moveRight();
+            }
+            case LEFT -> {
+                if (ghost.x - ghost.step < 0 || ghost.ii - 1 < 0 || map[ghost.jj][ghost.ii - 1] == 0) {
+                    ghost.randMove();
+                    return;
+                }
+                ghost.moveLeft();
+            }
+        }
+    }
+
+    private void drawGhost(GL gl) {
+        drawRect(gl, ghost.x-5, ghost.y-5, Ghost.R, Ghost.R, 1, 0, 0);
+
     }
 
     private void handelWinning() {
         if (eating.isEmpty()) { // Winning
-            System.out.println("Win");
-//            System.exit(0);
+            System.out.println("Winner");
+            System.exit(1);
         }
     }
 

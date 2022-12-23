@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_31_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_31_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_51_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_51_AM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Ghost.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Ghosts.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pacman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +131,8 @@
       <workItem from="1671647966705" duration="10439000" />
       <workItem from="1671703183188" duration="2058000" />
       <workItem from="1671719391234" duration="7049000" />
-      <workItem from="1671744319851" duration="6792000" />
+      <workItem from="1671744319851" duration="6984000" />
+      <workItem from="1671751934830" duration="1999000" />
     </task>
     <task id="LOCAL-00001" summary="first Pages">
       <created>1671580409361</created>
@@ -184,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671725510659</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add Map1">
+      <created>1671751396822</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671751396822</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +220,7 @@
     <MESSAGE value="add map 4 800*800" />
     <MESSAGE value="Solve reversed map" />
     <MESSAGE value="edite for dynamic Map" />
-    <option name="LAST_COMMIT_MESSAGE" value="edite for dynamic Map" />
+    <MESSAGE value="add Map1" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Map1" />
   </component>
 </project>
