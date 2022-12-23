@@ -21,7 +21,7 @@ public class Map5 extends JFrame {
         animator = new FPSAnimator(glcanvas, 12);
 
         add(glcanvas, BorderLayout.CENTER);
-        setSize(400, 400);
+        setSize(600, 600);
         requestFocus();
         setLocationRelativeTo(this);
         setResizable(false);

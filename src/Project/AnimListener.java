@@ -12,6 +12,6 @@ import java.awt.event.KeyListener;
  */
 public abstract class AnimListener implements GLEventListener, KeyListener {
  
-    protected String assetsFolderName = "Project/Assets";
+    protected String assetsFolderName = "Project/Assets/imgs";
     
 }
