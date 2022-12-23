@@ -12,19 +12,17 @@ public class Map1 extends JFrame {
     static FPSAnimator animator;
 
     public Map1() {
-        super("Map 4");
+        super("Map 1");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         glcanvas = new GLCanvas();
         glcanvas.addGLEventListener(listener);
         glcanvas.addKeyListener(listener);
-        glcanvas.setSize(800, 800);
         animator = new FPSAnimator(glcanvas, 15);
 
         add(glcanvas, BorderLayout.CENTER);
         setSize(800, 800);
         requestFocus();
         setLocationRelativeTo(this);
-        setResizable(false);
         setVisible(true);
     }
 

@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Project/Assets/eating.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Assets/home.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Assets/loser.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Assets/pacman-victory.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Assets/pacman-wakawaka.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/Map.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/down.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/food.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/food2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/ghost.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/left.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/pacman.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/right.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/up.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/AnimListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/AnimListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Utils.java" afterDir="false" />
     </list>
@@ -30,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Moody" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,7 +59,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/hp/IdeaProjects/ms/PacMan-Project/src/Project/Assets",
+    "last_opened_file_path": "C:/Users/hp/IdeaProjects/ms/PacMan-Project/src/Project/Assets/imgs",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -61,11 +68,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\Assets\imgs" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\Assets" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\texture" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\Assets\imgs" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\Assets" />
       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project" />
     </key>
@@ -137,7 +146,7 @@
       <workItem from="1671719391234" duration="7049000" />
       <workItem from="1671744319851" duration="6984000" />
       <workItem from="1671751934830" duration="3374000" />
-      <workItem from="1671793135127" duration="4469000" />
+      <workItem from="1671793135127" duration="18065000" />
     </task>
     <task id="LOCAL-00001" summary="first Pages">
       <created>1671580409361</created>
@@ -209,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671793164031</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add sound effect in map1 with some handel">
+      <created>1671797850888</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671797850888</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +258,7 @@
     <MESSAGE value="add Map1" />
     <MESSAGE value="add Ghost in Map 1" />
     <MESSAGE value="add Ghost in Map 1 smaller" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Ghost in Map 1 smaller" />
+    <MESSAGE value="add sound effect in map1 with some handel" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sound effect in map1 with some handel" />
   </component>
 </project>
