@@ -1,9 +1,9 @@
 package Project;
 
 public enum Directions {
-    Start,
+    IDEAL,
     UP,
     DOWN,
-    RiGHT,
+    RIGHT,
     LEFT
 }
