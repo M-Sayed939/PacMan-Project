@@ -5,9 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Add Background for Map4">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_31_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_31_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_51_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_51_AM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/eating.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/home.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/Map.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/down.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/food.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/food2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/ghost.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/left.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/pacman.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/right.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/up.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/loser.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/pacman-victory.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/pacman-wakawaka.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Ghost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/AnimListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/AnimListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Ghosts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pacman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

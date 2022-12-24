@@ -23,7 +23,6 @@ public class Map4Listener extends AnimListener {
 
     Pacman pacman = new Pacman();
     ArrayList<Eating> eating = new ArrayList<>();
- 
     static final int MAX_X = 230;
     static final int MAX_Y = 230;
 
@@ -42,15 +41,15 @@ public class Map4Listener extends AnimListener {
             {1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1},
             {1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1},
             {0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0},
-            {1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1},
             {1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1},
             {1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1},
             {1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1},
             {0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0},
             {1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
-            {0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0},
-            {1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1},
-            {1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1}
+            {0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0},
+            {1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1},
+            {1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1},
+            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
     };
     int row = map.length;
     int col = map[0].length;
@@ -62,7 +61,7 @@ public class Map4Listener extends AnimListener {
         gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
         gl.glMatrixMode(GL.GL_PROJECTION);
-//        gl.glLoadIdentity();
+        gl.glLoadIdentity();
 
         gl.glOrtho(0, MAX_X, MAX_Y, 0, 0, 1.0);
 
@@ -83,8 +82,8 @@ public class Map4Listener extends AnimListener {
     public void display(GLAutoDrawable gld) {
         GL gl = gld.getGL();
         gl.glClear(GL.GL_COLOR_BUFFER_BIT);
-
         {
+
             drawBackground(gl);
             drawEating(gl);
             drawPacman(gl);
@@ -109,7 +108,7 @@ public class Map4Listener extends AnimListener {
 
         for (int i = 0; i < eating.size(); i++) {
             if (pacman.ii == eating.get(i).ii && pacman.jj == eating.get(i).jj) {
-                //   System.out.println(i);
+                //  System.out.println(i);
                 System.out.println(eating.size());
                 eating.remove(i--);
             }
@@ -186,7 +185,7 @@ public class Map4Listener extends AnimListener {
             for (int j = 0; j < col; j++) {
                 if (map[i][j] == 0) { // blocks
                     double x = arcTrX(j) - 5, y = arcTrY(i) - 5;
-                    drawRect(gl, x, y, 10);
+                    drawRect(gl, x, y, 10, 10, 0, 0, 1);
                 }
             }
         }
