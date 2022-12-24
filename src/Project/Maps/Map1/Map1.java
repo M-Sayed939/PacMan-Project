@@ -19,11 +19,13 @@ public class Map1 extends JFrame {
         glcanvas.addKeyListener(listener);
         animator = new FPSAnimator(glcanvas, 15);
 
+        listener.frame = this; // For closing
+
         add(glcanvas, BorderLayout.CENTER);
         setSize(800, 800);
-        requestFocus();
         setLocationRelativeTo(this);
         setVisible(true);
+        requestFocus();
     }
 
     public static void main(String[] args) {

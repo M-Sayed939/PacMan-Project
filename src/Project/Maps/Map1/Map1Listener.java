@@ -1,12 +1,15 @@
 package Project.Maps.Map1;
 
 import Project.*;
+import Project.Pages.GameOver;
+import Project.Pages.WinnerPage;
 import Project.texture.TextureReader;
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.glu.GLU;
 import javax.sound.sampled.Clip;
+import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,7 +19,8 @@ import static Project.Utils.*;
 import static java.awt.event.KeyEvent.*;
 
 public class Map1Listener extends AnimListener {
-    Clip eatingSound, losingSound, winningSound;
+    JFrame frame = null;
+    Clip eatingSound;
 
     Pacman pacman = new Pacman();
     ArrayList<Ghost> ghosts = new ArrayList<>();
@@ -182,16 +186,10 @@ public class Map1Listener extends AnimListener {
     private void handelLose() {
         for (Ghost g : ghosts) {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
-                synchronized (this) {
-                    try {
-                        if (eatingSound != null) eatingSound.stop();
-                        losingSound = playMusic("src/Project/Assets/loser.wav", false);
-                        wait(3000);
-                        System.exit(0); // Show try again Frame
-                    } catch (InterruptedException e) {
-                        System.out.println(e.getMessage());
-                    }
-                }
+                if (eatingSound != null) eatingSound.stop();
+
+                frame.dispose();
+                new GameOver().setVisible(true);
             }
 
         }
@@ -236,7 +234,7 @@ public class Map1Listener extends AnimListener {
 
     private void drawGhost(GL gl) {
         for (Ghost g : ghosts) {
-            DrawSprite(gl, (int) g.x, (int) g.y, 6, textures, 10);
+            DrawSprite(gl, (int) g.x, (int) g.y, 6, textures, Ghost.R);
         }
     }
 
@@ -244,33 +242,22 @@ public class Map1Listener extends AnimListener {
         if (eating.isEmpty()) { // Winning
             System.out.println("Winner");
             if (eatingSound != null) eatingSound.stop();
-            synchronized (this) {
-                winningSound = playMusic("src/Project/Assets/pacman-victory.wav", false);
-                if (winningSound != null) {
-                    try {
-                        wait(winningSound.getMicrosecondLength() / 1000);
-                        System.exit(1); // Go Winning Frame
-                    } catch (InterruptedException e) {
-                        System.out.println(e.getMessage());
-                    }
-                }
-            }
-            System.exit(1);
+
+            frame.dispose();
+            new WinnerPage().setVisible(true);
         }
     }
 
 
-    int cnt;
 
     private void handelPacmanEating() {
 
         for (int i = 0; i < eating.size(); i++) {
             if (pacman.ii == eating.get(i).ii && pacman.jj == eating.get(i).jj) {
                 System.out.println(eating.size());
-                if (cnt == 0) {
-                    eatingSound = playMusic("src/Project/Assets/eating.wav", true);
+                if (eatingSound == null || !eatingSound.isRunning()) {
+                    eatingSound = playMusic("src/Project/Assets/pacman-wakawaka.wav", false);
                 }
-                cnt++;
                 eating.remove(i--);
             }
         }
@@ -319,8 +306,7 @@ public class Map1Listener extends AnimListener {
 
     private void drawEating(GL gl) {
         for (Eating e : eating) {
-
-            DrawSprite(gl, (int) e.x, (int) e.y, animIndexForFood, textures, 10);
+            DrawSprite(gl, (int) e.x, (int) e.y, animIndexForFood, textures, 20);
         }
     }
 
@@ -328,7 +314,7 @@ public class Map1Listener extends AnimListener {
         // check Dir for motion
         changeAnimIndex();
 
-        DrawSprite(gl, (int) pacman.x, (int) pacman.y, animIndexForPacman, textures, 10);
+        DrawSprite(gl, (int) pacman.x, (int) pacman.y, animIndexForPacman, textures, Pacman.R);
     }
 
     private void changeAnimIndex() {
