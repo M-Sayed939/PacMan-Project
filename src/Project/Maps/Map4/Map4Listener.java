@@ -23,7 +23,7 @@ public class Map4Listener extends AnimListener {
 
     Pacman pacman = new Pacman();
     ArrayList<Eating> eating = new ArrayList<>();
-
+ 
     static final int MAX_X = 230;
     static final int MAX_Y = 230;
 
