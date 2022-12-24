@@ -24,18 +24,36 @@ public class Map4Listener extends AnimListener {
     Pacman pacman = new Pacman();
     ArrayList<Eating> eating = new ArrayList<>();
 
+    static final int MAX_X = 230;
+    static final int MAX_Y = 230;
+
     int[][] map = new int[][]{
-            {1, 1, 0, 1, 1, 1, 0, 1, 1, 1},
-            {0, 1, 0, 1, 0, 1, 0, 1, 0, 0},
-            {0, 1, 1, 1, 0, 1, 1, 1, 1, 0},
-            {0, 1, 0, 1, 1, 1, 0, 0, 1, 0},
-            {0, 1, 1, 0, 1, 1, 0, 1, 1, 0},
-            {0, 0, 1, 0, 0, 0, 0, 1, 0, 0},
-            {0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-            {0, 1, 0, 1, 0, 0, 0, 1, 0, 0},
-            {0, 1, 0, 1, 0, 0, 0, 1, 0, 0},
-            {0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1},
+            {1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1},
+            {0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+            {1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1},
+            {1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1},
+            {1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1},
+            {1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1},
+            {0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0},
+            {1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1},
+            {1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1},
+            {1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1},
+            {0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0},
+            {1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1},
+            {1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1},
+            {1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1},
+            {1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1},
+            {0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0},
+            {1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
+            {0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0},
+            {1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1},
+            {1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1}
     };
+    int row = map.length;
+    int col = map[0].length;
 
     public void init(GLAutoDrawable gld) {
 
@@ -46,14 +64,14 @@ public class Map4Listener extends AnimListener {
         gl.glMatrixMode(GL.GL_PROJECTION);
 //        gl.glLoadIdentity();
 
-        gl.glOrtho(0, 100, 100, 0, 0, 1.0);
+        gl.glOrtho(0, MAX_X, MAX_Y, 0, 0, 1.0);
 
         fillEating();
     }
 
     private void fillEating() {
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
                 if (map[i][j] == 1) { // eat
                     eating.add(new Eating(i, j));
                 }
@@ -66,15 +84,17 @@ public class Map4Listener extends AnimListener {
         GL gl = gld.getGL();
         gl.glClear(GL.GL_COLOR_BUFFER_BIT);
 
+        {
+            drawBackground(gl);
+            drawEating(gl);
+            drawPacman(gl);
 
-        drawBackground(gl);
-        drawEating(gl);
-        drawPacman(gl);
+            handelPacmanMove();
+            handelPacmanEating();
 
-        handelPacmanMove();
-        handelPacmanEating();
-
-        handelWinning();
+            handelWinning();
+        }
+        gl.glPopMatrix();
 
     }
 
@@ -89,7 +109,8 @@ public class Map4Listener extends AnimListener {
 
         for (int i = 0; i < eating.size(); i++) {
             if (pacman.ii == eating.get(i).ii && pacman.jj == eating.get(i).jj) {
-                System.out.println(i);
+                //   System.out.println(i);
+                System.out.println(eating.size());
                 eating.remove(i--);
             }
         }
@@ -161,10 +182,11 @@ public class Map4Listener extends AnimListener {
 
 
     private void drawBackground(GL gl) {
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
                 if (map[i][j] == 0) { // blocks
-                    drawRect(gl, arcTrX(i), arcTrY(j), 10);
+                    double x = arcTrX(j) - 5, y = arcTrY(i) - 5;
+                    drawRect(gl, x, y, 10);
                 }
             }
         }
