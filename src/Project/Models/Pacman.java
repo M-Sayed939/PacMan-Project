@@ -1,7 +1,7 @@
-package Project;
+package Project.Models;
 
 
-import static Project.Utils.*;
+import static Project.Core.Utils.*;
 
 public class Pacman {
     public int step = 10;

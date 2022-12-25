@@ -1,4 +1,4 @@
-package Project;
+package Project.Core;
 
 import com.sun.opengl.util.GLUT;
 

@@ -1,9 +1,9 @@
-package Project;
+package Project.Models;
 
 import java.util.Random;
 
-import static Project.Utils.trX;
-import static Project.Utils.trY;
+import static Project.Core.Utils.trX;
+import static Project.Core.Utils.trY;
 
 public class Ghost {
     Random random = new Random();

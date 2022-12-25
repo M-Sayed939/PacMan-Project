@@ -1,10 +1,13 @@
 package Project.Maps.Map1;
 
-import Project.*;
+import Project.Core.AnimListener;
+import Project.Models.Directions;
+import Project.Models.Eating;
+import Project.Models.Ghost;
+import Project.Models.Pacman;
 import Project.Pages.GameOver;
 import Project.Pages.WinnerPage;
-import Project.texture.TextureReader;
-import com.sun.opengl.util.GLUT;
+import Project.Core.texture.TextureReader;
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
@@ -17,7 +20,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.BitSet;
 
-import static Project.Utils.*;
+import static Project.Core.Utils.*;
 import static java.awt.event.KeyEvent.*;
 
 public class Map1Listener extends AnimListener {
