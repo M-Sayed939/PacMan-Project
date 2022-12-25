@@ -8,6 +8,7 @@ import com.sun.opengl.util.GLUT;
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
+import javax.media.opengl.GLException;
 import javax.media.opengl.glu.GLU;
 import javax.sound.sampled.Clip;
 import javax.swing.*;
@@ -24,12 +25,14 @@ public class Map1Listener extends AnimListener {
     Clip eatingSound;
 
     Pacman pacman = new Pacman();
+    int cntFood;
+    int cntLives = 3;
     ArrayList<Ghost> ghosts = new ArrayList<>();
     static int GHOSTS_SIZE = 4;
     ArrayList<Eating> eating = new ArrayList<>();
 
     static final int MAX_X = 400;
-    static final int MAX_Y = 400;
+    static final int MAX_Y = 420;
     int animIndexForPacman = 1;
     int animIndexForFood = 7;
 
@@ -49,11 +52,11 @@ public class Map1Listener extends AnimListener {
 
     int[][] map = new int[][]{
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
-            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
-            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
-            {0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0},
-            {0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0},
+            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+            {0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0},
+            {0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0},
             {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
             {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
             {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
@@ -169,7 +172,6 @@ public class Map1Listener extends AnimListener {
 
 
         gl.glPushMatrix();
-//        gl.glTranslated(move, move-10, 0);
         gl.glScaled(0.98, 0.98, 1);
         {
             drawEating(gl);
@@ -187,22 +189,27 @@ public class Map1Listener extends AnimListener {
 
         handelWinning();
 
-        drawScore(gl, 5, MAX_Y - 8);
+        try {
+            drawString(gl, 5, MAX_Y - 8,"Score: " + cntFood);  // Score
+            drawString(gl, 60, MAX_Y - 8,"Lives: " + cntLives); // Lives
+        } catch (GLException e) {
+            System.out.println(e.getMessage());
+        }
 
     }
 
-    public void drawScore(GL gl, int x, int y) {
-        drawString(gl, x, y, String.valueOf(eating.size()));
-    }
 
 
     private void handelLose() {
         for (Ghost g : ghosts) {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
                 if (eatingSound != null) eatingSound.stop();
-
-                frame.dispose();
-                new GameOver().setVisible(true);
+                if (--cntLives == 0) {
+                    frame.dispose();
+                    new GameOver().setVisible(true);
+                }else {
+                    pacman.reset();
+                }
             }
 
         }
@@ -263,10 +270,9 @@ public class Map1Listener extends AnimListener {
 
 
     private void handelPacmanEating() {
-
         for (int i = 0; i < eating.size(); i++) {
             if (pacman.ii == eating.get(i).ii && pacman.jj == eating.get(i).jj) {
-                System.out.println(eating.size());
+                cntFood++;
                 if (eatingSound == null || !eatingSound.isRunning()) {
                     eatingSound = playMusic("src/Project/Assets/pacman-wakawaka.wav", false);
                 }
@@ -318,7 +324,7 @@ public class Map1Listener extends AnimListener {
 
     private void drawEating(GL gl) {
         for (Eating e : eating) {
-            DrawSprite(gl, (int) e.x, (int) e.y, animIndexForFood, textures, 10);
+            DrawSprite(gl, (int) e.x, (int) e.y, animIndexForFood, textures, 7);
         }
     }
 

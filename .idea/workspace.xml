@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Ghost.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pacman.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671990643732</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add score">
+      <created>1671995927031</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671995927031</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +210,7 @@
     <MESSAGE value="first Pages" />
     <MESSAGE value="org. package" />
     <MESSAGE value="edite map1 matrix" />
-    <option name="LAST_COMMIT_MESSAGE" value="edite map1 matrix" />
+    <MESSAGE value="add score" />
+    <option name="LAST_COMMIT_MESSAGE" value="add score" />
   </component>
 </project>
