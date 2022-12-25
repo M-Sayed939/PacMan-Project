@@ -132,11 +132,11 @@ public class ChooseMap extends javax.swing.JFrame {
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
-        new Map2().setVisible(true);
+//        new Map2().setVisible(true);
     }
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
-        new Map3().setVisible(true);
+//        new Map3().setVisible(true);
 
     }
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
