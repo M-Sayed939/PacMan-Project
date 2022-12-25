@@ -1,10 +1,13 @@
 package Project.Maps.Map2;
 
-import Project.*;
-import Project.Maps.Map1.Map1;
+import Project.Core.AnimListener;
+import Project.Core.texture.TextureReader;
+import Project.Models.Directions;
+import Project.Models.Ghost;
+import Project.Models.Eating;
+import Project.Models.Pacman;
 import Project.Pages.GameOver;
 import Project.Pages.WinnerPage;
-import Project.texture.TextureReader;
 
 
 import javax.media.opengl.GL;
@@ -17,7 +20,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.BitSet;
 
-import static Project.Utils.*;
+import static Project.Core.Utils.DrawSprite;
+import static Project.Core.Utils.playMusic;
 import static java.awt.event.KeyEvent.*;
 import static java.awt.event.KeyEvent.VK_LEFT;
 
