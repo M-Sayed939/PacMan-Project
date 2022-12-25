@@ -14,6 +14,16 @@ public class Ghost {
 
     public Directions direction = Directions.IDEAL;
 
+    public Ghost() {
+    }
+
+    public Ghost(double x, double y) {
+        this.x = x;
+        this.y = y;
+        ii = trX(x);
+        jj = trY(y);
+    }
+
     public void randMove() {
         int sw = random.nextInt(4);
         switch (sw) {

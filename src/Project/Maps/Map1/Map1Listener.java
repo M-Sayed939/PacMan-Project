@@ -145,7 +145,7 @@ public class Map1Listener extends AnimListener {
 
     private void addGhostsToArray() {
         for (int i = 0; i < GHOSTS_SIZE; i++) {
-            ghosts.add(new Ghost());
+            ghosts.add(new Ghost(355,355));
         }
     }
 
