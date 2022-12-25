@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Ghost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pacman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,13 +67,13 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Map1">
-    <configuration name="HomePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.HomePage" />
+  <component name="RunManager" selected="Application.ChooseMap">
+    <configuration name="ChooseMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Pages.ChooseMap" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Maps.Map1.*" />
+          <option name="PATTERN" value="Project.Pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ChooseMap" />
         <item itemvalue="Application.Map1" />
         <item itemvalue="Application.User_Name" />
         <item itemvalue="Application.Project.Pages.HomePage" />
         <item itemvalue="Application.Map5" />
-        <item itemvalue="Application.HomePage" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671995927031</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add lives counter">
+      <created>1671997916685</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671997916685</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +216,7 @@
     <MESSAGE value="org. package" />
     <MESSAGE value="edite map1 matrix" />
     <MESSAGE value="add score" />
-    <option name="LAST_COMMIT_MESSAGE" value="add score" />
+    <MESSAGE value="add lives counter" />
+    <option name="LAST_COMMIT_MESSAGE" value="add lives counter" />
   </component>
 </project>

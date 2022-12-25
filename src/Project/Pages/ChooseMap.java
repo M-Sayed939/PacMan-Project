@@ -40,7 +40,7 @@ public class ChooseMap extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new Dimension(715,550));
+        setMinimumSize(new Dimension(715, 550));
         setResizable(false);
         setTitle("Pac-Man Game");
         getContentPane().setLayout(null);
@@ -65,15 +65,12 @@ public class ChooseMap extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(500, 270, 160, 50);
 
-        jButton3.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Hobo Std", Font.PLAIN, 36)); // NOI18N
         jButton3.setText("Map 1");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
+        jButton2.addActionListener(this::jButton3ActionPerformed);
         getContentPane().add(jButton3);
         jButton3.setBounds(80, 270, 160, 50);
+        jButton3.addActionListener(this::jButton3ActionPerformed);
 
         jButton4.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
         jButton4.setText("Back");
@@ -126,27 +123,33 @@ public class ChooseMap extends javax.swing.JFrame {
         this.dispose();
         new PlayerChoose().setVisible(true);
     }
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
-        new Map1().setVisible(true);
+        Map1.main(null);
     }
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
-//        new Map2().setVisible(true);
+//        Map2.main(null);
     }
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
-//        new Map3().setVisible(true);
+//        Map3.main(null);
 
     }
+
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
-        new Map4().setVisible(true);
+        Map4.main(null);
     }
+
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
-        new Map5().setVisible(true);
+        Map5.main(null);
     }
+
     public static void main(String[] args) {
 
         java.awt.EventQueue.invokeLater(() -> new ChooseMap().setVisible(true));
