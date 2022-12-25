@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/Ghosts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/foodd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/imgs/mapp2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PacMan-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PacMan-Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Ghost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,25 +46,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pc/IdeaProjects/PacMan-Project/src/Project/Assets&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/pc/IdeaProjects/PacMan-Project/src/Project/Assets/imgs",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Errors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\texture" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\Assets" />
       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project" />
     </key>
@@ -67,13 +77,13 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ChooseMap">
-    <configuration name="ChooseMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Pages.ChooseMap" />
+  <component name="RunManager" selected="Application.Map2">
+    <configuration name="Map1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Pages.*" />
+          <option name="PATTERN" value="Project.Maps.Map1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,12 +91,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Map1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1" />
+    <configuration name="Map2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map2.Map2" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Maps.Map1.*" />
+          <option name="PATTERN" value="Project.Maps.Map2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,7 +145,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ChooseMap" />
+        <item itemvalue="Application.Map2" />
         <item itemvalue="Application.Map1" />
         <item itemvalue="Application.User_Name" />
         <item itemvalue="Application.Project.Pages.HomePage" />
@@ -167,28 +177,7 @@
       <option name="project" value="LOCAL" />
       <updated>1671589508336</updated>
     </task>
-    <task id="LOCAL-00003" summary="edite map1 matrix">
-      <created>1671990643732</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1671990643732</updated>
-    </task>
-    <task id="LOCAL-00004" summary="add score">
-      <created>1671995927031</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1671995927031</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add lives counter">
-      <created>1671997916685</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1671997916685</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,9 +203,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first Pages" />
     <MESSAGE value="org. package" />
-    <MESSAGE value="edite map1 matrix" />
-    <MESSAGE value="add score" />
-    <MESSAGE value="add lives counter" />
-    <option name="LAST_COMMIT_MESSAGE" value="add lives counter" />
+    <option name="LAST_COMMIT_MESSAGE" value="org. package" />
   </component>
 </project>
