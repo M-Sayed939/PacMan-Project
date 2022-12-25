@@ -3,11 +3,14 @@ package Project.Pages;
 import java.awt.*;
 import javax.swing.*;
 
+import static Project.Utils.playMusic;
+
 public class GameOver extends JFrame {
 
         public GameOver() {
             initComponents();
             setLocationRelativeTo(null);
+            playMusic("src/Project/Assets/loser.wav", false);
         }
 
 

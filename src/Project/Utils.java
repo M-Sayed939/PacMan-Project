@@ -1,7 +1,12 @@
 package Project;
 
-public class Utils {
+import javax.media.opengl.GL;
+import java.awt.*;
 
+
+import static javax.media.opengl.GL.*;
+
+public class Utils {
     static int r = 5;
 
     public static int trX(double x) {
@@ -20,5 +25,19 @@ public class Utils {
         return (j + 1) * 10.0 - r;
     }
 
+    public static void drawRect(GL gl, double x, double y, int w, int h, float r, float g, float b) {
+        gl.glColor3f(r, g, b);
+        gl.glBegin(GL_POLYGON);
+        x -= r;
+        y -= r;
+
+        gl.glVertex2d(x, y);
+        gl.glVertex2d(x + w, y);
+
+        gl.glVertex2d(x + w, y + h);
+        gl.glVertex2d(x, y + h);
+
+        gl.glEnd();
+    }
 
 }

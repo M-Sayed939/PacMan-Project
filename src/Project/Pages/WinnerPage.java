@@ -1,12 +1,15 @@
 package Project.Pages;
 
 
+import static Project.Utils.playMusic;
+
 public class WinnerPage extends javax.swing.JFrame {
 
 
     public WinnerPage() {
         initComponents();
         setLocationRelativeTo(null);
+        playMusic("src/Project/Assets/pacman-victory.wav", false);
     }
 
 
