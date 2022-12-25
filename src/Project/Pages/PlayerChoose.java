@@ -74,13 +74,13 @@ public class PlayerChoose  extends JFrame {
 
         private void playActionPerformed(java.awt.event.ActionEvent evt) {
             this.dispose();
-            new ChooseMap().setVisible(true);
+            new User_Name2().setVisible(true);
 
         }
 
         private void play1ActionPerformed(java.awt.event.ActionEvent evt) {
             this.dispose();
-            new ChooseMap().setVisible(true);
+            new User_Name().setVisible(true);
         }
 
         /**

@@ -1,6 +1,10 @@
 package Project.Pages;
 
+import Project.Maps.Map2.Map2;
 import Project.Maps.Map1.Map1;
+import Project.Maps.Map3.Map3;
+import Project.Maps.Map4.Map4;
+import Project.Maps.Map5.Map5;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -43,20 +47,31 @@ public class ChooseMap extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
         jButton1.setText("Map 2");
-
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(280, 270, 170, 50);
 
         jButton2.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
         jButton2.setText("Map 3");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
         jButton2.setBounds(500, 270, 160, 50);
 
         jButton3.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
         jButton3.setText("Map 1");
-        jButton3.addActionListener(this::jButton3ActionPerformed);
-
-
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3);
         jButton3.setBounds(80, 270, 160, 50);
 
@@ -68,12 +83,22 @@ public class ChooseMap extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
         jButton5.setText("Map 4");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         getContentPane().add(jButton5);
         jButton5.setBounds(190, 360, 160, 50);
 
         jButton6.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
         jButton6.setText("Map 5");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton6);
         jButton6.setBounds(390, 360, 160, 50);
 
@@ -91,18 +116,37 @@ public class ChooseMap extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
-    private void jButton3ActionPerformed(ActionEvent evt) {
-        this.dispose();
-        Map1.main(null);
-    }
+//    private void jButton3ActionPerformed(ActionEvent evt) {
+//        this.dispose();
+//        Map1.main(null);
+//    }
 
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
         new PlayerChoose().setVisible(true);
     }
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+        this.dispose();
+        new Map1().setVisible(true);
+    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+        this.dispose();
+        new Map2().setVisible(true);
+    }
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+        this.dispose();
+        new Map3().setVisible(true);
 
-
+    }
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
+        this.dispose();
+        new Map4().setVisible(true);
+    }
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {
+        this.dispose();
+        new Map5().setVisible(true);
+    }
     public static void main(String[] args) {
 
         java.awt.EventQueue.invokeLater(() -> new ChooseMap().setVisible(true));

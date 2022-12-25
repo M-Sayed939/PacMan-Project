@@ -13,6 +13,7 @@
       <root url="file://$USER_HOME$/Desktop/New folder (3)/Floyd - Student/jfreechart-1.0.19/source" />
       <root url="file://$USER_HOME$/Desktop/New folder (3)/Floyd - Student/jfreechart-1.0.19/swt" />
       <root url="file://$USER_HOME$/Desktop/New folder (3)/Floyd - Student/jfreechart-1.0.19/tests" />
+      <root url="jar://$USER_HOME$/Desktop/JOGLwin/lib64/jogl.jar!/" />
     </SOURCES>
   </library>
 </component>
