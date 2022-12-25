@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Models/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Models/Ghost.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Play">
+  <component name="RunManager" selected="Application.Map1">
     <configuration name="Map1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1" />
       <module name="PacMan-Project" />
@@ -137,9 +137,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Map1" />
         <item itemvalue="Application.Play" />
         <item itemvalue="Application.Map2" />
-        <item itemvalue="Application.Map1" />
         <item itemvalue="Application.User_Name" />
         <item itemvalue="Application.Project.Pages.HomePage" />
       </list>
@@ -190,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672007755481</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="edit Ghost.java Constructor">
+      <created>1672008180594</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672008180594</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +225,7 @@
     <MESSAGE value="org. package" />
     <MESSAGE value="edite Map2 imports" />
     <MESSAGE value="edite ChooseMap.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="edite ChooseMap.java" />
+    <MESSAGE value="edit Ghost.java Constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit Ghost.java Constructor" />
   </component>
 </project>

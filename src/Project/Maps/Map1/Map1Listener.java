@@ -37,7 +37,7 @@ public class Map1Listener extends AnimListener {
     static final int MAX_X = 400;
     static final int MAX_Y = 420;
     int animIndexForPacman = 1;
-    int animIndexForFood = 7;
+    int animIndexForFood = 1;
 
     String[] textureNames = {
             "Map.jpg", // 0
@@ -145,7 +145,7 @@ public class Map1Listener extends AnimListener {
 
     private void addGhostsToArray() {
         for (int i = 0; i < GHOSTS_SIZE; i++) {
-            ghosts.add(new Ghost(355,355));
+            ghosts.add(new Ghost(355, 355));
         }
     }
 
@@ -193,14 +193,13 @@ public class Map1Listener extends AnimListener {
         handelWinning();
 
         try {
-            drawString(gl, 5, MAX_Y - 8,"Score: " + cntFood);  // Score
-            drawString(gl, 60, MAX_Y - 8,"Lives: " + cntLives); // Lives
+            drawString(gl, 5, MAX_Y - 8, "Score: " + cntFood);  // Score
+            drawString(gl, 60, MAX_Y - 8, "Lives: " + cntLives); // Lives
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
 
     }
-
 
 
     private void handelLose() {
@@ -210,7 +209,7 @@ public class Map1Listener extends AnimListener {
                 if (--cntLives == 0) {
                     frame.dispose();
                     new GameOver().setVisible(true);
-                }else {
+                } else {
                     pacman.reset();
                 }
             }
@@ -327,7 +326,7 @@ public class Map1Listener extends AnimListener {
 
     private void drawEating(GL gl) {
         for (Eating e : eating) {
-            DrawSprite(gl, (int) e.x, (int) e.y, animIndexForFood, textures, 7);
+            DrawSprite(gl, (int) e.x + 3, (int) e.y + 3, animIndexForFood, textures, e.ii == e.jj ? 8 : 3);
         }
     }
 
