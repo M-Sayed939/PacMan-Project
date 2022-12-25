@@ -32,9 +32,9 @@ public class Map5Listener extends AnimListener {
     static int GHOSTS_SIZE = 4;
     Clip eatingSound, losingSound, winningSound;
     static final int MAX_X = 350;
-    static final int MAX_Y = 260;
+    static final int MAX_Y = 250;
 
-    String textureNames[] = {"Map.jpg","pacman.png","up.gif","down.gif","right.gif","left.gif","ghost.gif","food.png","food2.png"};
+    String textureNames[] = {"images.png","pacman.png","up.gif","down.gif","right.gif","left.gif","ghost.gif","food.png","food2.png"};
     TextureReader.Texture texture[] = new TextureReader.Texture[textureNames.length];
     int textures[] = new int[textureNames.length];
 
@@ -42,26 +42,25 @@ public class Map5Listener extends AnimListener {
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
             {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-            {0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
+            {0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
             {0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
             {0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
             {0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0},
-            {0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0},
-            {0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0},
-            {0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0},
-            {0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0},
+            {0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+            {0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0},
+            {0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
             {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-            {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
-            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-            {0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
-            {0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
-            {0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
-            {0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0},
-            {0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
-            {0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
-            {0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
+            {0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
+            {0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+            {0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+            {0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
+            {0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
+            {0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
+            {0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0},
+            {0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
+            {0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
+            {0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
+            {0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
             {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
             {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -69,32 +68,31 @@ public class Map5Listener extends AnimListener {
     int row = map.length;
     int col = map[0].length;
     int animIndexForPacman = 1;
-    int animIndexForFood = 7;
+    int animIndexForFood = 8;
 
     public void init(GLAutoDrawable gld) {
 
         GL gl = gld.getGL();
 
-        gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-
-        gl.glEnable(GL.GL_TEXTURE_2D);  // Enable Texture Mapping
-        gl.glBlendFunc(GL.GL_SRC_ALPHA, GL.GL_ONE_MINUS_SRC_ALPHA);
-        gl.glGenTextures(textureNames.length, textures, 0);
+        gl.glClearColor(0, 0, 0, 1f);
 
         {
+            gl.glEnable(GL.GL_TEXTURE_2D);  // Enable Texture Mapping
+            gl.glBlendFunc(GL.GL_SRC_ALPHA, GL.GL_ONE_MINUS_SRC_ALPHA);
+            gl.glGenTextures(textureNames.length, textures, 0);
+
             for (int i = 0; i < textureNames.length; i++) {
                 try {
                     texture[i] = TextureReader.readTexture(assetsFolderName + "//" + textureNames[i], true);
                     gl.glBindTexture(GL.GL_TEXTURE_2D, textures[i]);
 
-//                mipmapsFromPNG(gl, new GLU(), texture[i]);
                     new GLU().gluBuild2DMipmaps(
                             GL.GL_TEXTURE_2D,
                             GL.GL_RGBA, // Internal Texel Format,
                             texture[i].getWidth(), texture[i].getHeight(),
                             GL.GL_RGBA, // External format from image,
                             GL.GL_UNSIGNED_BYTE,
-                            texture[i].getPixels() // Imagedata
+                            texture[i].getPixels() // Image data
                     );
                 } catch (IOException e) {
                     System.out.println(e.getMessage());
@@ -125,6 +123,7 @@ public class Map5Listener extends AnimListener {
     private void fillEating() {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
+                if (i % 2 == 0 && j % 3 == 0)
                 if (map[i][j] == 1) { // eat
                     eating.add(new Eating(j, i));
                 }
@@ -145,14 +144,23 @@ public class Map5Listener extends AnimListener {
         }
         gl.glPopMatrix();
 
-//        drawEating(gl);
-//        drawPacman(gl);
-//        drawGhost(gl);
-//        handelPacmanMove();
-//        handelPacmanEating();
-////        handelGhostMove();
-//        handelLose();
-//        handelWinning();
+        gl.glPushMatrix();
+        double f =0.967;
+        double d =10;
+        gl.glTranslated(d+0.3,d-0.5,1);
+        gl.glScaled(f,f,1);
+        {
+            drawEating(gl);
+            drawPacman(gl);
+            drawGhost(gl);
+        }
+        gl.glPopMatrix();
+
+        handelPacmanMove();
+        handelPacmanEating();
+        handelGhostMove();
+        handelLose();
+        handelWinning();
     }
 
     private void handelLose() {
@@ -173,42 +181,42 @@ public class Map5Listener extends AnimListener {
         }
     }
 
-//    private void handelGhostMove() {
-//        for (Ghosts g : ghosts) {
-//            switch (g.direction) {
-//                case IDEAL -> {
-//                }
-//                case UP -> {
-//                    if (g.y - g.step < 0 || g.jj - 1 < 0 || map[g.jj - 1][g.ii] == 0) {
-//                        g.randMove();
-//                        return;
-//                    }
-//                    g.moveUP();
-//                }
-//                case DOWN -> {
-//                    if (g.y + g.step > MAX_Y || g.jj + 1 >= row || map[g.jj + 1][g.ii] == 0) {
-//                        g.randMove();
-//                        return;
-//                    }
-//                    g.moveDown();
-//                }
-//                case RIGHT -> {
-//                    if (g.x + g.step > MAX_X || g.ii + 1 >= col || map[g.jj][g.ii + 1] == 0) {
-//                        g.randMove();
-//                        return;
-//                    }
-//                    g.moveRight();
-//                }
-//                case LEFT -> {
-//                    if (g.x - g.step < 0 || g.ii - 1 < 0 || map[g.jj][g.ii - 1] == 0) {
-//                        g.randMove();
-//                        return;
-//                    }
-//                    g.moveLeft();
-//                }
-//            }
-//        }
-//    }
+    private void handelGhostMove() {
+        for (Ghosts g : ghosts) {
+            switch (g.direction) {
+                case IDEAL -> {
+                }
+                case UP -> {
+                    if (g.y - g.step < 0 || g.jj - 1 < 0 || map[g.jj - 1][g.ii] == 0) {
+                        g.randMove();
+                        return;
+                    }
+                    g.moveUP();
+                }
+                case DOWN -> {
+                    if (g.y + g.step > MAX_Y || g.jj + 1 >= row || map[g.jj + 1][g.ii] == 0) {
+                        g.randMove();
+                        return;
+                    }
+                    g.moveDown();
+                }
+                case RIGHT -> {
+                    if (g.x + g.step > MAX_X || g.ii + 1 >= col || map[g.jj][g.ii + 1] == 0) {
+                        g.randMove();
+                        return;
+                    }
+                    g.moveRight();
+                }
+                case LEFT -> {
+                    if (g.x - g.step < 0 || g.ii - 1 < 0 || map[g.jj][g.ii - 1] == 0) {
+                        g.randMove();
+                        return;
+                    }
+                    g.moveLeft();
+                }
+            }
+        }
+    }
 
     private void drawGhost(GL gl) {
         for (Ghosts g : ghosts) {
@@ -326,7 +334,7 @@ public class Map5Listener extends AnimListener {
             case UP -> {
                 if(animIndexForPacman == 1)
                     animIndexForPacman = 2;
-                else if(animIndexForPacman == 2)
+                else if(animIndexForPacman == 2);
                     animIndexForPacman = 1;
             }
             case DOWN -> {
@@ -351,17 +359,17 @@ public class Map5Listener extends AnimListener {
     }
 
     private void drawBackground(GL gl) {
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                if (map[i][j] == 0) { // blocks
-                    double x = arcTrX(j) - 5, y = arcTrY(i) - 5;
-
-                    drawRect(gl, x, y, 10, 10, 0, 0, 1);
-
-                }
-            }
-        }
-//        DrawSprite(gl, 0, 0, 0, textures, MAX_X - 10);
+//        for (int i = 0; i < row; i++) {
+//            for (int j = 0; j < col; j++) {
+//                if (map[i][j] == 0) { // blocks
+//                    double x = arcTrX(j) - 5, y = arcTrY(i) - 5;
+//
+//                    drawRect(gl, x, y, 10, 10, 0, 0, 1);
+//
+//                }
+//            }
+//        }
+        DrawSprite(gl, 0, 0, 0, textures, MAX_X,MAX_Y);
     }
 
 

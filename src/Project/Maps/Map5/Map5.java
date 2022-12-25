@@ -17,11 +17,11 @@ public class Map5 extends JFrame {
         glcanvas = new GLCanvas();
         glcanvas.addGLEventListener(listener);
         glcanvas.addKeyListener(listener);
-        glcanvas.setSize(400, 400);
+        glcanvas.setSize(800, 800);
         animator = new FPSAnimator(glcanvas, 12);
 
         add(glcanvas, BorderLayout.CENTER);
-        setSize(600, 600);
+        setSize(700, 700);
         requestFocus();
         setLocationRelativeTo(this);
         setResizable(false);

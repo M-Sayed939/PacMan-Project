@@ -32,6 +32,7 @@ public class Utils {
     }
 
     public static void drawRect(GL gl, double x, double y, int w, int h, float r, float g, float b) {
+        gl.glClearColor(r,g,b,1);
         gl.glColor3f(r, g, b);
         gl.glBegin(GL_POLYGON);
         x -= r;
@@ -45,11 +46,8 @@ public class Utils {
 
         gl.glEnd();
     }
-    private void drawCircle(GL gl, int r, Color color, double x, double y) {
-        drawRegularRibs(gl, r, color, x, y);
-    }
 
-    private void drawRegularRibs(GL gl, int r, Color color, double x, double y) {
+    public static void drawRegularRibs(GL gl, int r, Color color, double x, double y) {
         gl.glColor3fv(color.getColorComponents(null), 0);
         gl.glBegin(GL.GL_POLYGON);
         int step = 1;
@@ -60,34 +58,16 @@ public class Utils {
         gl.glEnd();
     }
 
-    public static void DrawSprite(GL gl, int x, int y, int index, int textures[], int size) {
-        gl.glEnable(GL.GL_BLEND);
-        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[index]);    // Turn Blending On
-
-        gl.glPushMatrix();
-        gl.glTranslated(-5,  -5, 0);
-        gl.glBegin(GL.GL_QUADS);
-        // Front Face
-        gl.glTexCoord2f(0.0f, 0.0f);
-        gl.glVertex3f(x, y+ size , -1.0f);
-        gl.glTexCoord2f(1.0f, 0.0f);
-        gl.glVertex3f(x, y+ size, -1.0f);
-        gl.glTexCoord2f(1.0f, 1.0f);
-        gl.glVertex3f(x, y+ size , -1.0f);
-        gl.glTexCoord2f(0.0f, 1.0f);
-        gl.glVertex3f(x, y, -1.0f);
-        gl.glEnd();
-        gl.glPopMatrix();
-
-        gl.glDisable(GL.GL_BLEND);
+    public static void drawCircle(GL gl, int r, Color color, double x, double y) {
+        drawRegularRibs(gl, r, color, x, y);
     }
+
     public static Clip playMusic(String location, boolean loop) {
 
         try {
             File musicPath = new File(location);
 
             if (musicPath.exists()) {
-
                 AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
                 Clip clip = AudioSystem.getClip();
                 clip.open(audioInput);
@@ -105,5 +85,57 @@ public class Utils {
         return null;
     }
 
+    public static void DrawSprite(GL gl, int x, int y, int index, int[] textures, int size) {
+        gl.glEnable(GL.GL_BLEND);
+        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[index]); // Turn Blending On
+
+        gl.glPushMatrix();
+        gl.glTranslated(-5, -5, 0);
+        gl.glBegin(GL.GL_QUADS);
+        // Front Face
+        gl.glTexCoord2f(0.0f, 0.0f);
+        gl.glVertex3f(x, y + size, -1.0f);
+
+        gl.glTexCoord2f(1.0f, 0.0f);
+        gl.glVertex3f(x + size, y + size, -1.0f);
+
+        gl.glTexCoord2f(1.0f, 1.0f);
+        gl.glVertex3f(x + size, y, -1.0f);
+
+        gl.glTexCoord2f(0.0f, 1.0f);
+        gl.glVertex3f(x, y, -1.0f);
+
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glDisable(GL.GL_BLEND);
+    }
+
+
+    public static void DrawSprite(GL gl, int x, int y, int index, int[] textures, int w, int h) {
+        gl.glEnable(GL.GL_BLEND);
+        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[index]); // Turn Blending On
+
+        gl.glPushMatrix();
+        gl.glTranslated(-5, -5, 0);
+        gl.glBegin(GL.GL_QUADS);
+        // Front Face
+        gl.glTexCoord2f(0.0f, 0.0f);
+        gl.glVertex3f(x, y + h, -1.0f);
+
+        gl.glTexCoord2f(1.0f, 0.0f);
+        gl.glVertex3f(x + w, y + h, -1.0f);
+
+        gl.glTexCoord2f(1.0f, 1.0f);
+        gl.glVertex3f(x + w, y, -1.0f);
+
+        gl.glTexCoord2f(0.0f, 1.0f);
+        gl.glVertex3f(x, y, -1.0f);
+
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glDisable(GL.GL_BLEND);
+    }
 
 }
