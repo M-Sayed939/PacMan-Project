@@ -4,6 +4,7 @@ import Project.*;
 import Project.Pages.GameOver;
 import Project.Pages.WinnerPage;
 import Project.texture.TextureReader;
+import com.sun.opengl.util.GLUT;
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
@@ -186,6 +187,12 @@ public class Map1Listener extends AnimListener {
 
         handelWinning();
 
+        drawScore(gl, 5, MAX_Y - 8);
+
+    }
+
+    public void drawScore(GL gl, int x, int y) {
+        drawString(gl, x, y, String.valueOf(eating.size()));
     }
 
 

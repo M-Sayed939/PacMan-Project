@@ -1,5 +1,7 @@
 package Project;
 
+import com.sun.opengl.util.GLUT;
+
 import javax.media.opengl.GL;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -109,6 +111,12 @@ public class Utils {
         gl.glPopMatrix();
 
         gl.glDisable(GL.GL_BLEND);
+    }
+
+    public static void drawString(GL gl, int x, int y, String s) {
+        GLUT glt = new GLUT();
+        gl.glRasterPos2i(x, y);
+        glt.glutBitmapString(5, s);
     }
 
 }
