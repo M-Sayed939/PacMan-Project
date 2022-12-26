@@ -114,7 +114,7 @@ public class Utils {
     }
 
 
-    public static void DrawSprite(GL gl, int x, int y, int index, int[] textures, int w, int h) {
+    public static void DrawSprite2(GL gl, int x, int y, int index, int[] textures, int w, int h) {
         gl.glEnable(GL.GL_BLEND);
         gl.glBindTexture(GL.GL_TEXTURE_2D, textures[index]); // Turn Blending On
 

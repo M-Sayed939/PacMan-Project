@@ -1,13 +1,13 @@
 package Project.Maps.Map5;
 
-import Project.AnimListener;
-import Project.Directions;
-import Project.Eating;
-import Project.Pacman;
+import Project.Core.AnimListener;
+import Project.Core.texture.TextureReader;
+import Project.Models.Directions;
+import Project.Models.Eating;
+import Project.Models.Ghost;
+import Project.Models.Pacman;
 import Project.Pages.GameOver;
 import Project.Pages.WinnerPage;
-import Project.texture.TextureReader;
-import Project.*;
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
@@ -136,7 +136,7 @@ public class Map5Listener extends AnimListener {
                     if (map[i][j] == 1) { // eat
                         eating.add(new Eating(j, i));
                     }
-                }
+            }
         }
     }
 
@@ -245,7 +245,7 @@ public class Map5Listener extends AnimListener {
             frame.dispose();
             new WinnerPage().setVisible(true);
         }
-        }
+    }
 
     private void handelPacmanEating() {
 
@@ -322,7 +322,7 @@ public class Map5Listener extends AnimListener {
                 if(animIndexForPacman == 1)
                     animIndexForPacman = 2;
                 else if(animIndexForPacman == 2);
-                    animIndexForPacman = 1;
+                animIndexForPacman = 1;
             }
             case DOWN -> {
                 if(animIndexForPacman == 1)
@@ -346,7 +346,7 @@ public class Map5Listener extends AnimListener {
     }
 
     private void drawBackground(GL gl) {
-        DrawSprite(gl, 0, 0, 0, textures, MAX_X,MAX_Y);
+        DrawSprite2(gl, 0, 0, 0, textures, MAX_X,MAX_Y);
     }
 
 
