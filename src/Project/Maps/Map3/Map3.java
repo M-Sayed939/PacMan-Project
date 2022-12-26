@@ -20,15 +20,17 @@ public class Map3 extends JFrame {
         glcanvas = new GLCanvas();
         glcanvas.addGLEventListener(listener);
         glcanvas.addKeyListener(listener);
-        glcanvas.setSize(400, 400);
+        glcanvas.setSize(800, 459);
         animator = new FPSAnimator(glcanvas, 12);
 
         add(glcanvas, BorderLayout.CENTER);
-        setSize(400, 400);
+        setSize(800, 459);
         requestFocus();
         setLocationRelativeTo(this);
         setResizable(false);
         setVisible(true);
+
+        listener.frame = this;
     }
 
     public static void main(String[] args) {
