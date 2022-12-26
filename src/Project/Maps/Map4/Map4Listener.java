@@ -1,9 +1,9 @@
 package Project.Maps.Map4;
 
-import Project.AnimListener;
-import Project.Directions;
-import Project.Eating;
-import Project.Pacman;
+import Project.Core.AnimListener;
+import Project.Models.Directions;
+import Project.Models.Eating;
+import Project.Models.Pacman;
 
 
 import javax.media.opengl.GL;
@@ -13,7 +13,7 @@ import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.BitSet;
 
-import static Project.Utils.*;
+import static Project.Core.Utils.*;
 import static java.awt.event.KeyEvent.*;
 import static java.awt.event.KeyEvent.VK_LEFT;
 import static java.lang.Math.*;

@@ -1,7 +1,7 @@
 package Project.Pages;
 
 
-//import static Project.Utils.playMusic;
+//import static Project.Core.Utils.playMusic;
 
 public class WinnerPage extends javax.swing.JFrame {
 

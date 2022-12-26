@@ -1,4 +1,4 @@
-package Project.texture;
+package Project.Core.texture;
 
 import com.sun.opengl.util.BufferUtil;
 

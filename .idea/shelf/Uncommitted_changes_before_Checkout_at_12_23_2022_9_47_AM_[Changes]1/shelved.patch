@@ -1,0 +1,232 @@
+Index: PacMan-Project.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"library\" name=\"lib64\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"hamcrest-core-1.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"lib641\" level=\"application\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/PacMan-Project.iml b/PacMan-Project.iml
+--- a/PacMan-Project.iml	(revision f413b1a718f2459413d1e55a2c874c091c65631a)
++++ b/PacMan-Project.iml	(date 1671781631793)
+@@ -7,8 +7,8 @@
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+-    <orderEntry type="library" name="lib64" level="project" />
+     <orderEntry type="library" name="hamcrest-core-1.3" level="project" />
+     <orderEntry type="library" name="lib641" level="application" />
++    <orderEntry type="library" name="lib64" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1901c679-ef5b-4b01-869c-8de279211f87\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/Project/Directions.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Project/Pacman.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Project/Pacman.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Project/Utils.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Project/Utils.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2JCRDqFkG23HmnxkPLxir2jqw3w\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"C:/Users/hp/IdeaProjects/ms/PacMan-Project/src/Project\",\r\n    \"project.structure.last.edited\": \"Global Libraries\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"Errors\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\" />\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\\texture\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\\Assets\" />\r\n      <recent name=\"C:\\Users\\pc\\IdeaProjects\\PacMan-Project\\src\\Project\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"Project.Map5\" />\r\n      <recent name=\"Project.Map4\" />\r\n      <recent name=\"\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"HomePage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.HomePage\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Maps.Map1.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.HomePage\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1901c679-ef5b-4b01-869c-8de279211f87\" name=\"Changes\" comment=\"\" />\r\n      <created>1671579963392</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1671579963392</updated>\r\n      <workItem from=\"1671629520497\" duration=\"1008000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"first Pages\">\r\n      <created>1671580409361</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671580409361</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"org. package\">\r\n      <created>1671589508336</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671589508336</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"CUSTOM_BOOLEAN_PROPERTIES\">\r\n                <map>\r\n                  <entry key=\"Show.Git.Branches\" value=\"false\" />\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"first Pages\" />\r\n    <MESSAGE value=\"org. package\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"org. package\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision f413b1a718f2459413d1e55a2c874c091c65631a)
++++ b/.idea/workspace.xml	(date 1671781635991)
+@@ -4,11 +4,16 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/Project/Directions.java" afterDir="false" />
++    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="first Pages">
++      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib64.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib64.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_31_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_31_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_51_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_51_AM__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/PacMan-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PacMan-Project.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Project/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pacman.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Project/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Utils.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -18,6 +23,7 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
++        <option value="Enum" />
+         <option value="Class" />
+       </list>
+     </option>
+@@ -25,9 +31,10 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="master" />
++        <entry key="$PROJECT_DIR$" value="Menna" />
+       </map>
+     </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -44,10 +51,11 @@
+   "keyToString": {
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+     "WebServerToolWindowFactoryState": "false",
+-    "last_opened_file_path": "C:/Users/hp/IdeaProjects/ms/PacMan-Project/src/Project",
+-    "project.structure.last.edited": "Global Libraries",
+-    "project.structure.proportion": "0.15",
++    "last_opened_file_path": "C:/JOGLwin/JOGLwin/lib64/jogl_cg.dll",
++    "project.structure.last.edited": "Libraries",
++    "project.structure.proportion": "0.15429688",
+     "project.structure.side.proportion": "0.2",
+     "settings.editor.selected.configurable": "Errors"
+   }
+@@ -67,7 +75,7 @@
+       <recent name="" />
+     </key>
+   </component>
+-  <component name="RunManager">
++  <component name="RunManager" selected="Application.Map5">
+     <configuration name="HomePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="Project.HomePage" />
+       <module name="PacMan-Project" />
+@@ -81,8 +89,38 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
++    <configuration name="Map4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map4.Map4" />
++      <module name="PacMan-Project" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="Project.Maps.Map4.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Map5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map5.Map5" />
++      <module name="PacMan-Project" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="Project.Maps.Map5.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Application.Map5" />
++        <item itemvalue="Application.Map4" />
++        <item itemvalue="Application.HomePage" />
++        <item itemvalue="Application.Map4" />
+         <item itemvalue="Application.HomePage" />
+       </list>
+     </recent_temporary>
+@@ -95,7 +133,8 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1671579963392</updated>
+-      <workItem from="1671629520497" duration="1008000" />
++      <workItem from="1671647966705" duration="10439000" />
++      <workItem from="1671703183188" duration="2058000" />
+     </task>
+     <task id="LOCAL-00001" summary="first Pages">
+       <created>1671580409361</created>
+@@ -104,14 +143,28 @@
+       <option name="project" value="LOCAL" />
+       <updated>1671580409361</updated>
+     </task>
+-    <task id="LOCAL-00002" summary="org. package">
+-      <created>1671589508336</created>
++    <task id="LOCAL-00002" summary="add map 4">
++      <created>1671636070105</created>
+       <option name="number" value="00002" />
+       <option name="presentableId" value="LOCAL-00002" />
+       <option name="project" value="LOCAL" />
+-      <updated>1671589508336</updated>
++      <updated>1671636070106</updated>
++    </task>
++    <task id="LOCAL-00003" summary="add map 4 without ghosts logic and draw">
++      <created>1671658294444</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1671658294445</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00004" summary="add map 4 800*800">
++      <created>1671658687385</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1671658687385</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -136,7 +189,9 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="first Pages" />
+-    <MESSAGE value="org. package" />
+-    <option name="LAST_COMMIT_MESSAGE" value="org. package" />
++    <MESSAGE value="add map 4" />
++    <MESSAGE value="add map 4 without ghosts logic and draw" />
++    <MESSAGE value="add map 4 800*800" />
++    <option name="LAST_COMMIT_MESSAGE" value="add map 4 800*800" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/libraries/lib641.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/lib641.xml b/.idea/libraries/lib641.xml
+new file mode 100644
+--- /dev/null	(date 1671781638645)
++++ b/.idea/libraries/lib641.xml	(date 1671781638645)
+@@ -0,0 +1,16 @@
++<component name="libraryTable">
++  <library name="lib641">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/Desktop/JOGLwin/lib64/gluegen-rt.jar!/" />
++      <root url="jar://$USER_HOME$/Desktop/JOGLwin/lib64/jogl.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <NATIVE>
++      <root url="file://$USER_HOME$/Desktop/JOGLwin/lib64" />
++      <root url="file://$USER_HOME$/Desktop/JOGLwin/lib64" />
++      <root url="file://$USER_HOME$/Desktop/JOGLwin/lib64" />
++      <root url="file://$USER_HOME$/Desktop/JOGLwin/lib64" />
++    </NATIVE>
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: src/Project/Maps/Map2/Map2GlListener.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Project/Maps/Map2/Map2GlListener.java b/src/Project/Maps/Map2/Map2GlListener.java
+new file mode 100644
+--- /dev/null	(date 1671781635749)
++++ b/src/Project/Maps/Map2/Map2GlListener.java	(date 1671781635749)
+@@ -0,0 +1,5 @@
++package Project.Maps.Map2;
++
++public class Map2GlListener {
++    
++}
