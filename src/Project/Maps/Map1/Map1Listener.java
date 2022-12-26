@@ -385,11 +385,12 @@ public class Map1Listener extends AnimListener {
         if (keyCode == VK_P) {
             pause = !pause;
             if (pause) {
+                timer.stop();
                 Map1.animator.stop();
                 JOptionPane.showMessageDialog(null, "Enter P To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
             } else {
                 Map1.animator.start();
-
+                timer.start();
             }
         }
     }
