@@ -1,13 +1,13 @@
 package Project.Maps.Map5;
 
-import Project.AnimListener;
-import Project.Directions;
-import Project.Eating;
-import Project.Pacman;
+import Project.Core.AnimListener;
+import Project.Core.texture.TextureReader;
+import Project.Models.Directions;
+import Project.Models.Eating;
+import Project.Models.Ghost;
+import Project.Models.Pacman;
 import Project.Pages.GameOver;
 import Project.Pages.WinnerPage;
-import Project.texture.TextureReader;
-import Project.*;
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
@@ -20,7 +20,7 @@ import java.util.BitSet;
 import javax.sound.sampled.Clip;
 import javax.swing.*;
 
-import static Project.Utils.*;
+import static Project.Core.Utils.*;
 import static java.awt.event.KeyEvent.*;
 import static java.awt.event.KeyEvent.VK_LEFT;
 
@@ -346,7 +346,7 @@ public class Map5Listener extends AnimListener {
     }
 
     private void drawBackground(GL gl) {
-        DrawSprite(gl, 0, 0, 0, textures, MAX_X,MAX_Y);
+        DrawSprite2(gl, 0, 0, 0, textures, MAX_X,MAX_Y);
     }
 
 
