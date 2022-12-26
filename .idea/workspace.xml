@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Add Multiplayer For Map 2">
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="finishing">
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/giffas_pacman.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_5_46_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_5_46_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_6_53_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_6_53_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Pages/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/Users.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,18 +43,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/JOGLwin/JOGLwin/lib64/jogl_cg.dll&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/pc/IdeaProjects/PacMan-Project/src/Project/Assets",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dell\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets" />
+      <recent name="C:\Users\dell\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\texture" />
     </key>
@@ -79,12 +83,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Map2Multi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map2.Map2Multi" />
+    <configuration name="HomePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Pages.HomePage" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Maps.Map2.*" />
+          <option name="PATTERN" value="Project.Pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,12 +96,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Player2Winner (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Pages.Player2Winner" />
+    <configuration name="Play" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Play" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Pages.*" />
+          <option name="PATTERN" value="Project.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,10 +138,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Users" />
+        <item itemvalue="Application.Play" />
+        <item itemvalue="Application.HomePage" />
         <item itemvalue="Application.User_Name" />
         <item itemvalue="Application.ChooseMap_Mult" />
-        <item itemvalue="Application.Map2Multi" />
-        <item itemvalue="Application.Player2Winner (1)" />
       </list>
     </recent_temporary>
   </component>

@@ -1,6 +1,7 @@
 package Project.Pages;
 
 
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
@@ -51,7 +52,10 @@ public class Users extends javax.swing.JFrame {
         USERNAME.setEditable(false);
         USERNAME.setColumns(20);
         USERNAME.setRows(5);
+        USERNAME.setFont(new Font("Hobo Std",0,24));
         jScrollPane1.setViewportView(USERNAME);
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(10, 80, 320, 300);
