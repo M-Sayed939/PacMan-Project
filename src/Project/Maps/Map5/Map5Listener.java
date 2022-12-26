@@ -167,11 +167,11 @@ public class Map5Listener extends AnimListener {
         }
         gl.glPopMatrix();
 
-//        handelPacmanMove();
-//        handelPacmanEating();
-//        handelGhostMove();
-//        handelLose();
-//        handelWinning();
+        handelPacmanMove();
+        handelPacmanEating();
+        handelGhostMove();
+        handelLose();
+        handelWinning();
 
         try {
             drawString(gl, 15, MAX_Y -230, "Score: " + cntFood);  // Score
