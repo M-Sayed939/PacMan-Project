@@ -18,6 +18,7 @@ public class Utils {
     static int r = 5;
 
     public static int trX(double x) {
+
         return (int) ((x + r) / 10) - 1;
     }
 
@@ -26,6 +27,7 @@ public class Utils {
     }
 
     public static double arcTrX(int i) {
+
         return (i + 1) * 10.0 - r;
     }
 
@@ -34,7 +36,7 @@ public class Utils {
     }
 
     public static void drawRect(GL gl, double x, double y, int w, int h, float r, float g, float b) {
-        gl.glClearColor(r,g,b,1);
+        gl.glClearColor(r, g, b, 1);
         gl.glColor3f(r, g, b);
         gl.glBegin(GL_POLYGON);
         x -= r;
@@ -112,6 +114,33 @@ public class Utils {
 
         gl.glDisable(GL.GL_BLEND);
     }
+
+    public static void DrawSprite2(GL gl, int x, int y, int index, int[] textures, int w, int h) {
+        gl.glEnable(GL.GL_BLEND);
+        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[index]); // Turn Blending On
+
+        gl.glPushMatrix();
+        gl.glTranslated(-5, -5, 0);
+        gl.glBegin(GL.GL_QUADS);
+        // Front Face
+        gl.glTexCoord2f(0.0f, 0.0f);
+        gl.glVertex3f(x, y + h, -1.0f);
+
+        gl.glTexCoord2f(1.0f, 0.0f);
+        gl.glVertex3f(x + w, y + h, -1.0f);
+
+        gl.glTexCoord2f(1.0f, 1.0f);
+        gl.glVertex3f(x + w, y, -1.0f);
+
+        gl.glTexCoord2f(0.0f, 1.0f);
+        gl.glVertex3f(x, y, -1.0f);
+
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glDisable(GL.GL_BLEND);
+    }
+
 
     public static void drawString(GL gl, int x, int y, String s) {
         GLUT glt = new GLUT();

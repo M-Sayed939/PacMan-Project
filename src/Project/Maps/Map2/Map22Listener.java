@@ -3,12 +3,12 @@ package Project.Maps.Map2;
 import Project.Core.AnimListener;
 import Project.Core.texture.TextureReader;
 import Project.Models.Directions;
-import Project.Models.Ghost;
 import Project.Models.Eating;
+import Project.Models.Ghost;
 import Project.Models.Pacman;
+import Project.Pages.ChooseMap;
 import Project.Pages.GameOver;
 import Project.Pages.WinnerPage;
-
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
@@ -16,22 +16,21 @@ import javax.media.opengl.GLException;
 import javax.media.opengl.glu.GLU;
 import javax.sound.sampled.Clip;
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.BitSet;
 
 import static Project.Core.Utils.*;
-import static Project.Core.Utils.drawString;
+import static Project.Core.Utils.DrawSprite;
 import static java.awt.event.KeyEvent.*;
 import static java.awt.event.KeyEvent.VK_LEFT;
 
-public class Map2Listener extends AnimListener {
+public class Map22Listener extends AnimListener {
     JFrame frame = null;
     Clip EatingSound;
     Pacman pacman = new Pacman();
+    Pacman pacman2 = new Pacman();
     int CountFood;
     int Lives = 3;
     boolean pause = false;
@@ -39,7 +38,7 @@ public class Map2Listener extends AnimListener {
     Timer timer = new Timer(1000, e -> {
         time++;
     });
-    ArrayList<Eating> Eating = new ArrayList<>();
+    ArrayList<Project.Models.Eating> Eating = new ArrayList<>();
     ArrayList<Ghost> ghosts = new ArrayList<>();
     static int No_Of_Ghosts = 4;
     public static final int MAX_X = 620;
@@ -174,6 +173,17 @@ public class Map2Listener extends AnimListener {
             drawGhost(gl);
         }
         gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glTranslated(10, 200, 0);
+        gl.glScaled(0.95, 0.93, 1);
+        {
+
+            drawPacman2(gl);
+
+        }
+        gl.glPopMatrix();
+
 
         handelPacmanMove();
         handelPacmanEating();
@@ -333,6 +343,12 @@ public class Map2Listener extends AnimListener {
         DrawSprite(gl, (int) pacman.x, (int) pacman.y, AnimIndexForPacman, textures, 15);
     }
 
+    private void drawPacman2(GL gl) {
+        changeAnimIndex();
+
+        DrawSprite(gl, (int) pacman.x, (int) pacman.y, AnimIndexForPacman, textures, 15);
+    }
+
     private void changeAnimIndex() {
         switch (pacman.direction) {
             case IDEAL -> {
@@ -373,11 +389,9 @@ public class Map2Listener extends AnimListener {
         keyBits.set(keyCode);
         if (event.getKeyCode() == KeyEvent.VK_P) {
             pause = !pause;
-            if (!pause) {
-                timer.start();
+            if (!pause)
                 Map2.animator.start();
-            } else {
-                timer.stop();
+            else {
                 Map2.animator.stop();
                 JOptionPane.showMessageDialog(null, "Enter P To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
 
@@ -416,4 +430,11 @@ public class Map2Listener extends AnimListener {
 
     }
 
+//    public static void main(String[] args) {
+//
+//        java.awt.EventQueue.invokeLater(() -> new Map22Listener().setVisible(true));
+//    }
+
 }
+
+

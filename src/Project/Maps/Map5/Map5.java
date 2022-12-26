@@ -1,7 +1,6 @@
 package Project.Maps.Map5;
 
 
-
 import com.sun.opengl.util.FPSAnimator;
 
 import javax.media.opengl.GLCanvas;
@@ -19,11 +18,13 @@ public class Map5 extends JFrame {
         glcanvas = new GLCanvas();
         glcanvas.addGLEventListener(listener);
         glcanvas.addKeyListener(listener);
-        glcanvas.setSize(400, 400);
+        glcanvas.setSize(800, 800);
         animator = new FPSAnimator(glcanvas, 12);
 
+        listener.frame = this; // For closing
+
         add(glcanvas, BorderLayout.CENTER);
-        setSize(400, 400);
+        setSize(700, 700);
         requestFocus();
         setLocationRelativeTo(this);
         setResizable(false);

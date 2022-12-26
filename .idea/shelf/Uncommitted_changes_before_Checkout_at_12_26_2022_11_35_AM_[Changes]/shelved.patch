@@ -1,0 +1,395 @@
+Index: src/Project/Utils.java
+===================================================================
+diff --git a/src/Project/Utils.java b/src/Project/Utils.java
+deleted file mode 100644
+--- a/src/Project/Utils.java	(revision 1d4ce234078e3161058006ee6fd220cd9a84a279)
++++ /dev/null	(revision 1d4ce234078e3161058006ee6fd220cd9a84a279)
+@@ -1,149 +0,0 @@
+-package Project;
+-
+-import com.sun.opengl.util.GLUT;
+-
+-import javax.media.opengl.GL;
+-import javax.sound.sampled.AudioInputStream;
+-import javax.sound.sampled.AudioSystem;
+-import javax.sound.sampled.Clip;
+-import java.awt.*;
+-import java.io.File;
+-
+-
+-import static java.lang.Math.*;
+-import static java.lang.Math.toRadians;
+-import static javax.media.opengl.GL.*;
+-
+-public class Utils {
+-    static int r = 5;
+-
+-    public static int trX(double x) {
+-        return (int) ((x + r) / 10) - 1;
+-    }
+-
+-    public static int trY(double y) {
+-        return (int) ((y + r) / 10) - 1;
+-    }
+-
+-    public static double arcTrX(int i) {
+-        return (i + 1) * 10.0 - r;
+-    }
+-
+-    public static double arcTrY(int j) {
+-        return (j + 1) * 10.0 - r;
+-    }
+-
+-    public static void drawRect(GL gl, double x, double y, int w, int h, float r, float g, float b) {
+-        gl.glClearColor(r,g,b,1);
+-        gl.glColor3f(r, g, b);
+-        gl.glBegin(GL_POLYGON);
+-        x -= r;
+-        y -= r;
+-
+-        gl.glVertex2d(x, y);
+-        gl.glVertex2d(x + w, y);
+-
+-        gl.glVertex2d(x + w, y + h);
+-        gl.glVertex2d(x, y + h);
+-
+-        gl.glEnd();
+-    }
+-
+-    public static void drawRegularRibs(GL gl, int r, Color color, double x, double y) {
+-        gl.glColor3fv(color.getColorComponents(null), 0);
+-        gl.glBegin(GL.GL_POLYGON);
+-        int step = 1;
+-        for (int i = 0; i < 360; i += step)
+-            gl.glVertex2d(x + r * cos(toRadians(i)),
+-                    y + r * sin(toRadians(i)));
+-
+-        gl.glEnd();
+-    }
+-
+-    public static void drawCircle(GL gl, int r, Color color, double x, double y) {
+-        drawRegularRibs(gl, r, color, x, y);
+-    }
+-
+-    public static Clip playMusic(String location, boolean loop) {
+-
+-        try {
+-            File musicPath = new File(location);
+-
+-            if (musicPath.exists()) {
+-                AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+-                Clip clip = AudioSystem.getClip();
+-                clip.open(audioInput);
+-                clip.start();
+-                if (loop) clip.loop(Clip.LOOP_CONTINUOUSLY);
+-                return clip;
+-            } else {
+-                System.out.println("Cant find file");
+-            }
+-        } catch (Exception e) {
+-            System.out.println(e.getMessage());
+-
+-        }
+-
+-        return null;
+-    }
+-
+-    public static void DrawSprite(GL gl, int x, int y, int index, int[] textures, int size) {
+-        gl.glEnable(GL.GL_BLEND);
+-        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[index]); // Turn Blending On
+-
+-        gl.glPushMatrix();
+-        gl.glTranslated(-5, -5, 0);
+-        gl.glBegin(GL.GL_QUADS);
+-        // Front Face
+-        gl.glTexCoord2f(0.0f, 0.0f);
+-        gl.glVertex3f(x, y + size, -1.0f);
+-
+-        gl.glTexCoord2f(1.0f, 0.0f);
+-        gl.glVertex3f(x + size, y + size, -1.0f);
+-
+-        gl.glTexCoord2f(1.0f, 1.0f);
+-        gl.glVertex3f(x + size, y, -1.0f);
+-
+-        gl.glTexCoord2f(0.0f, 1.0f);
+-        gl.glVertex3f(x, y, -1.0f);
+-
+-        gl.glEnd();
+-        gl.glPopMatrix();
+-
+-        gl.glDisable(GL.GL_BLEND);
+-    }
+-
+-
+-    public static void DrawSprite(GL gl, int x, int y, int index, int[] textures, int w, int h) {
+-        gl.glEnable(GL.GL_BLEND);
+-        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[index]); // Turn Blending On
+-
+-        gl.glPushMatrix();
+-        gl.glTranslated(-5, -5, 0);
+-        gl.glBegin(GL.GL_QUADS);
+-        // Front Face
+-        gl.glTexCoord2f(0.0f, 0.0f);
+-        gl.glVertex3f(x, y + h, -1.0f);
+-
+-        gl.glTexCoord2f(1.0f, 0.0f);
+-        gl.glVertex3f(x + w, y + h, -1.0f);
+-
+-        gl.glTexCoord2f(1.0f, 1.0f);
+-        gl.glVertex3f(x + w, y, -1.0f);
+-
+-        gl.glTexCoord2f(0.0f, 1.0f);
+-        gl.glVertex3f(x, y, -1.0f);
+-
+-        gl.glEnd();
+-        gl.glPopMatrix();
+-
+-        gl.glDisable(GL.GL_BLEND);
+-    }
+-
+-    public static void drawString(GL gl, int x, int y, String s) {
+-        GLUT glt = new GLUT();
+-        gl.glRasterPos2i(x, y);
+-        glt.glutBitmapString(5, s);
+-    }
+-
+-}
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"openjdk-17\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 1d4ce234078e3161058006ee6fd220cd9a84a279)
++++ b/.idea/misc.xml	(date 1672047004895)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="openjdk-17" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="openjdk-17" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: PacMan-Project.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"library\" name=\"hamcrest-core-1.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"lib64\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"lib641\" level=\"application\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/PacMan-Project.iml b/PacMan-Project.iml
+--- a/PacMan-Project.iml	(revision 1d4ce234078e3161058006ee6fd220cd9a84a279)
++++ b/PacMan-Project.iml	(date 1672047157599)
+@@ -10,5 +10,7 @@
+     <orderEntry type="library" name="hamcrest-core-1.3" level="project" />
+     <orderEntry type="library" name="lib64" level="project" />
+     <orderEntry type="library" name="lib641" level="application" />
++    <orderEntry type="library" name="lib642" level="application" />
++    <orderEntry type="library" name="lib643" level="application" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1901c679-ef5b-4b01-869c-8de279211f87\" name=\"Changes\" comment=\"add time and pause in Map 1\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Moody\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2JCRDqFkG23HmnxkPLxir2jqw3w\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/JOGLwin/lib64/jogl_cg.dll&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\pc\\IdeaProjects\\PacMan-Project\\src\\Project\\Assets\\imgs\" />\r\n      <recent name=\"C:\\Users\\pc\\IdeaProjects\\PacMan-Project\\src\\Project\\Assets\" />\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\" />\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\\texture\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\pc\\IdeaProjects\\PacMan-Project\\src\\Project\\Assets\\imgs\" />\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\\Assets\" />\r\n      <recent name=\"C:\\Users\\pc\\IdeaProjects\\PacMan-Project\\src\\Project\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"Project.Pages\" />\r\n      <recent name=\"Project.Map5\" />\r\n      <recent name=\"Project.Map4\" />\r\n      <recent name=\"\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Map1\">\r\n    <configuration name=\"Map1\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Maps.Map1.Map1\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Maps.Map1.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Map2\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Maps.Map2.Map2\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Maps.Map2.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Map5\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Maps.Map5.Map5\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Maps.Map5.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Project.Pages.HomePage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Pages.HomePage\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Pages.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"User_Name\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Pages.User_Name\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Pages.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Map1\" />\r\n        <item itemvalue=\"Application.Map2\" />\r\n        <item itemvalue=\"Application.User_Name\" />\r\n        <item itemvalue=\"Application.Project.Pages.HomePage\" />\r\n        <item itemvalue=\"Application.Map5\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1901c679-ef5b-4b01-869c-8de279211f87\" name=\"Changes\" comment=\"\" />\r\n      <created>1671579963392</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1671579963392</updated>\r\n      <workItem from=\"1671629520497\" duration=\"1008000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"first Pages\">\r\n      <created>1671580409361</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671580409361</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"org. package\">\r\n      <created>1671589508336</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671589508336</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Add Score And Lives\">\r\n      <created>1672014467857</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672014467857</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Add Score And Lives\">\r\n      <created>1672014879153</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672014879153</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Add Time in Map2\">\r\n      <created>1672017939951</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672017939951</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Add Time in Map2\">\r\n      <created>1672018121535</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672018121535</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"add time and pause in Map 1\">\r\n      <created>1672019394132</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672019394132</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"CUSTOM_BOOLEAN_PROPERTIES\">\r\n                <map>\r\n                  <entry key=\"Show.Git.Branches\" value=\"false\" />\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"first Pages\" />\r\n    <MESSAGE value=\"org. package\" />\r\n    <MESSAGE value=\"Add Score And Lives\" />\r\n    <MESSAGE value=\"Add Time in Map2\" />\r\n    <MESSAGE value=\"add time and pause in Map 1\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"add time and pause in Map 1\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1d4ce234078e3161058006ee6fd220cd9a84a279)
++++ b/.idea/workspace.xml	(date 1672047157606)
+@@ -4,9 +4,23 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="add time and pause in Map 1">
++    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="for now">
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_1.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_1.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_23_2022_8_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_23_2022_8_35_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_25_2022_2_47_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_25_2022_2_47_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_23_2022_9_41_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_23_2022_9_41_AM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_10_30_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_10_30_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_1_41_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_1_41_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_8_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_8_35_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_12_29_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_12_29_AM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_2_18_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_2_18_AM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/PacMan-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PacMan-Project.iml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -23,9 +37,10 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="Moody" />
++        <entry key="$PROJECT_DIR$" value="Menna_Akram" />
+       </map>
+     </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -38,27 +53,25 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/JOGLwin/lib64/jogl_cg.dll&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "last_opened_file_path": "C:/Users/pc/Desktop/JOGLwin/lib64/jogl_cg.dll",
++    "project.structure.last.edited": "Global Libraries",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "settings.editor.selected.configurable": "Errors"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
+       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets" />
+       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project" />
+       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\texture" />
+     </key>
+     <key name="MoveFile.RECENT_KEYS">
+-      <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
+       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\Assets" />
+       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project" />
+     </key>
+@@ -69,7 +82,7 @@
+       <recent name="" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.Map1">
++  <component name="RunManager" selected="Application.Map5">
+     <configuration name="Map1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1" />
+       <module name="PacMan-Project" />
+@@ -96,12 +109,12 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Map5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map5.Map5" />
++    <configuration name="Map4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map4.Map4" />
+       <module name="PacMan-Project" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="Project.Maps.Map5.*" />
++          <option name="PATTERN" value="Project.Maps.Map4.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -109,12 +122,12 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Project.Pages.HomePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Project.Pages.HomePage" />
++    <configuration name="Map5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map5.Map5" />
+       <module name="PacMan-Project" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="Project.Pages.*" />
++          <option name="PATTERN" value="Project.Maps.Map5.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -137,11 +150,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.Map1" />
+-        <item itemvalue="Application.Map2" />
+         <item itemvalue="Application.User_Name" />
+-        <item itemvalue="Application.Project.Pages.HomePage" />
+         <item itemvalue="Application.Map5" />
++        <item itemvalue="Application.Map4" />
++        <item itemvalue="Application.Map2" />
++        <item itemvalue="Application.Map1" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -169,42 +182,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1671589508336</updated>
+     </task>
+-    <task id="LOCAL-00003" summary="Add Score And Lives">
+-      <created>1672014467857</created>
+-      <option name="number" value="00003" />
+-      <option name="presentableId" value="LOCAL-00003" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1672014467857</updated>
+-    </task>
+-    <task id="LOCAL-00004" summary="Add Score And Lives">
+-      <created>1672014879153</created>
+-      <option name="number" value="00004" />
+-      <option name="presentableId" value="LOCAL-00004" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1672014879153</updated>
+-    </task>
+-    <task id="LOCAL-00005" summary="Add Time in Map2">
+-      <created>1672017939951</created>
+-      <option name="number" value="00005" />
+-      <option name="presentableId" value="LOCAL-00005" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1672017939951</updated>
+-    </task>
+-    <task id="LOCAL-00006" summary="Add Time in Map2">
+-      <created>1672018121535</created>
+-      <option name="number" value="00006" />
+-      <option name="presentableId" value="LOCAL-00006" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1672018121535</updated>
+-    </task>
+-    <task id="LOCAL-00007" summary="add time and pause in Map 1">
+-      <created>1672019394132</created>
+-      <option name="number" value="00007" />
+-      <option name="presentableId" value="LOCAL-00007" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1672019394132</updated>
+-    </task>
+-    <option name="localTasksCounter" value="8" />
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -230,9 +208,7 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="first Pages" />
+     <MESSAGE value="org. package" />
+-    <MESSAGE value="Add Score And Lives" />
+-    <MESSAGE value="Add Time in Map2" />
+-    <MESSAGE value="add time and pause in Map 1" />
+-    <option name="LAST_COMMIT_MESSAGE" value="add time and pause in Map 1" />
++    <MESSAGE value="for now" />
++    <option name="LAST_COMMIT_MESSAGE" value="for now" />
+   </component>
+ </project>
+\ No newline at end of file

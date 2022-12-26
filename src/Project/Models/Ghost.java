@@ -70,4 +70,5 @@ public class Ghost {
     public void reset() {
         direction = Directions.IDEAL;
     }
+
 }
