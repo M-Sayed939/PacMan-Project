@@ -86,21 +86,20 @@ public class User_Name2 extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        if (jTextField1.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Enter Player1 Name : ", "user_name", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
-        if (jTextField2.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Enter Player2 Name : ", "user_name", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
-
 
         this.dispose();
         new PlayerChoose().setVisible(true);
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+        if (jTextField2.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Enter Player1 Name : ", "user_name", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        if (jTextField1.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Enter Player2 Name : ", "user_name", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
         this.dispose();
         new ChooseMap_Mult().setVisible(true);
     }
