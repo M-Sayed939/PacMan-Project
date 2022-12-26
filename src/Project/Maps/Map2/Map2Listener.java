@@ -12,6 +12,7 @@ import Project.Pages.WinnerPage;
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
+import javax.media.opengl.GLException;
 import javax.media.opengl.glu.GLU;
 import javax.sound.sampled.Clip;
 import javax.swing.*;
@@ -20,8 +21,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.BitSet;
 
-import static Project.Core.Utils.DrawSprite;
-import static Project.Core.Utils.playMusic;
+import static Project.Core.Utils.*;
+import static Project.Core.Utils.drawString;
 import static java.awt.event.KeyEvent.*;
 import static java.awt.event.KeyEvent.VK_LEFT;
 
@@ -29,6 +30,8 @@ public class Map2Listener extends AnimListener {
     JFrame frame = null;
     Clip EatingSound;
     Pacman pacman = new Pacman();
+    int CountFood;
+    int Lives =3;
     ArrayList<Eating> Eating = new ArrayList<>();
     ArrayList<Ghost> ghosts = new ArrayList<>();
     static int No_Of_Ghosts = 4;
@@ -170,6 +173,12 @@ public class Map2Listener extends AnimListener {
         handelGhostMove();
 
         handelLose();
+        try {
+            drawString(gl, 5, MAX_Y - 8, "Score: " + CountFood);  // Score
+            drawString(gl, 60, MAX_Y - 8, "Lives: " + Lives); // Lives
+        } catch (GLException e) {
+            System.out.println(e.getMessage());
+        }
 
         handelWinning();
 
@@ -180,13 +189,17 @@ public class Map2Listener extends AnimListener {
         for (Ghost g : ghosts) {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
                 if (EatingSound != null) EatingSound.stop();
-
-                frame.dispose();
-                new GameOver().setVisible(true);
+                if (--Lives == 0) {
+                    frame.dispose();
+                    new GameOver().setVisible(true);
+                } else {
+                    pacman.reset();
+                }
+            }
             }
 
         }
-    }
+
 
     private void handelGhostMove() {
         for (Ghost g : ghosts) {
@@ -246,6 +259,7 @@ public class Map2Listener extends AnimListener {
 
         for (int i = 0; i < Eating.size(); i++) {
             if (pacman.ii == Eating.get(i).ii && pacman.jj == Eating.get(i).jj) {
+                CountFood++;
                 System.out.println(Eating.size());
                 if (EatingSound == null || !EatingSound.isRunning()) {
                     EatingSound = playMusic("src/Project/Assets/pacman-wakawaka.wav", false);
