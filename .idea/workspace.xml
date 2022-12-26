@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="finishing">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="finishing" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +60,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Map3">
+  <component name="RunManager" selected="Application.ChooseMap">
     <configuration name="ChooseMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Project.Pages.ChooseMap" />
       <module name="PacMan-Project" />
@@ -130,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ChooseMap" />
+        <item itemvalue="Application.User_Name" />
         <item itemvalue="Application.Map3" />
         <item itemvalue="Application.User_Name2" />
-        <item itemvalue="Application.ChooseMap" />
         <item itemvalue="Application.Map1" />
-        <item itemvalue="Application.User_Name" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +217,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first Pages" />

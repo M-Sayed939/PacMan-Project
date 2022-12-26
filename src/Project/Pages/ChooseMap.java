@@ -125,7 +125,7 @@ public class ChooseMap extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
-        new PlayerChoose().setVisible(true);
+        new User_Name().setVisible(true);
     }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
