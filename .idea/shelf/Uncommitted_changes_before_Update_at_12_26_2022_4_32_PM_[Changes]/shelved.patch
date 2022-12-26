@@ -1,0 +1,896 @@
+Index: src/Project/Pages/HomePage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Project.Pages;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\npublic class HomePage extends JFrame {\r\n\r\n\r\n        public HomePage() {\r\n            initComponents();\r\n            setLocationRelativeTo(null);\r\n        }\r\n\r\n\r\n        @SuppressWarnings(\"unchecked\")\r\n        // <editor-fold defaultstate=\"collapsed\" desc=\"Generated Code\">\r\n        private void initComponents() {\r\n\r\n            exit = new JButton();\r\n            play = new JButton();\r\n            play1 = new JButton();\r\n            jLabel2 = new JLabel();\r\n\r\n            setDefaultCloseOperation(EXIT_ON_CLOSE);\r\n            setMinimumSize(new Dimension(700,520));\r\n            setResizable(false);\r\n            setTitle(\"Pac-Man Game\");\r\n            getContentPane().setLayout(null);\r\n            getContentPane().setLayout(null);\r\n\r\n            exit.setFont(new java.awt.Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n            exit.setText(\"Exit\");\r\n            exit.addActionListener(new java.awt.event.ActionListener() {\r\n                public void actionPerformed(java.awt.event.ActionEvent evt) {\r\n                    exitActionPerformed(evt);\r\n                }\r\n            });\r\n            getContentPane().add(exit);\r\n            exit.setBounds(500, 360, 160, 50);\r\n\r\n            play.setFont(new java.awt.Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n            play.setText(\"Help\");\r\n            play.addActionListener(new java.awt.event.ActionListener() {\r\n                public void actionPerformed(java.awt.event.ActionEvent evt) {\r\n                    playActionPerformed(evt);\r\n                }\r\n            });\r\n            getContentPane().add(play);\r\n            play.setBounds(270, 360, 160, 50);\r\n\r\n            play1.setFont(new java.awt.Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n            play1.setText(\"Play\");\r\n            play1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));\r\n            play1.addActionListener(new java.awt.event.ActionListener() {\r\n                public void actionPerformed(java.awt.event.ActionEvent evt) {\r\n                    play1ActionPerformed(evt);\r\n                }\r\n            });\r\n            getContentPane().add(play1);\r\n            play1.setBounds(30, 360, 160, 50);\r\n\r\n            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource(\"/Project/Assets/PacManH.jpg\"))); // NOI18N\r\n            getContentPane().add(jLabel2);\r\n            jLabel2.setBounds(0, -20, 770, 540);\r\n\r\n            pack();\r\n        }// </editor-fold>\r\n\r\n        private void exitActionPerformed(java.awt.event.ActionEvent evt) {\r\n            System.exit(0);\r\n        }\r\n\r\n        private void playActionPerformed(java.awt.event.ActionEvent evt) {\r\n            this.dispose();\r\n            new HelpPage().setVisible(true);\r\n\r\n        }\r\n\r\n        private void play1ActionPerformed(java.awt.event.ActionEvent evt) {\r\n            this.dispose();\r\n            new PlayerChoose().setVisible(true);\r\n        }\r\n\r\n        /**\r\n         * @param args the command line arguments\r\n         */\r\n        public static void main(String args[]) {\r\n            /* Set the Nimbus look and feel */\r\n            //<editor-fold defaultstate=\"collapsed\" desc=\" Look and feel setting code (optional) \">\r\n            /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.\r\n             * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html\r\n             */\r\n            try {\r\n                for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {\r\n                    if (\"Nimbus\".equals(info.getName())) {\r\n                        javax.swing.UIManager.setLookAndFeel(info.getClassName());\r\n                        break;\r\n                    }\r\n                }\r\n            } catch (ClassNotFoundException ex) {\r\n                java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);\r\n            } catch (InstantiationException ex) {\r\n                java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);\r\n            } catch (IllegalAccessException ex) {\r\n                java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);\r\n            } catch (javax.swing.UnsupportedLookAndFeelException ex) {\r\n                java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);\r\n            }\r\n            //</editor-fold>\r\n\r\n            /* Create and display the form */\r\n            java.awt.EventQueue.invokeLater(new Runnable() {\r\n                public void run() {\r\n                    new HomePage().setVisible(true);\r\n                }\r\n            });\r\n        }\r\n\r\n        // Variables declaration - do not modify\r\n        private javax.swing.JButton exit;\r\n        private javax.swing.JLabel jLabel2;\r\n        private javax.swing.JButton play;\r\n        private javax.swing.JButton play1;\r\n        // End of variables declaration\r\n    }\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Project/Pages/HomePage.java b/src/Project/Pages/HomePage.java
+--- a/src/Project/Pages/HomePage.java	(revision 3ef44bc445a3c037a4e553bd3bab117bb2e333aa)
++++ b/src/Project/Pages/HomePage.java	(date 1672059689002)
+@@ -19,6 +19,8 @@
+             play = new JButton();
+             play1 = new JButton();
+             jLabel2 = new JLabel();
++            jButton1 = new JButton();
++
+ 
+             setDefaultCloseOperation(EXIT_ON_CLOSE);
+             setMinimumSize(new Dimension(700,520));
+@@ -27,6 +29,8 @@
+             getContentPane().setLayout(null);
+             getContentPane().setLayout(null);
+ 
++
++
+             exit.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
+             exit.setText("Exit");
+             exit.addActionListener(new java.awt.event.ActionListener() {
+@@ -35,7 +39,8 @@
+                 }
+             });
+             getContentPane().add(exit);
+-            exit.setBounds(500, 360, 160, 50);
++            exit.setBounds(490, 370, 160, 50);
++
+ 
+             play.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
+             play.setText("Help");
+@@ -45,7 +50,8 @@
+                 }
+             });
+             getContentPane().add(play);
+-            play.setBounds(270, 360, 160, 50);
++            play.setBounds(260, 370, 160, 50);
++
+ 
+             play1.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
+             play1.setText("Play");
+@@ -56,7 +62,18 @@
+                 }
+             });
+             getContentPane().add(play1);
+-            play1.setBounds(30, 360, 160, 50);
++            play1.setBounds(130, 220, 200, 50);
++
++            jButton1.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
++            jButton1.setText("Users");
++            getContentPane().add(jButton1);
++            jButton1.setBounds(30, 370, 160, 50);
++            jButton1.addActionListener(new java.awt.event.ActionListener() {
++                public void actionPerformed(java.awt.event.ActionEvent evt) {
++                    jButton1ActionPerformed(evt);
++                }
++            });
++
+ 
+             jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project/Assets/PacManH.jpg"))); // NOI18N
+             getContentPane().add(jLabel2);
+@@ -79,6 +96,10 @@
+             this.dispose();
+             new PlayerChoose().setVisible(true);
+         }
++        private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
++            this.dispose();
++            new Users().setVisible(true);
++        }
+ 
+         /**
+          * @param args the command line arguments
+@@ -120,6 +141,7 @@
+         private javax.swing.JLabel jLabel2;
+         private javax.swing.JButton play;
+         private javax.swing.JButton play1;
++        private javax.swing.JButton jButton1;
+         // End of variables declaration
+     }
+ 
+Index: src/Project/Maps/Map2/Map2Listener.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Project.Maps.Map2;\r\n\r\nimport Project.Core.AnimListener;\r\nimport Project.Core.texture.TextureReader;\r\nimport Project.Models.Directions;\r\nimport Project.Models.Ghost;\r\nimport Project.Models.Eating;\r\nimport Project.Models.Pacman;\r\nimport Project.Pages.GameOver;\r\nimport Project.Pages.WinnerPage;\r\n\r\n\r\nimport javax.media.opengl.GL;\r\nimport javax.media.opengl.GLAutoDrawable;\r\nimport javax.media.opengl.GLException;\r\nimport javax.media.opengl.glu.GLU;\r\nimport javax.sound.sampled.Clip;\r\nimport javax.swing.*;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\nimport java.awt.event.KeyEvent;\r\nimport java.io.IOException;\r\nimport java.util.ArrayList;\r\nimport java.util.BitSet;\r\n\r\nimport static Project.Core.Utils.*;\r\nimport static Project.Core.Utils.drawString;\r\nimport static java.awt.event.KeyEvent.*;\r\nimport static java.awt.event.KeyEvent.VK_LEFT;\r\n\r\npublic class Map2Listener extends AnimListener {\r\n    JFrame frame = null;\r\n    Clip EatingSound;\r\n    Pacman pacman = new Pacman();\r\n    int CountFood;\r\n    int Lives = 3;\r\n    boolean pause = false;\r\n    int time;\r\n    Timer timer = new Timer(1000, e -> {\r\n        time++;\r\n    });\r\n    ArrayList<Eating> Eating = new ArrayList<>();\r\n    ArrayList<Ghost> ghosts = new ArrayList<>();\r\n    static int No_Of_Ghosts = 4;\r\n    public static final int MAX_X = 620;\r\n    public static final int MAX_Y = 265;\r\n    int AnimIndexForPacman = 1;\r\n    int AnimIndexForFood = 7;\r\n    String[] textureNames = {\r\n            \"mapp2.jpg\", // 0\r\n            \"pacman.png\", // 1\r\n            \"up.gif\", // 2\r\n            \"down.gif\", // 3\r\n            \"right.gif\", // 4\r\n            \"left.gif\", // 5\r\n            \"ghost.gif\", // 6\r\n            \"foodd.png\", // 7\r\n    };\r\n    TextureReader.Texture[] texture = new TextureReader.Texture[textureNames.length];\r\n    int[] textures = new int[textureNames.length];\r\n    int[][] Map = new int[][]{\r\n            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},\r\n            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},\r\n            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},\r\n            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},\r\n            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},\r\n            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},\r\n            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},\r\n            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},\r\n\r\n    };\r\n    int row = Map.length;\r\n    int column = Map[0].length;\r\n\r\n    public void init(GLAutoDrawable gld) {\r\n        GL gl = gld.getGL();\r\n        /*gl.glClearColor(0, 0, 0, 1f);*/\r\n        {\r\n            gl.glEnable(GL.GL_TEXTURE_2D);\r\n            gl.glBlendFunc(GL.GL_SRC_ALPHA, GL.GL_ONE_MINUS_SRC_ALPHA);\r\n            gl.glGenTextures(textureNames.length, textures, 0);\r\n            for (int i = 0; i < textureNames.length; i++) {\r\n                try {\r\n                    texture[i] = TextureReader.readTexture(assetsFolderName + \"//\" + textureNames[i], true);\r\n                    gl.glBindTexture(GL.GL_TEXTURE_2D, textures[i]);\r\n\r\n                    new GLU().gluBuild2DMipmaps(\r\n                            GL.GL_TEXTURE_2D,\r\n                            GL.GL_RGBA,\r\n                            texture[i].getWidth(), texture[i].getHeight(),\r\n                            GL.GL_RGBA,\r\n                            GL.GL_UNSIGNED_BYTE,\r\n                            texture[i].getPixels() // Image data\r\n                    );\r\n                } catch (IOException e) {\r\n                    System.out.println(e.getMessage());\r\n                    e.printStackTrace();\r\n                }\r\n            }\r\n        }\r\n        gl.glMatrixMode(GL.GL_PROJECTION);\r\n        gl.glLoadIdentity();\r\n\r\n        gl.glOrtho(0, MAX_X, MAX_Y, 0, 0, 1.0);\r\n\r\n        fillEating();\r\n\r\n        addGhostsToArray();\r\n        for (Ghost g : ghosts) {\r\n            g.randMove();\r\n        }\r\n        startTimer();\r\n    }\r\n\r\n    private void addGhostsToArray() {\r\n        for (int i = 0; i < No_Of_Ghosts; i++) {\r\n            ghosts.add(new Ghost());\r\n        }\r\n    }\r\n\r\n    private void fillEating() {\r\n        for (int i = 0; i < row; i++) {\r\n            for (int j = 0; j < column; j++) {\r\n                if (i % 2 == 0 && j % 3 == 0)\r\n                    if (Map[i][j] == 1) { // eat\r\n                        Eating.add(new Eating(j, i));\r\n                    }\r\n            }\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public void display(GLAutoDrawable gld) {\r\n        GL gl = gld.getGL();\r\n        gl.glClear(GL.GL_COLOR_BUFFER_BIT);\r\n\r\n        gl.glPushMatrix();\r\n        int move = 5;\r\n        gl.glTranslated(8, move, 0);\r\n        gl.glScaled(1, 0.44, 1);\r\n        {\r\n            drawBackground(gl);\r\n        }\r\n        gl.glPopMatrix();\r\n\r\n        gl.glPushMatrix();\r\n        gl.glTranslated(8, move, 0);\r\n        gl.glScaled(0.95, 0.93, 1);\r\n        {\r\n            drawEating(gl);\r\n            drawPacman(gl);\r\n            drawGhost(gl);\r\n        }\r\n        gl.glPopMatrix();\r\n\r\n        handelPacmanMove();\r\n        handelPacmanEating();\r\n\r\n        handelGhostMove();\r\n\r\n        handelLose();\r\n        try {\r\n            drawString(gl, 8, 8, \"Lives: \" + Lives + \"      Score: \" + CountFood + \"      Time: \" + time); // Lives Score Time\r\n        } catch (GLException e) {\r\n            System.out.println(e.getMessage());\r\n        }\r\n\r\n        handelWinning();\r\n\r\n    }\r\n\r\n    private void startTimer() {\r\n        timer.start();\r\n    }\r\n\r\n\r\n    private void handelLose() {\r\n        for (Ghost g : ghosts) {\r\n            if (g.ii == pacman.ii && g.jj == pacman.jj) {\r\n                if (EatingSound != null) EatingSound.stop();\r\n                if (--Lives == 0) {\r\n                    frame.dispose();\r\n                    new GameOver().setVisible(true);\r\n                } else {\r\n                    pacman.reset();\r\n                }\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n\r\n    private void handelGhostMove() {\r\n        for (Ghost g : ghosts) {\r\n            switch (g.direction) {\r\n                case IDEAL -> {\r\n                }\r\n                case UP -> {\r\n                    if (g.y - g.step < 0 || g.jj - 1 < 0 || Map[g.jj - 1][g.ii] == 0) {\r\n                        g.randMove();\r\n                        return;\r\n                    }\r\n                    g.moveUP();\r\n                }\r\n                case DOWN -> {\r\n                    if (g.y + g.step > MAX_Y || g.jj + 1 >= row || Map[g.jj + 1][g.ii] == 0) {\r\n                        g.randMove();\r\n                        return;\r\n                    }\r\n                    g.moveDown();\r\n                }\r\n                case RIGHT -> {\r\n                    if (g.x + g.step > MAX_X || g.ii + 1 >= column || Map[g.jj][g.ii + 1] == 0) {\r\n                        g.randMove();\r\n                        return;\r\n                    }\r\n                    g.moveRight();\r\n                }\r\n                case LEFT -> {\r\n                    if (g.x - g.step < 0 || g.ii - 1 < 0 || Map[g.jj][g.ii - 1] == 0) {\r\n                        g.randMove();\r\n                        return;\r\n                    }\r\n                    g.moveLeft();\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    private void drawGhost(GL gl) {\r\n        for (Ghost g : ghosts) {\r\n            DrawSprite(gl, (int) g.x, (int) g.y, 6, textures, 15);\r\n        }\r\n    }\r\n\r\n    private void handelWinning() {\r\n        if (Eating.isEmpty()) {\r\n            System.out.println(\"You Win\");\r\n            if (EatingSound != null) EatingSound.stop();\r\n\r\n            frame.dispose();\r\n            new WinnerPage().setVisible(true);\r\n        }\r\n    }\r\n\r\n\r\n    private void handelPacmanEating() {\r\n\r\n        for (int i = 0; i < Eating.size(); i++) {\r\n            if (pacman.ii == Eating.get(i).ii && pacman.jj == Eating.get(i).jj) {\r\n                CountFood++;\r\n                System.out.println(Eating.size());\r\n                if (EatingSound == null || !EatingSound.isRunning()) {\r\n                    EatingSound = playMusic(\"src/Project/Assets/pacman-wakawaka.wav\", false);\r\n                }\r\n                Eating.remove(i--);\r\n            }\r\n        }\r\n    }\r\n\r\n    private void handelPacmanMove() {\r\n        if (isKeyPressed(VK_UP)) {\r\n            pacman.direction = Directions.UP;\r\n        }\r\n        if (isKeyPressed(VK_DOWN)) {\r\n            pacman.direction = Directions.DOWN;\r\n        }\r\n        if (isKeyPressed(VK_RIGHT)) {\r\n            pacman.direction = Directions.RIGHT;\r\n        }\r\n        if (isKeyPressed(VK_LEFT)) {\r\n            pacman.direction = Directions.LEFT;\r\n        }\r\n        if (!(isKeyPressed(VK_UP) || isKeyPressed(VK_DOWN) || isKeyPressed(VK_RIGHT) || isKeyPressed(VK_LEFT))) {\r\n            pacman.direction = Directions.IDEAL;\r\n        }\r\n\r\n        switch (pacman.direction) {\r\n            case IDEAL -> {\r\n            }\r\n            case UP -> {\r\n                if (pacman.y - pacman.step < 0 || pacman.jj - 1 < 0 || Map[pacman.jj - 1][pacman.ii] == 0) return;\r\n                pacman.moveUP();\r\n            }\r\n            case DOWN -> {\r\n                if (pacman.y + pacman.step > MAX_Y || pacman.jj + 1 >= row || Map[pacman.jj + 1][pacman.ii] == 0)\r\n                    return;\r\n                pacman.moveDown();\r\n            }\r\n            case RIGHT -> {\r\n                if (pacman.x + pacman.step > MAX_X || pacman.ii + 1 >= column || Map[pacman.jj][pacman.ii + 1] == 0)\r\n                    return;\r\n                pacman.moveRight();\r\n            }\r\n            case LEFT -> {\r\n                if (pacman.x - pacman.step < 0 || pacman.ii - 1 < 0 || Map[pacman.jj][pacman.ii - 1] == 0) return;\r\n                pacman.moveLeft();\r\n            }\r\n        }\r\n    }\r\n\r\n    private void drawEating(GL gl) {\r\n        for (Eating e : Eating) {\r\n            DrawSprite(gl, (int) e.x, (int) e.y, AnimIndexForFood, textures, 12);\r\n        }\r\n    }\r\n\r\n    private void drawPacman(GL gl) {\r\n        changeAnimIndex();\r\n\r\n        DrawSprite(gl, (int) pacman.x, (int) pacman.y, AnimIndexForPacman, textures, 15);\r\n    }\r\n\r\n    private void changeAnimIndex() {\r\n        switch (pacman.direction) {\r\n            case IDEAL -> {\r\n                AnimIndexForPacman = 1;\r\n            }\r\n            case UP -> { // 2\r\n                if (AnimIndexForPacman == 1) AnimIndexForPacman = 2;\r\n                else if (AnimIndexForPacman == 2) AnimIndexForPacman = 1;\r\n            }\r\n            case DOWN -> { // 3\r\n\r\n                if (AnimIndexForPacman == 1) AnimIndexForPacman = 3;\r\n                else if (AnimIndexForPacman == 3) AnimIndexForPacman = 1;\r\n            }\r\n            case RIGHT -> { // 4\r\n\r\n                if (AnimIndexForPacman == 1) AnimIndexForPacman = 4;\r\n                else if (AnimIndexForPacman == 4) AnimIndexForPacman = 1;\r\n            }\r\n            case LEFT -> { // 5\r\n\r\n                if (AnimIndexForPacman == 1) AnimIndexForPacman = 5;\r\n                else if (AnimIndexForPacman == 5) AnimIndexForPacman = 1;\r\n            }\r\n        }\r\n    }\r\n\r\n    private void drawBackground(GL gl) {\r\n        DrawSprite(gl, 0, 0, 0, textures, MAX_X - 10);\r\n    }\r\n\r\n\r\n    public BitSet keyBits = new BitSet(256);\r\n\r\n    @Override\r\n    public void keyPressed(final KeyEvent event) {\r\n        int keyCode = event.getKeyCode();\r\n        keyBits.set(keyCode);\r\n        if (event.getKeyCode() == KeyEvent.VK_P) {\r\n            pause = !pause;\r\n            if (!pause)\r\n                Map2.animator.start();\r\n            else {\r\n                Map2.animator.stop();\r\n                JOptionPane.showMessageDialog(null, \"Enter P To Continue\", \"Attention\", JOptionPane.WARNING_MESSAGE);\r\n\r\n            }\r\n\r\n        }\r\n\r\n    }\r\n\r\n\r\n    @Override\r\n    public void keyReleased(final KeyEvent event) {\r\n        int keyCode = event.getKeyCode();\r\n        keyBits.clear(keyCode);\r\n        switch (keyCode) {\r\n            case VK_UP, VK_DOWN, VK_RIGHT, VK_LEFT -> pacman.direction = Directions.IDEAL;\r\n        }\r\n    }\r\n\r\n    public boolean isKeyPressed(final int keyCode) {\r\n        return keyBits.get(keyCode);\r\n    }\r\n\r\n    @Override\r\n    public void keyTyped(KeyEvent e) {\r\n\r\n    }\r\n\r\n    @Override\r\n    public void reshape(GLAutoDrawable glAutoDrawable, int i, int i1, int i2, int i3) {\r\n\r\n    }\r\n\r\n    @Override\r\n    public void displayChanged(GLAutoDrawable glAutoDrawable, boolean b, boolean b1) {\r\n\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Project/Maps/Map2/Map2Listener.java b/src/Project/Maps/Map2/Map2Listener.java
+--- a/src/Project/Maps/Map2/Map2Listener.java	(revision 3ef44bc445a3c037a4e553bd3bab117bb2e333aa)
++++ b/src/Project/Maps/Map2/Map2Listener.java	(date 1672065020892)
+@@ -373,9 +373,12 @@
+         keyBits.set(keyCode);
+         if (event.getKeyCode() == KeyEvent.VK_P) {
+             pause = !pause;
+-            if (!pause)
++            if (!pause){
++                timer.start();
+                 Map2.animator.start();
++            }
+             else {
++                timer.stop();
+                 Map2.animator.stop();
+                 JOptionPane.showMessageDialog(null, "Enter P To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
+ 
+Index: src/Project/Maps/Map2/Map2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Project.Maps.Map2;\r\n\r\nimport com.sun.opengl.util.FPSAnimator;\r\n\r\nimport javax.media.opengl.GLCanvas;\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\n\r\npublic class Map2 extends JFrame {\r\n    GLCanvas glcanvas;\r\n    Map2Listener listener = new Map2Listener();\r\n    static FPSAnimator animator;\r\n\r\n    public Map2() {\r\n        super(\"Map 2\");\r\n        setDefaultCloseOperation(EXIT_ON_CLOSE);\r\n        glcanvas = new GLCanvas();\r\n        glcanvas.addGLEventListener(listener);\r\n        glcanvas.addKeyListener(listener);\r\n        animator = new FPSAnimator(glcanvas, 25);\r\n\r\n        listener.frame = this;\r\n\r\n        add(glcanvas, BorderLayout.CENTER);\r\n        setSize(800, 800);\r\n        setLocationRelativeTo(this);\r\n        setVisible(true);\r\n        requestFocus();\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        new Map2();\r\n        animator.start();\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Project/Maps/Map2/Map2.java b/src/Project/Maps/Map2/Map2.java
+--- a/src/Project/Maps/Map2/Map2.java	(revision 3ef44bc445a3c037a4e553bd3bab117bb2e333aa)
++++ b/src/Project/Maps/Map2/Map2.java	(date 1672057175977)
+@@ -8,7 +8,7 @@
+ 
+ public class Map2 extends JFrame {
+     GLCanvas glcanvas;
+-    Map2Listener listener = new Map2Listener();
++    Map22Listener listener = new Map22Listener();
+     static FPSAnimator animator;
+ 
+     public Map2() {
+Index: src/Project/Pages/ChooseMap_Mult.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Project.Pages;\r\n\r\n//import Project.Maps.Map1.Map1;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\nimport java.awt.event.ActionEvent;\r\n\r\n\r\npublic class ChooseMap_Mult extends JFrame {\r\n\r\n\r\n    public ChooseMap_Mult() {\r\n        initComponents();\r\n        setLocationRelativeTo(null);\r\n\r\n        setFocusable(true);\r\n        requestFocus();\r\n        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\r\n\r\n\r\n    }\r\n\r\n\r\n    @SuppressWarnings(\"unchecked\")\r\n    // <editor-fold defaultstate=\"collapsed\" desc=\"Generated Code\">\r\n    private void initComponents() {\r\n\r\n        jButton1 = new javax.swing.JButton();\r\n        jButton2 = new javax.swing.JButton();\r\n        jButton3 = new javax.swing.JButton();\r\n        jButton4 = new javax.swing.JButton();\r\n        jButton5 = new javax.swing.JButton();\r\n        jButton6 = new javax.swing.JButton();\r\n        jLabel2 = new javax.swing.JLabel();\r\n        jLabel1 = new javax.swing.JLabel();\r\n\r\n        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);\r\n        setMinimumSize(new Dimension(715,550));\r\n        setResizable(false);\r\n        setTitle(\"Pac-Man Game\");\r\n        getContentPane().setLayout(null);\r\n\r\n        jButton1.setFont(new Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n        jButton1.setText(\"Map 2\");\r\n\r\n        getContentPane().add(jButton1);\r\n        jButton1.setBounds(280, 270, 170, 50);\r\n\r\n        jButton2.setFont(new Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n        jButton2.setText(\"Map 3\");\r\n        getContentPane().add(jButton2);\r\n        jButton2.setBounds(500, 270, 160, 50);\r\n\r\n        jButton3.setFont(new Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n        jButton3.setText(\"Map 1\");\r\n//        jButton3.addActionListener(this::jButton3ActionPerformed);\r\n\r\n\r\n        getContentPane().add(jButton3);\r\n        jButton3.setBounds(80, 270, 160, 50);\r\n\r\n        jButton4.setFont(new Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n        jButton4.setText(\"Back\");\r\n        jButton4.addActionListener(this::jButton4ActionPerformed);\r\n        getContentPane().add(jButton4);\r\n        jButton4.setBounds(280, 450, 180, 50);\r\n\r\n        jButton5.setFont(new Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n        jButton5.setText(\"Map 4\");\r\n\r\n        getContentPane().add(jButton5);\r\n        jButton5.setBounds(190, 360, 160, 50);\r\n\r\n        jButton6.setFont(new Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n        jButton6.setText(\"Map 5\");\r\n        getContentPane().add(jButton6);\r\n        jButton6.setBounds(390, 360, 160, 50);\r\n\r\n        jLabel2.setFont(new Font(\"Hobo Std\", 0, 48)); // NOI18N\r\n        jLabel2.setForeground(new Color(255, 255, 255));\r\n        jLabel2.setText(\"Choose map Multiplayer\");\r\n        getContentPane().add(jLabel2);\r\n        jLabel2.setBounds(120, 180, 600, 58);\r\n\r\n        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource(\"/Project/Assets/Mapp.jpg\"))); // NOI18N\r\n        jLabel1.setText(\"jLabel1\");\r\n        getContentPane().add(jLabel1);\r\n        jLabel1.setBounds(-100, 0, 840, 640);\r\n\r\n        pack();\r\n    }// </editor-fold>\r\n\r\n//    private void jButton3ActionPerformed(ActionEvent evt) {\r\n//        this.dispose();\r\n//        Map1.main(null);\r\n//    }\r\n\r\n\r\n    private void jButton4ActionPerformed(ActionEvent evt) {\r\n        this.dispose();\r\n        new PlayerChoose().setVisible(true);\r\n    }\r\n\r\n\r\n    public static void main(String[] args) {\r\n\r\n        EventQueue.invokeLater(() -> new ChooseMap_Mult().setVisible(true));\r\n    }\r\n\r\n    // Variables declaration - do not modify\r\n    private javax.swing.JButton jButton1;\r\n    private javax.swing.JButton jButton2;\r\n    private javax.swing.JButton jButton3;\r\n    private javax.swing.JButton jButton4;\r\n    private javax.swing.JButton jButton5;\r\n    private javax.swing.JButton jButton6;\r\n    private javax.swing.JLabel jLabel1;\r\n    private javax.swing.JLabel jLabel2;\r\n    // End of variables declaration\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Project/Pages/ChooseMap_Mult.java b/src/Project/Pages/ChooseMap_Mult.java
+--- a/src/Project/Pages/ChooseMap_Mult.java	(revision 3ef44bc445a3c037a4e553bd3bab117bb2e333aa)
++++ b/src/Project/Pages/ChooseMap_Mult.java	(date 1672061316384)
+@@ -99,7 +99,7 @@
+ 
+     private void jButton4ActionPerformed(ActionEvent evt) {
+         this.dispose();
+-        new PlayerChoose().setVisible(true);
++        new User_Name2().setVisible(true);
+     }
+ 
+ 
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"openjdk-17\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 3ef44bc445a3c037a4e553bd3bab117bb2e333aa)
++++ b/.idea/misc.xml	(date 1672054391556)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="openjdk-17" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="openjdk-17" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1901c679-ef5b-4b01-869c-8de279211f87\" name=\"Changes\" comment=\"add time and pause in Map 1\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/PacMan-Project.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/PacMan-Project.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Moody\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2JCRDqFkG23HmnxkPLxir2jqw3w\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"C:/JOGLwin/JOGLwin/lib64/jogl_cg.dll\",\r\n    \"project.structure.last.edited\": \"Libraries\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"Errors\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\pc\\IdeaProjects\\PacMan-Project\\src\\Project\\Assets\\imgs\" />\r\n      <recent name=\"C:\\Users\\pc\\IdeaProjects\\PacMan-Project\\src\\Project\\Assets\" />\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\" />\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\\texture\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\pc\\IdeaProjects\\PacMan-Project\\src\\Project\\Assets\\imgs\" />\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\\Assets\" />\r\n      <recent name=\"C:\\Users\\pc\\IdeaProjects\\PacMan-Project\\src\\Project\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"Project.Pages\" />\r\n      <recent name=\"Project.Map5\" />\r\n      <recent name=\"Project.Map4\" />\r\n      <recent name=\"\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Map5\">\r\n    <configuration name=\"Map1\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Maps.Map1.Map1\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Maps.Map1.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Map2\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Maps.Map2.Map2\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Maps.Map2.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Map5\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Maps.Map5.Map5\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Maps.Map5.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Project.Pages.HomePage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Pages.HomePage\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Pages.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"User_Name\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Pages.User_Name\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Pages.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Map5\" />\r\n        <item itemvalue=\"Application.Map1\" />\r\n        <item itemvalue=\"Application.Map2\" />\r\n        <item itemvalue=\"Application.User_Name\" />\r\n        <item itemvalue=\"Application.Project.Pages.HomePage\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1901c679-ef5b-4b01-869c-8de279211f87\" name=\"Changes\" comment=\"\" />\r\n      <created>1671579963392</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1671579963392</updated>\r\n      <workItem from=\"1671629520497\" duration=\"1008000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"first Pages\">\r\n      <created>1671580409361</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671580409361</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"org. package\">\r\n      <created>1671589508336</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671589508336</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Add Score And Lives\">\r\n      <created>1672014467857</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672014467857</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Add Score And Lives\">\r\n      <created>1672014879153</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672014879153</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Add Time in Map2\">\r\n      <created>1672017939951</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672017939951</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Add Time in Map2\">\r\n      <created>1672018121535</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672018121535</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"add time and pause in Map 1\">\r\n      <created>1672019394132</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672019394132</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"no\">\r\n      <created>1672052080543</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672052080543</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"9\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"CUSTOM_BOOLEAN_PROPERTIES\">\r\n                <map>\r\n                  <entry key=\"Show.Git.Branches\" value=\"false\" />\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"first Pages\" />\r\n    <MESSAGE value=\"org. package\" />\r\n    <MESSAGE value=\"Add Score And Lives\" />\r\n    <MESSAGE value=\"Add Time in Map2\" />\r\n    <MESSAGE value=\"add time and pause in Map 1\" />\r\n    <MESSAGE value=\"no\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"no\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3ef44bc445a3c037a4e553bd3bab117bb2e333aa)
++++ b/.idea/workspace.xml	(date 1672061316768)
+@@ -4,10 +4,30 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="add time and pause in Map 1">
++    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="for now">
++      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map22Listener.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Project/Models/User.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Project/Pages/Users.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_1.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_1.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_23_2022_8_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_23_2022_8_35_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_25_2022_2_47_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_25_2022_2_47_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_31_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_31_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_51_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_51_AM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_23_2022_9_41_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_23_2022_9_41_AM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_10_30_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_10_30_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_1_41_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_1_41_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_8_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_8_35_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_12_29_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_12_29_AM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_2_18_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_2_18_AM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/PacMan-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PacMan-Project.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Project/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/HomePage.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -24,7 +44,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="Moody" />
++        <entry key="$PROJECT_DIR$" value="Radwa" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -40,18 +60,18 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "last_opened_file_path": "C:/JOGLwin/JOGLwin/lib64/jogl_cg.dll",
+-    "project.structure.last.edited": "Libraries",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "Errors"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/JOGLwin/JOGLwin/lib64/jogl_cg.dll&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
+@@ -71,13 +91,13 @@
+       <recent name="" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.Map5">
+-    <configuration name="Map1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1" />
++  <component name="RunManager" selected="Application.Map2">
++    <configuration name="HomePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Project.Pages.HomePage" />
+       <module name="PacMan-Project" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="Project.Maps.Map1.*" />
++          <option name="PATTERN" value="Project.Pages.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -98,12 +118,12 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Map5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map5.Map5" />
++    <configuration name="Play" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Project.Play" />
+       <module name="PacMan-Project" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="Project.Maps.Map5.*" />
++          <option name="PATTERN" value="Project.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -111,8 +131,8 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Project.Pages.HomePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Project.Pages.HomePage" />
++    <configuration name="User_Name" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Project.Pages.User_Name" />
+       <module name="PacMan-Project" />
+       <extension name="coverage">
+         <pattern>
+@@ -124,8 +144,8 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="User_Name" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Project.Pages.User_Name" />
++    <configuration name="Users" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Project.Pages.Users" />
+       <module name="PacMan-Project" />
+       <extension name="coverage">
+         <pattern>
+@@ -139,11 +159,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.Map5" />
+-        <item itemvalue="Application.Map1" />
+         <item itemvalue="Application.Map2" />
++        <item itemvalue="Application.HomePage" />
++        <item itemvalue="Application.Users" />
+         <item itemvalue="Application.User_Name" />
+-        <item itemvalue="Application.Project.Pages.HomePage" />
++        <item itemvalue="Application.Play" />
+       </list>
+     </recent_temporary>
+   </component>
+Index: src/Project/Maps/Map2/Map22Listener.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Project/Maps/Map2/Map22Listener.java b/src/Project/Maps/Map2/Map22Listener.java
+new file mode 100644
+--- /dev/null	(date 1672057534921)
++++ b/src/Project/Maps/Map2/Map22Listener.java	(date 1672057534921)
+@@ -0,0 +1,439 @@
++package Project.Maps.Map2;
++
++import Project.Core.AnimListener;
++import Project.Core.texture.TextureReader;
++import Project.Models.Directions;
++import Project.Models.Eating;
++import Project.Models.Ghost;
++import Project.Models.Pacman;
++import Project.Pages.ChooseMap;
++import Project.Pages.GameOver;
++import Project.Pages.WinnerPage;
++
++import javax.media.opengl.GL;
++import javax.media.opengl.GLAutoDrawable;
++import javax.media.opengl.GLException;
++import javax.media.opengl.glu.GLU;
++import javax.sound.sampled.Clip;
++import javax.swing.*;
++import java.awt.event.KeyEvent;
++import java.io.IOException;
++import java.util.ArrayList;
++import java.util.BitSet;
++
++import static Project.Core.Utils.*;
++import static Project.Core.Utils.DrawSprite;
++import static java.awt.event.KeyEvent.*;
++import static java.awt.event.KeyEvent.VK_LEFT;
++
++public class Map22Listener extends AnimListener {
++        JFrame frame = null;
++        Clip EatingSound;
++        Pacman pacman = new Pacman();
++        Pacman pacman2 = new Pacman();
++        int CountFood;
++        int Lives = 3;
++        boolean pause = false;
++        int time;
++        Timer timer = new Timer(1000, e -> {
++            time++;
++        });
++        ArrayList<Project.Models.Eating> Eating = new ArrayList<>();
++        ArrayList<Ghost> ghosts = new ArrayList<>();
++        static int No_Of_Ghosts = 4;
++        public static final int MAX_X = 620;
++        public static final int MAX_Y = 265;
++        int AnimIndexForPacman = 1;
++        int AnimIndexForFood = 7;
++        String[] textureNames = {
++                "mapp2.jpg", // 0
++                "pacman.png", // 1
++                "up.gif", // 2
++                "down.gif", // 3
++                "right.gif", // 4
++                "left.gif", // 5
++                "ghost.gif", // 6
++                "foodd.png", // 7
++        };
++        TextureReader.Texture[] texture = new TextureReader.Texture[textureNames.length];
++        int[] textures = new int[textureNames.length];
++        int[][] Map = new int[][]{
++                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++
++        };
++        int row = Map.length;
++        int column = Map[0].length;
++
++        public void init(GLAutoDrawable gld) {
++            GL gl = gld.getGL();
++            /*gl.glClearColor(0, 0, 0, 1f);*/
++            {
++                gl.glEnable(GL.GL_TEXTURE_2D);
++                gl.glBlendFunc(GL.GL_SRC_ALPHA, GL.GL_ONE_MINUS_SRC_ALPHA);
++                gl.glGenTextures(textureNames.length, textures, 0);
++                for (int i = 0; i < textureNames.length; i++) {
++                    try {
++                        texture[i] = TextureReader.readTexture(assetsFolderName + "//" + textureNames[i], true);
++                        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[i]);
++
++                        new GLU().gluBuild2DMipmaps(
++                                GL.GL_TEXTURE_2D,
++                                GL.GL_RGBA,
++                                texture[i].getWidth(), texture[i].getHeight(),
++                                GL.GL_RGBA,
++                                GL.GL_UNSIGNED_BYTE,
++                                texture[i].getPixels() // Image data
++                        );
++                    } catch (IOException e) {
++                        System.out.println(e.getMessage());
++                        e.printStackTrace();
++                    }
++                }
++            }
++            gl.glMatrixMode(GL.GL_PROJECTION);
++            gl.glLoadIdentity();
++
++            gl.glOrtho(0, MAX_X, MAX_Y, 0, 0, 1.0);
++
++            fillEating();
++
++            addGhostsToArray();
++            for (Ghost g : ghosts) {
++                g.randMove();
++            }
++            startTimer();
++        }
++
++        private void addGhostsToArray() {
++            for (int i = 0; i < No_Of_Ghosts; i++) {
++                ghosts.add(new Ghost());
++            }
++        }
++
++        private void fillEating() {
++            for (int i = 0; i < row; i++) {
++                for (int j = 0; j < column; j++) {
++                    if (i % 2 == 0 && j % 3 == 0)
++                        if (Map[i][j] == 1) { // eat
++                            Eating.add(new Eating(j, i));
++                        }
++                }
++            }
++        }
++
++        @Override
++        public void display(GLAutoDrawable gld) {
++            GL gl = gld.getGL();
++            gl.glClear(GL.GL_COLOR_BUFFER_BIT);
++
++            gl.glPushMatrix();
++            int move = 5;
++            gl.glTranslated(8, move, 0);
++            gl.glScaled(1, 0.44, 1);
++            {
++                drawBackground(gl);
++            }
++            gl.glPopMatrix();
++
++            gl.glPushMatrix();
++            gl.glTranslated(8, move, 0);
++            gl.glScaled(0.95, 0.93, 1);
++            {
++                drawEating(gl);
++                drawPacman(gl);
++                drawGhost(gl);
++            }
++            gl.glPopMatrix();
++
++            gl.glPushMatrix();
++            gl.glTranslated(10, 200, 0);
++            gl.glScaled(0.95, 0.93, 1);
++            {
++
++                drawPacman2(gl);
++
++            }
++            gl.glPopMatrix();
++
++
++            handelPacmanMove();
++            handelPacmanEating();
++
++            handelGhostMove();
++
++            handelLose();
++            try {
++                drawString(gl, 8, 8, "Lives: " + Lives + "      Score: " + CountFood + "      Time: " + time); // Lives Score Time
++            } catch (GLException e) {
++                System.out.println(e.getMessage());
++            }
++
++            handelWinning();
++
++        }
++
++        private void startTimer() {
++            timer.start();
++        }
++
++
++        private void handelLose() {
++            for (Ghost g : ghosts) {
++                if (g.ii == pacman.ii && g.jj == pacman.jj) {
++                    if (EatingSound != null) EatingSound.stop();
++                    if (--Lives == 0) {
++                        frame.dispose();
++                        new GameOver().setVisible(true);
++                    } else {
++                        pacman.reset();
++                    }
++                }
++            }
++
++        }
++
++
++        private void handelGhostMove() {
++            for (Ghost g : ghosts) {
++                switch (g.direction) {
++                    case IDEAL -> {
++                    }
++                    case UP -> {
++                        if (g.y - g.step < 0 || g.jj - 1 < 0 || Map[g.jj - 1][g.ii] == 0) {
++                            g.randMove();
++                            return;
++                        }
++                        g.moveUP();
++                    }
++                    case DOWN -> {
++                        if (g.y + g.step > MAX_Y || g.jj + 1 >= row || Map[g.jj + 1][g.ii] == 0) {
++                            g.randMove();
++                            return;
++                        }
++                        g.moveDown();
++                    }
++                    case RIGHT -> {
++                        if (g.x + g.step > MAX_X || g.ii + 1 >= column || Map[g.jj][g.ii + 1] == 0) {
++                            g.randMove();
++                            return;
++                        }
++                        g.moveRight();
++                    }
++                    case LEFT -> {
++                        if (g.x - g.step < 0 || g.ii - 1 < 0 || Map[g.jj][g.ii - 1] == 0) {
++                            g.randMove();
++                            return;
++                        }
++                        g.moveLeft();
++                    }
++                }
++            }
++        }
++
++        private void drawGhost(GL gl) {
++            for (Ghost g : ghosts) {
++                DrawSprite(gl, (int) g.x, (int) g.y, 6, textures, 15);
++            }
++        }
++
++        private void handelWinning() {
++            if (Eating.isEmpty()) {
++                System.out.println("You Win");
++                if (EatingSound != null) EatingSound.stop();
++
++                frame.dispose();
++                new WinnerPage().setVisible(true);
++            }
++        }
++
++
++        private void handelPacmanEating() {
++
++            for (int i = 0; i < Eating.size(); i++) {
++                if (pacman.ii == Eating.get(i).ii && pacman.jj == Eating.get(i).jj) {
++                    CountFood++;
++                    System.out.println(Eating.size());
++                    if (EatingSound == null || !EatingSound.isRunning()) {
++                        EatingSound = playMusic("src/Project/Assets/pacman-wakawaka.wav", false);
++                    }
++                    Eating.remove(i--);
++                }
++            }
++        }
++
++        private void handelPacmanMove() {
++            if (isKeyPressed(VK_UP)) {
++                pacman.direction = Directions.UP;
++            }
++            if (isKeyPressed(VK_DOWN)) {
++                pacman.direction = Directions.DOWN;
++            }
++            if (isKeyPressed(VK_RIGHT)) {
++                pacman.direction = Directions.RIGHT;
++            }
++            if (isKeyPressed(VK_LEFT)) {
++                pacman.direction = Directions.LEFT;
++            }
++            if (!(isKeyPressed(VK_UP) || isKeyPressed(VK_DOWN) || isKeyPressed(VK_RIGHT) || isKeyPressed(VK_LEFT))) {
++                pacman.direction = Directions.IDEAL;
++            }
++
++            switch (pacman.direction) {
++                case IDEAL -> {
++                }
++                case UP -> {
++                    if (pacman.y - pacman.step < 0 || pacman.jj - 1 < 0 || Map[pacman.jj - 1][pacman.ii] == 0) return;
++                    pacman.moveUP();
++                }
++                case DOWN -> {
++                    if (pacman.y + pacman.step > MAX_Y || pacman.jj + 1 >= row || Map[pacman.jj + 1][pacman.ii] == 0)
++                        return;
++                    pacman.moveDown();
++                }
++                case RIGHT -> {
++                    if (pacman.x + pacman.step > MAX_X || pacman.ii + 1 >= column || Map[pacman.jj][pacman.ii + 1] == 0)
++                        return;
++                    pacman.moveRight();
++                }
++                case LEFT -> {
++                    if (pacman.x - pacman.step < 0 || pacman.ii - 1 < 0 || Map[pacman.jj][pacman.ii - 1] == 0) return;
++                    pacman.moveLeft();
++                }
++            }
++        }
++
++        private void drawEating(GL gl) {
++            for (Eating e : Eating) {
++                DrawSprite(gl, (int) e.x, (int) e.y, AnimIndexForFood, textures, 12);
++            }
++        }
++
++        private void drawPacman(GL gl) {
++            changeAnimIndex();
++
++            DrawSprite(gl, (int) pacman.x, (int) pacman.y, AnimIndexForPacman, textures, 15);
++        }
++        private void drawPacman2(GL gl) {
++            changeAnimIndex();
++
++            DrawSprite(gl, (int) pacman.x, (int) pacman.y, AnimIndexForPacman, textures, 15);
++        }
++
++        private void changeAnimIndex() {
++            switch (pacman.direction) {
++                case IDEAL -> {
++                    AnimIndexForPacman = 1;
++                }
++                case UP -> { // 2
++                    if (AnimIndexForPacman == 1) AnimIndexForPacman = 2;
++                    else if (AnimIndexForPacman == 2) AnimIndexForPacman = 1;
++                }
++                case DOWN -> { // 3
++
++                    if (AnimIndexForPacman == 1) AnimIndexForPacman = 3;
++                    else if (AnimIndexForPacman == 3) AnimIndexForPacman = 1;
++                }
++                case RIGHT -> { // 4
++
++                    if (AnimIndexForPacman == 1) AnimIndexForPacman = 4;
++                    else if (AnimIndexForPacman == 4) AnimIndexForPacman = 1;
++                }
++                case LEFT -> { // 5
++
++                    if (AnimIndexForPacman == 1) AnimIndexForPacman = 5;
++                    else if (AnimIndexForPacman == 5) AnimIndexForPacman = 1;
++                }
++            }
++        }
++
++        private void drawBackground(GL gl) {
++            DrawSprite(gl, 0, 0, 0, textures, MAX_X - 10);
++        }
++
++
++        public BitSet keyBits = new BitSet(256);
++
++        @Override
++        public void keyPressed(final KeyEvent event) {
++            int keyCode = event.getKeyCode();
++            keyBits.set(keyCode);
++            if (event.getKeyCode() == KeyEvent.VK_P) {
++                pause = !pause;
++                if (!pause)
++                    Map2.animator.start();
++                else {
++                    Map2.animator.stop();
++                    JOptionPane.showMessageDialog(null, "Enter P To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
++
++                }
++
++            }
++
++        }
++
++
++        @Override
++        public void keyReleased(final KeyEvent event) {
++            int keyCode = event.getKeyCode();
++            keyBits.clear(keyCode);
++            switch (keyCode) {
++                case VK_UP, VK_DOWN, VK_RIGHT, VK_LEFT -> pacman.direction = Directions.IDEAL;
++            }
++        }
++
++        public boolean isKeyPressed(final int keyCode) {
++            return keyBits.get(keyCode);
++        }
++
++        @Override
++        public void keyTyped(KeyEvent e) {
++
++        }
++
++        @Override
++        public void reshape(GLAutoDrawable glAutoDrawable, int i, int i1, int i2, int i3) {
++
++        }
++
++        @Override
++        public void displayChanged(GLAutoDrawable glAutoDrawable, boolean b, boolean b1) {
++
++        }
++
++//    public static void main(String[] args) {
++//
++//        java.awt.EventQueue.invokeLater(() -> new Map22Listener().setVisible(true));
++//    }
++
++    }
++
++
+Index: src/Project/Models/User.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Project/Models/User.java b/src/Project/Models/User.java
+new file mode 100644
+--- /dev/null	(date 1672058142744)
++++ b/src/Project/Models/User.java	(date 1672058142744)
+@@ -0,0 +1,4 @@
++package Project.Models;
++
++public class User {
++}
+Index: src/Project/Pages/Users.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Project/Pages/Users.java b/src/Project/Pages/Users.java
+new file mode 100644
+--- /dev/null	(date 1672059262755)
++++ b/src/Project/Pages/Users.java	(date 1672059262755)
+@@ -0,0 +1,101 @@
++package Project.Pages;
++
++
++
++
++public class Users extends javax.swing.JFrame {
++
++
++    public Users() {
++        initComponents();
++        setLocationRelativeTo(null);
++    }
++
++    @SuppressWarnings("unchecked")
++    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
++    private void initComponents() {
++
++        jButton1 = new javax.swing.JButton();
++        jScrollPane1 = new javax.swing.JScrollPane();
++        jLabel16 = new javax.swing.JLabel();
++        jLabel2 = new javax.swing.JLabel();
++
++        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
++        setMinimumSize(new java.awt.Dimension(700, 452));
++        setResizable(false);
++        setTitle("Pac-Man Game");
++        getContentPane().setLayout(null);
++
++        jButton1.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
++        jButton1.setText("Back");
++        jButton1.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jButton1ActionPerformed(evt);
++            }
++        });
++        getContentPane().add(jButton1);
++        jButton1.setBounds(450, 300, 220, 70);
++        getContentPane().add(jScrollPane1);
++        jScrollPane1.setBounds(10, 80, 320, 300);
++
++        jLabel16.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
++        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
++        jLabel16.setText("USERS");
++        getContentPane().add(jLabel16);
++        jLabel16.setBounds(10, 10, 320, 70);
++
++        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project/Assets/blue-pacman-gameboy-old-games-wallpaper-preview.jpg"))); // NOI18N
++        jLabel2.setText("jLabel2");
++        getContentPane().add(jLabel2);
++        jLabel2.setBounds(0, -80, 870, 580);
++
++        pack();
++    }// </editor-fold>                        
++
++    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
++        this.dispose();
++        new HomePage().setVisible(true);
++    }
++
++    /**
++     * @param args the command line arguments
++     */
++    public static void main(String args[]) {
++        /* Set the Nimbus look and feel */
++        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
++        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
++         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
++         */
++        try {
++            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
++                if ("Nimbus".equals(info.getName())) {
++                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
++                    break;
++                }
++            }
++        } catch (ClassNotFoundException ex) {
++            java.util.logging.Logger.getLogger(Users.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (InstantiationException ex) {
++            java.util.logging.Logger.getLogger(Users.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (IllegalAccessException ex) {
++            java.util.logging.Logger.getLogger(Users.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
++            java.util.logging.Logger.getLogger(Users.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        }
++        //</editor-fold>
++
++        /* Create and display the form */
++        java.awt.EventQueue.invokeLater(new Runnable() {
++            public void run() {
++                new Users().setVisible(true);
++            }
++        });
++    }
++
++    // Variables declaration - do not modify                     
++    private javax.swing.JButton jButton1;
++    private javax.swing.JLabel jLabel16;
++    private javax.swing.JLabel jLabel2;
++    private javax.swing.JScrollPane jScrollPane1;
++    // End of variables declaration                   
++}
