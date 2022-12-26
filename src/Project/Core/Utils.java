@@ -7,7 +7,7 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.awt.*;
-import java.io.File;
+import java.io.*;
 
 
 import static java.lang.Math.*;
@@ -146,6 +146,18 @@ public class Utils {
         GLUT glt = new GLUT();
         gl.glRasterPos2i(x, y);
         glt.glutBitmapString(5, s);
+    }
+
+    public static void SaveUser(String s) {
+
+
+        try (FileWriter f = new FileWriter("Users.txt", true);
+             BufferedWriter b = new BufferedWriter(f);
+             PrintWriter p = new PrintWriter(b);) {
+            p.println(s);
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
     }
 
 }

@@ -1,10 +1,10 @@
 package Project.Pages;
 
 import javax.swing.*;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
+
+import static Project.Core.Utils.SaveUser;
 
 public class User_Name2 extends javax.swing.JFrame {
 
@@ -104,39 +104,31 @@ public class User_Name2 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Enter Player2 Name : ", "user_name", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        Save(jTextField2.getText() + " \n" + jTextField1.getText());
-
-//        Save(jTextField2.getText());
-
-        this.dispose();
-        new ChooseMap_Mult().setVisible(true);
-    }
-
-    public void Save(String s) {
         try {
-            FileWriter file = new FileWriter("Users.txt");
             boolean flag = false;
             Scanner input = new Scanner(new File("Users.txt"));
             while (input.hasNext()) {
+                String name = jTextField1.getText();
                 String name2 = input.nextLine();
-                name2 = name2.substring(0, name2.indexOf(' '));
+                name2 = name2.substring(0, name2.indexOf(' ') == -1 ? name2.length() : name2.indexOf( ' '));
 
-                if (s.equals(name2)) {
+                if (name.equals(name2)) {
                     flag = true;
                     break;
                 }
             }
             if (!flag) {
-//                FileWriter file = new FileWriter("Users.txt");
-                file.append(s + " \n");
+                SaveUser(jTextField1.getText() + " ");
+                SaveUser(jTextField2.getText() + " ");
 
             }
-            file.close();
         } catch (IOException e) {
-            System.out.println(e.getMessage());
         }
 
+        this.dispose();
+        new ChooseMap_Mult().setVisible(true);
     }
+
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
