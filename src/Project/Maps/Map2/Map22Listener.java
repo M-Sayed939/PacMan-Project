@@ -173,6 +173,7 @@ public class Map22Listener extends AnimListener {
             drawPacman2(gl);
         }
         gl.glPopMatrix();
+
         handelPacmanMove();
         handelPacmanEating();
         handelPacman2Move();
