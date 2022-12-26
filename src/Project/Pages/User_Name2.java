@@ -1,5 +1,7 @@
 package Project.Pages;
 
+import javax.swing.*;
+
 public class User_Name2  extends javax.swing.JFrame {
 
 
@@ -89,8 +91,12 @@ public class User_Name2  extends javax.swing.JFrame {
         }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+        if (jTextField1.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this,"Enter your name","User Name",JOptionPane.WARNING_MESSAGE);
+            return ;
+        }
         this.dispose();
-        new ChooseMap_Mult().setVisible(true);
+        new ChooseMap().setVisible(true);
     }
 
         private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {

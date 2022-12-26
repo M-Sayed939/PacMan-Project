@@ -42,6 +42,7 @@ public class Map5Listener extends AnimListener {
         time++;
     });
 
+
     String textureNames[] = {"images.png","pacman.png","up.gif","down.gif","right.gif","left.gif","ghost.gif","food.png","food2.png"};
     TextureReader.Texture texture[] = new TextureReader.Texture[textureNames.length];
     int textures[] = new int[textureNames.length];
@@ -77,6 +78,7 @@ public class Map5Listener extends AnimListener {
     int col = map[0].length;
     int animIndexForPacman = 1;
     int animIndexForFood = 8;
+    boolean pause = false;
 
     public void init(GLAutoDrawable gld) {
 
@@ -177,6 +179,19 @@ public class Map5Listener extends AnimListener {
             drawString(gl, 125, MAX_Y -230, "Time: " + time); // Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
+        }
+        if(isKeyPressed(VK_SPACE)){
+            pause = !pause;
+            if(pause){
+                timer.stop();
+                Map5.animator.stop();
+
+                JOptionPane.showMessageDialog(null,"Enter Space to Resume","Pause",JOptionPane.WARNING_MESSAGE);
+            }else{
+                timer.start();
+                Map5.animator.start();
+//                timer.start();
+            }
         }
     }
 
