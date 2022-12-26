@@ -16,6 +16,8 @@ import javax.media.opengl.GLException;
 import javax.media.opengl.glu.GLU;
 import javax.sound.sampled.Clip;
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -31,8 +33,12 @@ public class Map2Listener extends AnimListener {
     Clip EatingSound;
     Pacman pacman = new Pacman();
     int CountFood;
-    int Lives =3;
+    int Lives = 3;
     boolean pause = false;
+    int time;
+    Timer timer = new Timer(1000, e -> {
+        time++;
+    });
     ArrayList<Eating> Eating = new ArrayList<>();
     ArrayList<Ghost> ghosts = new ArrayList<>();
     static int No_Of_Ghosts = 4;
@@ -125,6 +131,7 @@ public class Map2Listener extends AnimListener {
         for (Ghost g : ghosts) {
             g.randMove();
         }
+        startTimer();
     }
 
     private void addGhostsToArray() {
@@ -137,9 +144,9 @@ public class Map2Listener extends AnimListener {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 if (i % 2 == 0 && j % 3 == 0)
-                if (Map[i][j] == 1) { // eat
-                    Eating.add(new Eating(j, i));
-                }
+                    if (Map[i][j] == 1) { // eat
+                        Eating.add(new Eating(j, i));
+                    }
             }
         }
     }
@@ -175,15 +182,17 @@ public class Map2Listener extends AnimListener {
 
         handelLose();
         try {
-//            drawString(gl,90,MAX_Y-8,"Time: "+time);
-            drawString(gl, 5, MAX_Y - 8, "Score: " + CountFood);  // Score
-            drawString(gl, 60, MAX_Y - 8, "Lives: " + Lives); // Lives
+            drawString(gl, 5, MAX_Y, "Lives: " + Lives + "      Score: " + CountFood + "      Time: " + time); // Lives Score Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
 
         handelWinning();
 
+    }
+
+    private void startTimer() {
+        timer.start();
     }
 
 
@@ -198,9 +207,9 @@ public class Map2Listener extends AnimListener {
                     pacman.reset();
                 }
             }
-            }
-
         }
+
+    }
 
 
     private void handelGhostMove() {
@@ -363,18 +372,18 @@ public class Map2Listener extends AnimListener {
         int keyCode = event.getKeyCode();
         keyBits.set(keyCode);
         if (event.getKeyCode() == KeyEvent.VK_P) {
-            pause=!pause;
-            if (pause == false)
+            pause = !pause;
+            if (!pause)
                 Map2.animator.start();
-            else if (pause == true) {
-                    Map2.animator.stop();
-                JOptionPane.showMessageDialog(null,"Enter P To Continue","Attention",2);
+            else {
+                Map2.animator.stop();
+                JOptionPane.showMessageDialog(null, "Enter P To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
 
             }
 
-                }
-            
         }
+
+    }
 
 
     @Override
