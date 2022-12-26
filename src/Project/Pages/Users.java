@@ -16,6 +16,7 @@ public class Users extends javax.swing.JFrame {
             Scanner sc= new Scanner(new File("Users.txt"));
             while(sc.hasNext()){
                 USERNAME.append(sc.nextLine());
+                USERNAME.append("\n");
             }
 
         }catch(IOException e){

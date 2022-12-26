@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Add Actions in Choose Map Multiplayer">
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Edit Text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_MultiListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_MultiListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3MultiListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3MultiListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/MultiMap5Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/MultiMap5Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/Player1Winner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/Player1Winner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/Player2Winner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/Player2Winner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/player1Winner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/player2Winner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/Users.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,39 +71,13 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Player2Winner">
-    <configuration name="ChooseMap_Mult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Pages.ChooseMap_Mult" />
+  <component name="RunManager" selected="Application.Users">
+    <configuration name="Play" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Play" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Pages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Map1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1" />
-      <module name="PacMan-Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Project.Maps.Map1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Map1_Multi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1_Multi" />
-      <module name="PacMan-Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Project.Maps.Map1.*" />
+          <option name="PATTERN" value="Project.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,13 +111,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="User_Name2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Pages.User_Name2" />
+      <module name="PacMan-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Project.Pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Users" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Pages.Users" />
+      <module name="PacMan-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Project.Pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Users" />
+        <item itemvalue="Application.User_Name2" />
+        <item itemvalue="Application.Play" />
         <item itemvalue="Application.Player2Winner" />
         <item itemvalue="Application.Player1Winner" />
-        <item itemvalue="Application.ChooseMap_Mult" />
-        <item itemvalue="Application.Map1_Multi" />
-        <item itemvalue="Application.Map1" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672093019759</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Edit Text">
+      <created>1672093325824</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672093325824</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +250,7 @@
     <MESSAGE value="Add Time in Map2" />
     <MESSAGE value="add time and pause in Map 1" />
     <MESSAGE value="Add Actions in Choose Map Multiplayer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Actions in Choose Map Multiplayer" />
+    <MESSAGE value="Edit Text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit Text" />
   </component>
 </project>

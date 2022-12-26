@@ -118,8 +118,8 @@ public class User_Name2 extends javax.swing.JFrame {
                 }
             }
             if (!flag) {
-                SaveUser(jTextField1.getText() + " ");
                 SaveUser(jTextField2.getText() + " ");
+                SaveUser( jTextField1.getText() + " ");
 
             }
         } catch (IOException e) {
