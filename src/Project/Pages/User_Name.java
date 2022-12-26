@@ -1,6 +1,10 @@
 package Project.Pages;
 
 import javax.swing.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class User_Name extends JFrame {
 
@@ -41,7 +45,10 @@ public class User_Name extends JFrame {
         jButton2.setText("Play");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                try {
+                    jButton2ActionPerformed(evt);
+                } catch (IOException e) {
+                }
             }
         });
         getContentPane().add(jButton2);
@@ -74,14 +81,36 @@ public class User_Name extends JFrame {
         new PlayerChoose().setVisible(true);
     }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
 
         if (jTextField1.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this,"Enter your name","User Name",JOptionPane.WARNING_MESSAGE);
             return ;
         }
+
+        try {
+            boolean flag = false;
+            Scanner input = new Scanner(new File("Users.txt"));
+            while (input.hasNext()){
+                String name = jTextField1.getText();
+                String name2 = input.nextLine();
+                name2 = name2.substring(0,name2.indexOf(' '));
+
+                if(name .equals(name2)){
+                    flag = true;
+                    break;
+                }
+            }
+            if(!flag){
+                FileWriter file = new FileWriter("Users.txt");
+                file.append(jTextField1.getText() + " \n");
+                file.close();
+            }
+        } catch (IOException e) {
+        }
         this.dispose();
         new ChooseMap().setVisible(true);
+
     }
 
     /**

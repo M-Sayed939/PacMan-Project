@@ -1,6 +1,10 @@
 package Project.Pages;
 
 import javax.swing.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class User_Name2 extends javax.swing.JFrame {
 
@@ -100,8 +104,38 @@ public class User_Name2 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Enter Player2 Name : ", "user_name", JOptionPane.WARNING_MESSAGE);
             return;
         }
+        Save(jTextField2.getText() + " \n" + jTextField1.getText());
+
+//        Save(jTextField2.getText());
+
         this.dispose();
         new ChooseMap_Mult().setVisible(true);
+    }
+
+    public void Save(String s) {
+        try {
+            FileWriter file = new FileWriter("Users.txt");
+            boolean flag = false;
+            Scanner input = new Scanner(new File("Users.txt"));
+            while (input.hasNext()) {
+                String name2 = input.nextLine();
+                name2 = name2.substring(0, name2.indexOf(' '));
+
+                if (s.equals(name2)) {
+                    flag = true;
+                    break;
+                }
+            }
+            if (!flag) {
+//                FileWriter file = new FileWriter("Users.txt");
+                file.append(s + " \n");
+
+            }
+            file.close();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {
