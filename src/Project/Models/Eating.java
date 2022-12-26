@@ -1,7 +1,7 @@
-package Project;
+package Project.Models;
 
-import static Project.Utils.arcTrX;
-import static Project.Utils.arcTrY;
+import static Project.Core.Utils.arcTrX;
+import static Project.Core.Utils.arcTrY;
 
 public class Eating {
     public static final int R = 1;

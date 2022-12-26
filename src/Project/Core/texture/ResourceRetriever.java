@@ -1,4 +1,4 @@
-package Project.texture;
+package Project.Core.texture;
 
 import java.io.FileInputStream;
 import java.io.IOException;

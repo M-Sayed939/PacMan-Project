@@ -1,4 +1,4 @@
-package Project;
+package Project.Models;
 
 public enum Directions {
     IDEAL,

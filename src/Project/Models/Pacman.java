@@ -1,11 +1,11 @@
-package Project;
+package Project.Models;
 
 
-import static Project.Utils.*;
+import static Project.Core.Utils.*;
 
 public class Pacman {
     public int step = 10;
-    public static final int R = 5;
+    public static final int R = 10;
     public double x = 15, y = 15;
     public int ii = 1, jj = 1;
 

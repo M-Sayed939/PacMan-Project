@@ -1,0 +1,696 @@
+Index: src/Project/Maps/Map2/Map2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Project.Maps.Map2;\r\n\r\npublic class Map2 {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Project/Maps/Map2/Map2.java b/src/Project/Maps/Map2/Map2.java
+--- a/src/Project/Maps/Map2/Map2.java	(revision 5de0ef188a54dd80d258b42a7162570a4c41c66a)
++++ b/src/Project/Maps/Map2/Map2.java	(date 1671987695116)
+@@ -1,4 +1,37 @@
+ package Project.Maps.Map2;
+ 
+-public class Map2 {
++import com.sun.opengl.util.FPSAnimator;
++
++import javax.media.opengl.GLCanvas;
++import javax.swing.*;
++import java.awt.*;
++
++public class Map2 extends JFrame {
++    GLCanvas glcanvas;
++    Map2Listener listener = new Map2Listener();
++    static FPSAnimator animator;
++
++    public Map2() {
++        super("Map 2");
++        setDefaultCloseOperation(EXIT_ON_CLOSE);
++        glcanvas = new GLCanvas();
++        glcanvas.addGLEventListener(listener);
++        glcanvas.addKeyListener(listener);
++        animator = new FPSAnimator(glcanvas, 15);
++
++        listener.frame = this;
++
++        add(glcanvas, BorderLayout.CENTER);
++        setSize(800, 800);
++        setLocationRelativeTo(this);
++        setVisible(true);
++        requestFocus();
++    }
++
++    public static void main(String[] args) {
++        new Map2();
++        animator.start();
++    }
++
++
+ }
+Index: src/Project/Pages/ChooseMap.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Project.Pages;\r\n\r\nimport Project.Maps.Map2.Map2;\r\nimport Project.Maps.Map1.Map1;\r\nimport Project.Maps.Map3.Map3;\r\nimport Project.Maps.Map4.Map4;\r\nimport Project.Maps.Map5.Map5;\r\n\r\nimport java.awt.*;\r\nimport java.awt.event.ActionEvent;\r\nimport javax.swing.JFrame;\r\n\r\n\r\npublic class ChooseMap extends javax.swing.JFrame {\r\n\r\n\r\n    public ChooseMap() {\r\n        initComponents();\r\n        setLocationRelativeTo(null);\r\n\r\n        setFocusable(true);\r\n        requestFocus();\r\n        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\r\n\r\n\r\n    }\r\n\r\n\r\n    @SuppressWarnings(\"unchecked\")\r\n    // <editor-fold defaultstate=\"collapsed\" desc=\"Generated Code\">\r\n    private void initComponents() {\r\n\r\n        jButton1 = new javax.swing.JButton();\r\n        jButton2 = new javax.swing.JButton();\r\n        jButton3 = new javax.swing.JButton();\r\n        jButton4 = new javax.swing.JButton();\r\n        jButton5 = new javax.swing.JButton();\r\n        jButton6 = new javax.swing.JButton();\r\n        jLabel2 = new javax.swing.JLabel();\r\n        jLabel1 = new javax.swing.JLabel();\r\n\r\n        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);\r\n        setMinimumSize(new Dimension(715,550));\r\n        setResizable(false);\r\n        setTitle(\"Pac-Man Game\");\r\n        getContentPane().setLayout(null);\r\n\r\n        jButton1.setFont(new java.awt.Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n        jButton1.setText(\"Map 2\");\r\n        jButton1.addActionListener(new java.awt.event.ActionListener() {\r\n            public void actionPerformed(java.awt.event.ActionEvent evt) {\r\n                jButton1ActionPerformed(evt);\r\n            }\r\n        });\r\n        getContentPane().add(jButton1);\r\n        jButton1.setBounds(280, 270, 170, 50);\r\n\r\n        jButton2.setFont(new java.awt.Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n        jButton2.setText(\"Map 3\");\r\n        jButton2.addActionListener(new java.awt.event.ActionListener() {\r\n            public void actionPerformed(java.awt.event.ActionEvent evt) {\r\n                jButton2ActionPerformed(evt);\r\n            }\r\n        });\r\n        getContentPane().add(jButton2);\r\n        jButton2.setBounds(500, 270, 160, 50);\r\n\r\n        jButton3.setFont(new java.awt.Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n        jButton3.setText(\"Map 1\");\r\n        jButton2.addActionListener(new java.awt.event.ActionListener() {\r\n            public void actionPerformed(java.awt.event.ActionEvent evt) {\r\n                jButton3ActionPerformed(evt);\r\n            }\r\n        });\r\n        getContentPane().add(jButton3);\r\n        jButton3.setBounds(80, 270, 160, 50);\r\n\r\n        jButton4.setFont(new java.awt.Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n        jButton4.setText(\"Back\");\r\n        jButton4.addActionListener(this::jButton4ActionPerformed);\r\n        getContentPane().add(jButton4);\r\n        jButton4.setBounds(280, 450, 180, 50);\r\n\r\n        jButton5.setFont(new java.awt.Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n        jButton5.setText(\"Map 4\");\r\n        jButton5.addActionListener(new java.awt.event.ActionListener() {\r\n            public void actionPerformed(java.awt.event.ActionEvent evt) {\r\n                jButton5ActionPerformed(evt);\r\n            }\r\n        });\r\n\r\n        getContentPane().add(jButton5);\r\n        jButton5.setBounds(190, 360, 160, 50);\r\n\r\n        jButton6.setFont(new java.awt.Font(\"Hobo Std\", 0, 36)); // NOI18N\r\n        jButton6.setText(\"Map 5\");\r\n        jButton6.addActionListener(new java.awt.event.ActionListener() {\r\n            public void actionPerformed(java.awt.event.ActionEvent evt) {\r\n                jButton6ActionPerformed(evt);\r\n            }\r\n        });\r\n        getContentPane().add(jButton6);\r\n        jButton6.setBounds(390, 360, 160, 50);\r\n\r\n        jLabel2.setFont(new java.awt.Font(\"Hobo Std\", 0, 48)); // NOI18N\r\n        jLabel2.setForeground(new java.awt.Color(255, 255, 255));\r\n        jLabel2.setText(\"Choose map\");\r\n        getContentPane().add(jLabel2);\r\n        jLabel2.setBounds(240, 180, 280, 58);\r\n\r\n        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource(\"/Project/Assets/Mapp.jpg\"))); // NOI18N\r\n        jLabel1.setText(\"jLabel1\");\r\n        getContentPane().add(jLabel1);\r\n        jLabel1.setBounds(-100, 0, 840, 640);\r\n\r\n        pack();\r\n    }// </editor-fold>\r\n\r\n//    private void jButton3ActionPerformed(ActionEvent evt) {\r\n//        this.dispose();\r\n//        Map1.main(null);\r\n//    }\r\n\r\n\r\n    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {\r\n        this.dispose();\r\n        new PlayerChoose().setVisible(true);\r\n    }\r\n    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {\r\n        this.dispose();\r\n        new Map1().setVisible(true);\r\n    }\r\n    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {\r\n        this.dispose();\r\n        new Map2().setVisible(true);\r\n    }\r\n    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {\r\n        this.dispose();\r\n        new Map3().setVisible(true);\r\n\r\n    }\r\n    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {\r\n        this.dispose();\r\n        new Map4().setVisible(true);\r\n    }\r\n    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {\r\n        this.dispose();\r\n        new Map5().setVisible(true);\r\n    }\r\n    public static void main(String[] args) {\r\n\r\n        java.awt.EventQueue.invokeLater(() -> new ChooseMap().setVisible(true));\r\n    }\r\n\r\n    // Variables declaration - do not modify\r\n    private javax.swing.JButton jButton1;\r\n    private javax.swing.JButton jButton2;\r\n    private javax.swing.JButton jButton3;\r\n    private javax.swing.JButton jButton4;\r\n    private javax.swing.JButton jButton5;\r\n    private javax.swing.JButton jButton6;\r\n    private javax.swing.JLabel jLabel1;\r\n    private javax.swing.JLabel jLabel2;\r\n    // End of variables declaration\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Project/Pages/ChooseMap.java b/src/Project/Pages/ChooseMap.java
+--- a/src/Project/Pages/ChooseMap.java	(revision 5de0ef188a54dd80d258b42a7162570a4c41c66a)
++++ b/src/Project/Pages/ChooseMap.java	(date 1671972835118)
+@@ -47,27 +47,27 @@
+ 
+         jButton1.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
+         jButton1.setText("Map 2");
+-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+-                jButton1ActionPerformed(evt);
+-            }
+-        });
++//        jButton1.addActionListener(new java.awt.event.ActionListener() {
++//            public void actionPerformed(java.awt.event.ActionEvent evt) {
++//                jButton1ActionPerformed(evt);
++//            }
++//        });
+         getContentPane().add(jButton1);
+         jButton1.setBounds(280, 270, 170, 50);
+ 
+         jButton2.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
+         jButton2.setText("Map 3");
+-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+-                jButton2ActionPerformed(evt);
+-            }
+-        });
++//        jButton2.addActionListener(new java.awt.event.ActionListener() {
++//            public void actionPerformed(java.awt.event.ActionEvent evt) {
++//                jButton2ActionPerformed(evt);
++//            }
++//        });
+         getContentPane().add(jButton2);
+         jButton2.setBounds(500, 270, 160, 50);
+ 
+         jButton3.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
+         jButton3.setText("Map 1");
+-        jButton2.addActionListener(new java.awt.event.ActionListener() {
++        jButton3.addActionListener(new java.awt.event.ActionListener() {
+             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                 jButton3ActionPerformed(evt);
+             }
+@@ -130,15 +130,15 @@
+         this.dispose();
+         new Map1().setVisible(true);
+     }
+-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+-        this.dispose();
+-        new Map2().setVisible(true);
+-    }
+-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+-        this.dispose();
+-        new Map3().setVisible(true);
+-
+-    }
++//    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
++//        this.dispose();
++//        new Map2().setVisible(true);
++//    }
++//    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
++//        this.dispose();
++//        new Map3().setVisible(true);
++//
++//    }
+     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
+         this.dispose();
+         new Map4().setVisible(true);
+Index: PacMan-Project.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"library\" name=\"hamcrest-core-1.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"lib641\" level=\"application\" />\r\n    <orderEntry type=\"library\" name=\"lib64\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"gluegen-rt\" level=\"project\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/PacMan-Project.iml b/PacMan-Project.iml
+--- a/PacMan-Project.iml	(revision 5de0ef188a54dd80d258b42a7162570a4c41c66a)
++++ b/PacMan-Project.iml	(date 1671972696607)
+@@ -9,7 +9,7 @@
+     <orderEntry type="sourceFolder" forTests="false" />
+     <orderEntry type="library" name="hamcrest-core-1.3" level="project" />
+     <orderEntry type="library" name="lib641" level="application" />
+-    <orderEntry type="library" name="lib64" level="project" />
+     <orderEntry type="library" name="gluegen-rt" level="project" />
++    <orderEntry type="library" name="lib64" level="application" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: src/Project/Maps/Map2/Map2Listener.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Project/Maps/Map2/Map2Listener.java b/src/Project/Maps/Map2/Map2Listener.java
+new file mode 100644
+--- /dev/null	(date 1671988864712)
++++ b/src/Project/Maps/Map2/Map2Listener.java	(date 1671988864712)
+@@ -0,0 +1,363 @@
++package Project.Maps.Map2;
++import Project.*;
++import Project.Maps.Map1.Map1;
++import Project.Pages.GameOver;
++import Project.Pages.WinnerPage;
++import Project.texture.TextureReader;
++
++
++import javax.media.opengl.GL;
++import javax.media.opengl.GLAutoDrawable;
++import javax.media.opengl.glu.GLU;
++import javax.sound.sampled.Clip;
++import javax.swing.*;
++import java.awt.event.KeyEvent;
++import java.io.IOException;
++import java.util.ArrayList;
++import java.util.BitSet;
++
++import static Project.Utils.*;
++import static java.awt.event.KeyEvent.*;
++import static java.awt.event.KeyEvent.VK_LEFT;
++
++public class Map2Listener extends AnimListener {
++    JFrame frame =null;
++    Clip EatingSound;
++    Pacman pacman = new Pacman();
++    ArrayList<Eating> Eating = new ArrayList<>();
++    ArrayList<Ghost> ghosts = new ArrayList<>();
++    static int No_Of_Ghosts = 4;
++    public static final int MAX_X = 620;
++    public static final int MAX_Y = 240;
++    int AnimIndexForPacman = 1;
++    int AnimIndexForFood = 7;
++    String[] textureNames = {
++            "MAPACMAN.jpg", // 0
++            "pacman.png", // 1
++            "up.gif", // 2
++            "down.gif", // 3
++            "right.gif", // 4
++            "left.gif", // 5
++            "ghost.gif", // 6
++            "food.png", // 7
++            "food2.png", // 8
++    };
++    TextureReader.Texture[] texture = new TextureReader.Texture[textureNames.length];
++    int[] textures = new int[textureNames.length];
++    int[][] Map = new int[][]{
++            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++            {0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0},
++            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++            {0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0},
++            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++            {0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0},
++            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++            {0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0},
++            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
++            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
++
++    };
++    int row = Map.length;
++    int column = Map[0].length;
++
++    public void init(GLAutoDrawable gld) {
++        GL gl = gld.getGL();
++        gl.glClearColor(0, 0, 0, 1f);
++        {
++            gl.glEnable(GL.GL_TEXTURE_2D);
++            gl.glBlendFunc(GL.GL_SRC_ALPHA, GL.GL_ONE_MINUS_SRC_ALPHA);
++            gl.glGenTextures(textureNames.length, textures, 0);
++//            for (int i = 0; i < textureNames.length; i++) {
++//                try {
++//                    texture[i] = TextureReader.readTexture(assetsFolderName + "//" + textureNames[i], true);
++//                    gl.glBindTexture(GL.GL_TEXTURE_2D, textures[i]);
++//
++//                    new GLU().gluBuild2DMipmaps(
++//                            GL.GL_TEXTURE_2D,
++//                            GL.GL_RGBA,
++//                            texture[i].getWidth(), texture[i].getHeight(),
++//                            GL.GL_RGBA,
++//                            GL.GL_UNSIGNED_BYTE,
++//                            texture[i].getPixels() // Image data
++//                    );
++//                } catch (IOException e) {
++//                    System.out.println(e.getMessage());
++//                    e.printStackTrace();
++//                }
++//            }
++        }
++        gl.glMatrixMode(GL.GL_PROJECTION);
++        gl.glLoadIdentity();
++
++        gl.glOrtho(0, MAX_X, MAX_Y, 0, 0, 1.0);
++
++        fillEating();
++
++        addGhostsToArray();
++        for (Ghost g : ghosts) {
++            g.randMove();
++        }
++    }
++
++    private void addGhostsToArray() {
++        for (int i = 0; i < No_Of_Ghosts; i++) {
++            ghosts.add(new Ghost());
++        }
++    }
++
++    private void fillEating() {
++        for (int i = 0; i < row; i++) {
++            for (int j = 0; j < column; j++) {
++                if (i % 2 == 0 && j % 3 == 0)
++                    if (Map[i][j] == 1) { // eat
++                        Eating.add(new Eating(j, i));
++                    }
++            }
++        }
++    }
++
++    @Override
++    public void display(GLAutoDrawable gld) {
++        GL gl = gld.getGL();
++        gl.glClear(GL.GL_COLOR_BUFFER_BIT);
++
++        gl.glPushMatrix();
++        int move = 10;
++        gl.glTranslated(move, move, 0);
++        {
++            drawBackground(gl);
++        }
++        gl.glPopMatrix();
++
++
++        drawEating(gl);
++        drawPacman(gl);
++        drawGhost(gl);
++
++        handelPacmanMove();
++        handelPacmanEating();
++
++//        handelGhostMove();
++
++        handelLose();
++
++        handelWinning();
++
++    }
++
++
++    private void handelLose() {
++        for (Ghost g : ghosts) {
++            if (g.ii == pacman.ii && g.jj == pacman.jj) {
++                if (EatingSound != null) EatingSound.stop();
++
++                frame.dispose();
++                new GameOver().setVisible(true);
++            }
++
++        }
++    }
++
++//    private void handelGhostMove() {
++//        for (Ghost g : ghosts) {
++//            switch (g.direction) {
++//                case IDEAL -> {
++//                }
++//                case UP -> {
++//                    if (g.y - g.step < 0 || g.jj - 1 < 0 || Map[g.jj - 1][g.ii] == 0) {
++//                        g.randMove();
++//                        return;
++//                    }
++//                    g.moveUP();
++//                }
++//                case DOWN -> {
++//                    if (g.y + g.step > MAX_Y || g.jj + 1 >= row || Map[g.jj + 1][g.ii] == 0) {
++//                        g.randMove();
++//                        return;
++//                    }
++//                    g.moveDown();
++//                }
++//                case RIGHT -> {
++//                    if (g.x + g.step > MAX_X || g.ii + 1 >= column || Map[g.jj][g.ii + 1] == 0) {
++//                        g.randMove();
++//                        return;
++//                    }
++//                    g.moveRight();
++//                }
++//                case LEFT -> {
++//                    if (g.x - g.step < 0 || g.ii - 1 < 0 || Map[g.jj][g.ii - 1] == 0) {
++//                        g.randMove();
++//                        return;
++//                    }
++//                    g.moveLeft();
++//                }
++//            }
++//        }
++//    }
++
++    private void drawGhost(GL gl) {
++        for (Ghost g : ghosts) {
++            DrawSprite(gl, (int) g.x, (int) g.y, 6, textures, Ghost.R);
++        }
++    }
++
++    private void handelWinning() {
++        if (Eating.isEmpty()) {
++            System.out.println("You Win");
++            if (EatingSound != null) EatingSound.stop();
++
++            frame.dispose();
++            new WinnerPage().setVisible(true);
++        }
++    }
++
++
++    private void handelPacmanEating() {
++
++        for (int i = 0; i < Eating.size(); i++) {
++            if (pacman.ii == Eating.get(i).ii && pacman.jj == Eating.get(i).jj) {
++                System.out.println(Eating.size());
++                if (EatingSound == null || !EatingSound.isRunning()) {
++                    EatingSound = playMusic("src/Project/Assets/pacman-wakawaka.wav", false);
++                }
++                Eating.remove(i--);
++            }
++        }
++    }
++
++    private void handelPacmanMove() {
++        if (isKeyPressed(VK_UP)) {
++            pacman.direction = Directions.UP;
++        }
++        if (isKeyPressed(VK_DOWN)) {
++            pacman.direction = Directions.DOWN;
++        }
++        if (isKeyPressed(VK_RIGHT)) {
++            pacman.direction = Directions.RIGHT;
++        }
++        if (isKeyPressed(VK_LEFT)) {
++            pacman.direction = Directions.LEFT;
++        }
++        if (!(isKeyPressed(VK_UP) || isKeyPressed(VK_DOWN) || isKeyPressed(VK_RIGHT) || isKeyPressed(VK_LEFT))) {
++            pacman.direction = Directions.IDEAL;
++        }
++
++        switch (pacman.direction) {
++            case IDEAL -> {
++            }
++            case UP -> {
++                if (pacman.y - pacman.step < 0 || pacman.jj - 1 < 0 || Map[pacman.jj - 1][pacman.ii] == 0) return;
++                pacman.moveUP();
++            }
++            case DOWN -> {
++                if (pacman.y + pacman.step > MAX_Y || pacman.jj + 1 >= row || Map[pacman.jj + 1][pacman.ii] == 0)
++                    return;
++                pacman.moveDown();
++            }
++            case RIGHT -> {
++                if (pacman.x + pacman.step > MAX_X || pacman.ii + 1 >= column || Map[pacman.jj][pacman.ii + 1] == 0)
++                    return;
++                pacman.moveRight();
++            }
++            case LEFT -> {
++                if (pacman.x - pacman.step < 0 || pacman.ii - 1 < 0 || Map[pacman.jj][pacman.ii - 1] == 0) return;
++                pacman.moveLeft();
++            }
++        }
++    }
++
++    private void drawEating(GL gl) {
++        for (Eating e : Eating) {
++            DrawSprite(gl, (int) e.x, (int) e.y, AnimIndexForFood, textures, 20);
++        }
++    }
++
++    private void drawPacman(GL gl) {
++        changeAnimIndex();
++
++        DrawSprite(gl, (int) pacman.x, (int) pacman.y, AnimIndexForPacman, textures, Pacman.R);
++    }
++
++    private void changeAnimIndex() {
++        switch (pacman.direction) {
++            case IDEAL -> {
++                AnimIndexForPacman = 1;
++            }
++            case UP -> { // 2
++                if (AnimIndexForPacman == 1) AnimIndexForPacman = 2;
++                else if (AnimIndexForPacman == 2) AnimIndexForPacman = 1;
++            }
++            case DOWN -> { // 3
++
++                if (AnimIndexForPacman == 1) AnimIndexForPacman = 3;
++                else if (AnimIndexForPacman == 3) AnimIndexForPacman = 1;
++            }
++            case RIGHT -> { // 4
++
++                if (AnimIndexForPacman == 1) AnimIndexForPacman = 4;
++                else if (AnimIndexForPacman == 4) AnimIndexForPacman = 1;
++            }
++            case LEFT -> { // 5
++
++                if (AnimIndexForPacman == 1) AnimIndexForPacman = 5;
++                else if (AnimIndexForPacman == 5) AnimIndexForPacman = 1;
++            }
++        }
++    }
++
++    private void drawBackground(GL gl) {
++        DrawSprite(gl, 0, 0, 0, textures, MAX_X - 10);
++    }
++
++
++    public BitSet keyBits = new BitSet(256);
++
++    @Override
++    public void keyPressed(final KeyEvent event) {
++        int keyCode = event.getKeyCode();
++        keyBits.set(keyCode);
++    }
++
++    @Override
++    public void keyReleased(final KeyEvent event) {
++        int keyCode = event.getKeyCode();
++        keyBits.clear(keyCode);
++        switch (keyCode) {
++            case VK_UP, VK_DOWN, VK_RIGHT, VK_LEFT -> pacman.direction = Directions.IDEAL;
++        }
++    }
++
++    public boolean isKeyPressed(final int keyCode) {
++        return keyBits.get(keyCode);
++    }
++
++    @Override
++    public void keyTyped(KeyEvent e) {
++
++    }
++
++    @Override
++    public void reshape(GLAutoDrawable glAutoDrawable, int i, int i1, int i2, int i3) {
++
++    }
++
++    @Override
++    public void displayChanged(GLAutoDrawable glAutoDrawable, boolean b, boolean b1) {
++
++    }
++
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1901c679-ef5b-4b01-869c-8de279211f87\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/Project/Assets/blue-pacman-gameboy-old-games-wallpaper-preview.jpg\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Project/Pages/User_Name.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Project/Pages/User_Name2.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/libraries/gluegen_rt.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/libraries/gluegen_rt.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Project/Pages/ChooseMap.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Project/Pages/ChooseMap.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Project/Pages/GameOver.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Project/Pages/GameOver.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Project/Pages/PlayerChoose.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Project/Pages/PlayerChoose.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Project/Pages/WinnerPage.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Project/Pages/WinnerPage.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2JCRDqFkG23HmnxkPLxir2jqw3w\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/pc/IdeaProjects/PacMan-Project/src/Project/Assets&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\pc\\IdeaProjects\\PacMan-Project\\src\\Project\\Assets\" />\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\" />\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\\texture\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\\Assets\" />\r\n      <recent name=\"C:\\Users\\pc\\IdeaProjects\\PacMan-Project\\src\\Project\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"Project.Pages\" />\r\n      <recent name=\"Project.Map5\" />\r\n      <recent name=\"Project.Map4\" />\r\n      <recent name=\"\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Map5\">\r\n    <configuration name=\"ChooseMap_Mult\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Pages.ChooseMap_Mult\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Pages.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"HomePage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.HomePage\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Maps.Map1.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Map5\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Maps.Map5.Map5\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Maps.Map5.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Project.Pages.HomePage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Pages.HomePage\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Pages.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"User_Name\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Pages.User_Name\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Pages.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.User_Name\" />\r\n        <item itemvalue=\"Application.Project.Pages.HomePage\" />\r\n        <item itemvalue=\"Application.Map5\" />\r\n        <item itemvalue=\"Application.HomePage\" />\r\n        <item itemvalue=\"Application.ChooseMap_Mult\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1901c679-ef5b-4b01-869c-8de279211f87\" name=\"Changes\" comment=\"\" />\r\n      <created>1671579963392</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1671579963392</updated>\r\n      <workItem from=\"1671629520497\" duration=\"1008000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"first Pages\">\r\n      <created>1671580409361</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671580409361</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"org. package\">\r\n      <created>1671589508336</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671589508336</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"CUSTOM_BOOLEAN_PROPERTIES\">\r\n                <map>\r\n                  <entry key=\"Show.Git.Branches\" value=\"false\" />\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"first Pages\" />\r\n    <MESSAGE value=\"org. package\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"org. package\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 5de0ef188a54dd80d258b42a7162570a4c41c66a)
++++ b/.idea/workspace.xml	(date 1671988025635)
+@@ -4,20 +4,13 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/Project/Assets/blue-pacman-gameboy-old-games-wallpaper-preview.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gluegen_rt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/gluegen_rt.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Chae Utils">
++      <change afterPath="$PROJECT_DIR$/src/Project/Assets/MAPPACMAN.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Listener.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/PacMan-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PacMan-Project.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/GameOver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/GameOver.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/PlayerChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/PlayerChoose.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/WinnerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/WinnerPage.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -34,7 +27,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="master" />
++        <entry key="$PROJECT_DIR$" value="Moody" />
+       </map>
+     </option>
+   </component>
+@@ -49,18 +42,18 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pc/IdeaProjects/PacMan-Project/src/Project/Assets&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "last_opened_file_path": "C:/Users/pc/IdeaProjects/PacMan-Project/src/Project/Assets",
++    "project.structure.last.edited": "Global Libraries",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "settings.editor.selected.configurable": "Errors"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets" />
+@@ -78,9 +71,9 @@
+       <recent name="" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.Map5">
+-    <configuration name="ChooseMap_Mult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Project.Pages.ChooseMap_Mult" />
++  <component name="RunManager" selected="Application.Map2">
++    <configuration name="ChooseMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Project.Pages.ChooseMap" />
+       <module name="PacMan-Project" />
+       <extension name="coverage">
+         <pattern>
+@@ -92,8 +85,8 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="HomePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Project.HomePage" />
++    <configuration name="Map1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1" />
+       <module name="PacMan-Project" />
+       <extension name="coverage">
+         <pattern>
+@@ -105,12 +98,12 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Map5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map5.Map5" />
++    <configuration name="Map2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map2.Map2" />
+       <module name="PacMan-Project" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="Project.Maps.Map5.*" />
++          <option name="PATTERN" value="Project.Maps.Map2.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -118,12 +111,12 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Project.Pages.HomePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Project.Pages.HomePage" />
++    <configuration name="Map5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map5.Map5" />
+       <module name="PacMan-Project" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="Project.Pages.*" />
++          <option name="PATTERN" value="Project.Maps.Map5.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -146,11 +139,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.User_Name" />
+-        <item itemvalue="Application.Project.Pages.HomePage" />
++        <item itemvalue="Application.Map2" />
++        <item itemvalue="Application.Map1" />
+         <item itemvalue="Application.Map5" />
+-        <item itemvalue="Application.HomePage" />
+-        <item itemvalue="Application.ChooseMap_Mult" />
++        <item itemvalue="Application.ChooseMap" />
++        <item itemvalue="Application.User_Name" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -178,7 +171,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1671589508336</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="Chae Utils">
++      <created>1671972522994</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1671972522994</updated>
++    </task>
++    <task id="LOCAL-00004" summary="Chae Utils">
++      <created>1671972538413</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1671972538413</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -204,6 +211,7 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="first Pages" />
+     <MESSAGE value="org. package" />
+-    <option name="LAST_COMMIT_MESSAGE" value="org. package" />
++    <MESSAGE value="Chae Utils" />
++    <option name="LAST_COMMIT_MESSAGE" value="Chae Utils" />
+   </component>
+ </project>
+\ No newline at end of file
