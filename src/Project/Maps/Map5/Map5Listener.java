@@ -188,20 +188,28 @@ public class Map5Listener extends AnimListener {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
                 synchronized (this) {
                     try {
-                        if (eatingSound != null) eatingSound.stop();
-                        losingSound = playMusic("src/Project/Assets/loser.wav", false);
-                        wait(3000);
-                        System.exit(0); // Show try again Frame
+                        if (--cntLives == 0) {
+                            frame.dispose();
+                            new GameOver().setVisible(true);
+                            if (eatingSound != null) eatingSound.stop();
+                            losingSound = playMusic("src/Project/Assets/loser.wav", false);
+                            wait(3000);
+                            System.exit(0); // Show try again Frame
+                        } else {
+                            pacman.reset();
+                        }
+
                     } catch (InterruptedException e) {
                         System.out.println(e.getMessage());
                     }
-                    if (eatingSound != null) eatingSound.stop();
-                    if (--cntLives == 0) {
-                        frame.dispose();
-                        new GameOver().setVisible(true);
-                    } else {
-                        pacman.reset();
-                    }
+//                    if (eatingSound != null) eatingSound.stop();
+//                    if (--cntLives == 0) {
+//                        frame.dispose();
+//                        new GameOver().setVisible(true);
+//
+//                    } else {
+//                        pacman.reset();
+//                    }
                 }
             }
         }
