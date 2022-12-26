@@ -32,7 +32,7 @@ public class Map2Listener extends AnimListener {
     Pacman pacman = new Pacman();
     int CountFood;
     int Lives =3;
-    long time = System.currentTimeMillis();
+    boolean pause = false;
     ArrayList<Eating> Eating = new ArrayList<>();
     ArrayList<Ghost> ghosts = new ArrayList<>();
     static int No_Of_Ghosts = 4;
@@ -175,7 +175,7 @@ public class Map2Listener extends AnimListener {
 
         handelLose();
         try {
-            drawString(gl,90,MAX_Y-8,"Time: "+time);
+//            drawString(gl,90,MAX_Y-8,"Time: "+time);
             drawString(gl, 5, MAX_Y - 8, "Score: " + CountFood);  // Score
             drawString(gl, 60, MAX_Y - 8, "Lives: " + Lives); // Lives
         } catch (GLException e) {
@@ -362,7 +362,20 @@ public class Map2Listener extends AnimListener {
     public void keyPressed(final KeyEvent event) {
         int keyCode = event.getKeyCode();
         keyBits.set(keyCode);
-    }
+        if (event.getKeyCode() == KeyEvent.VK_P) {
+            pause=!pause;
+            if (pause == false)
+                Map2.animator.start();
+            else if (pause == true) {
+                    Map2.animator.stop();
+                JOptionPane.showMessageDialog(null,"Enter P To Continue","Attention",2);
+
+            }
+
+                }
+            
+        }
+
 
     @Override
     public void keyReleased(final KeyEvent event) {
