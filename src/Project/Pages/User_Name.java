@@ -75,6 +75,11 @@ public class User_Name extends JFrame {
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+
+        if (jTextField1.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this,"Enter your name","User Name",JOptionPane.WARNING_MESSAGE);
+            return ;
+        }
         this.dispose();
         new ChooseMap().setVisible(true);
     }

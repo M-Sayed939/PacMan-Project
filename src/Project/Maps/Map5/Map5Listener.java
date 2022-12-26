@@ -42,7 +42,8 @@ public class Map5Listener extends AnimListener {
         time++;
     });
 
-    String textureNames[] = {"images.png", "pacman.png", "up.gif", "down.gif", "right.gif", "left.gif", "ghost.gif", "food.png", "food2.png"};
+
+    String textureNames[] = {"images.png","pacman.png","up.gif","down.gif","right.gif","left.gif","ghost.gif","food.png","food2.png"};
     TextureReader.Texture texture[] = new TextureReader.Texture[textureNames.length];
     int textures[] = new int[textureNames.length];
 
@@ -52,21 +53,21 @@ public class Map5Listener extends AnimListener {
             {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
             {0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
             {0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-            {0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+            {0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0},
             {0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0},
             {0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0},
-            {0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0},
-            {0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+            {0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0},
+            {0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0},
             {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
             {0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
             {0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
             {0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-            {0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
+            {0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
             {0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
-            {0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
-            {0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0},
-            {0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
-            {0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
+            {0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
+            {0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0},
+            {0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0},
+            {0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
             {0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0},
             {0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
             {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
@@ -77,6 +78,7 @@ public class Map5Listener extends AnimListener {
     int col = map[0].length;
     int animIndexForPacman = 1;
     int animIndexForFood = 8;
+    boolean pause = false;
 
     public void init(GLAutoDrawable gld) {
 
@@ -125,7 +127,7 @@ public class Map5Listener extends AnimListener {
 
     private void addGhostsToArray() {
         for (int i = 0; i < GHOSTS_SIZE; i++) {
-            ghosts.add(new Ghost(150, 150));
+            ghosts.add(new Ghost(150,150));
         }
     }
 
@@ -154,10 +156,10 @@ public class Map5Listener extends AnimListener {
         gl.glPopMatrix();
 
         gl.glPushMatrix();
-        double f = 0.967;
-        double d = 10;
-        gl.glTranslated(d + 0.3, d - 0.5, 1);
-        gl.glScaled(f, f, 1);
+        double f =0.967;
+        double d =10;
+        gl.glTranslated(d+0.3,d-0.5,1);
+        gl.glScaled(f,f,1);
         {
             drawEating(gl);
             drawPacman(gl);
@@ -172,12 +174,13 @@ public class Map5Listener extends AnimListener {
         handelWinning();
 
         try {
-            drawString(gl, 15, MAX_Y - 230, "Score: " + cntFood);  // Score
-            drawString(gl, 70, MAX_Y - 230, "Lives: " + cntLives); // Lives
-            drawString(gl, 125, MAX_Y - 230, "Time: " + time); // Time
+            drawString(gl, 15, MAX_Y -230, "Score: " + cntFood);  // Score
+            drawString(gl, 70, MAX_Y -230, "Lives: " + cntLives); // Lives
+            drawString(gl, 125, MAX_Y -230, "Time: " + time); // Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
+
     }
 
     private void handelLose() {
@@ -304,49 +307,49 @@ public class Map5Listener extends AnimListener {
 
     private void drawEating(GL gl) {
         for (Eating e : eating) {
-            DrawSprite(gl, (int) e.x, (int) e.y, animIndexForFood, textures, 10);
+            DrawSprite(gl, (int) e.x, (int) e.y, animIndexForFood,textures,10);
         }
     }
 
     private void drawPacman(GL gl) {
         changeAnimIndex();
-        DrawSprite(gl, (int) pacman.x, (int) pacman.y, animIndexForPacman, textures, 10);
+        DrawSprite(gl, (int) pacman.x, (int) pacman.y, animIndexForPacman,textures,10);
     }
 
     private void changeAnimIndex() {
-        switch (pacman.direction) {
+        switch (pacman.direction){
             case IDEAL -> {
                 animIndexForPacman = 1;
             }
             case UP -> {
-                if (animIndexForPacman == 1)
+                if(animIndexForPacman == 1)
                     animIndexForPacman = 2;
-                else if (animIndexForPacman == 2) ;
+                else if(animIndexForPacman == 2);
                 animIndexForPacman = 1;
             }
             case DOWN -> {
-                if (animIndexForPacman == 1)
+                if(animIndexForPacman == 1)
                     animIndexForPacman = 3;
-                else if (animIndexForPacman == 3)
+                else if(animIndexForPacman == 3)
                     animIndexForPacman = 1;
             }
             case RIGHT -> {
-                if (animIndexForPacman == 1)
+                if(animIndexForPacman == 1)
                     animIndexForPacman = 4;
-                else if (animIndexForPacman == 4)
+                else if(animIndexForPacman == 4)
                     animIndexForPacman = 1;
             }
             case LEFT -> {
-                if (animIndexForPacman == 1)
+                if(animIndexForPacman == 1)
                     animIndexForPacman = 5;
-                else if (animIndexForPacman == 5)
+                else if(animIndexForPacman == 5)
                     animIndexForPacman = 1;
             }
         }
     }
 
     private void drawBackground(GL gl) {
-        DrawSprite2(gl, 0, 0, 0, textures, MAX_X, MAX_Y);
+        DrawSprite2(gl, 0, 0, 0, textures, MAX_X,MAX_Y);
     }
 
 
@@ -356,6 +359,19 @@ public class Map5Listener extends AnimListener {
     public void keyPressed(final KeyEvent event) {
         int keyCode = event.getKeyCode();
         keyBits.set(keyCode);
+        if (keyCode == VK_SPACE) {
+            pause = !pause;
+            if (pause) {
+                timer.stop();
+                Map5.animator.stop();
+
+                JOptionPane.showMessageDialog(null, "Enter Space to Resume", "Pause", JOptionPane.WARNING_MESSAGE);
+            } else {
+//                timer.start();
+                Map5.animator.start();
+                timer.start();
+            }
+        }
     }
 
     @Override
@@ -369,6 +385,7 @@ public class Map5Listener extends AnimListener {
 
     public boolean isKeyPressed(final int keyCode) {
         return keyBits.get(keyCode);
+
     }
 
     @Override
