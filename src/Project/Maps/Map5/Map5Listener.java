@@ -32,7 +32,7 @@ public class Map5Listener extends AnimListener {
 
     ArrayList<Ghost> ghosts = new ArrayList<>();
     static int GHOSTS_SIZE = 4;
-    Clip eatingSound;
+    Clip eatingSound , losingSound , winningSound;
     static final int MAX_X = 350;
     static final int MAX_Y = 250;
     int cntFood;
@@ -78,7 +78,7 @@ public class Map5Listener extends AnimListener {
     int col = map[0].length;
     int animIndexForPacman = 1;
     int animIndexForFood = 8;
-    boolean pause = false;
+    boolean pause ;
 
     public void init(GLAutoDrawable gld) {
 
@@ -186,15 +186,24 @@ public class Map5Listener extends AnimListener {
     private void handelLose() {
         for (Ghost g : ghosts) {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
-                if (eatingSound != null) eatingSound.stop();
-                if (--cntLives == 0) {
-                    frame.dispose();
-                    new GameOver().setVisible(true);
-                } else {
-                    pacman.reset();
+                synchronized (this) {
+                    try {
+                        if (eatingSound != null) eatingSound.stop();
+                        losingSound = playMusic("src/Project/Assets/loser.wav", false);
+                        wait(3000);
+                        System.exit(0); // Show try again Frame
+                    } catch (InterruptedException e) {
+                        System.out.println(e.getMessage());
+                    }
+                    if (eatingSound != null) eatingSound.stop();
+                    if (--cntLives == 0) {
+                        frame.dispose();
+                        new GameOver().setVisible(true);
+                    } else {
+                        pacman.reset();
+                    }
                 }
             }
-
         }
     }
 
@@ -245,6 +254,18 @@ public class Map5Listener extends AnimListener {
         if (eating.isEmpty()) { // Winning
             System.out.println("Win");
             if (eatingSound != null) eatingSound.stop();
+            synchronized (this) {
+                winningSound = playMusic("src/Project/Assets/pacman-victory.wav", false);
+                if (winningSound != null) {
+                    try {
+                        wait(winningSound.getMicrosecondLength() / 1000);
+                        System.exit(1); // Go Winning Frame
+                    } catch (InterruptedException e) {
+                        System.out.println(e.getMessage());
+                    }
+                }
+            }
+            System.exit(1);
             frame.dispose();
             new WinnerPage().setVisible(true);
         }
