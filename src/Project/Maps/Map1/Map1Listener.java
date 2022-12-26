@@ -1,6 +1,7 @@
 package Project.Maps.Map1;
 
 import Project.Core.AnimListener;
+import Project.Maps.Map2.Map2;
 import Project.Models.Directions;
 import Project.Models.Eating;
 import Project.Models.Ghost;
@@ -30,6 +31,12 @@ public class Map1Listener extends AnimListener {
     Pacman pacman = new Pacman();
     int cntFood;
     int cntLives = 3;
+    boolean pause;
+    int time;
+    Timer timer = new Timer(1000, e -> {
+        time++;
+    });
+
     ArrayList<Ghost> ghosts = new ArrayList<>();
     static int GHOSTS_SIZE = 4;
     ArrayList<Eating> eating = new ArrayList<>();
@@ -141,6 +148,7 @@ public class Map1Listener extends AnimListener {
         for (Ghost g : ghosts) {
             g.randMove();
         }
+        timer.start();
     }
 
     private void addGhostsToArray() {
@@ -193,8 +201,7 @@ public class Map1Listener extends AnimListener {
         handelWinning();
 
         try {
-            drawString(gl, 5, MAX_Y - 8, "Score: " + cntFood);  // Score
-            drawString(gl, 60, MAX_Y - 8, "Lives: " + cntLives); // Lives
+            drawString(gl, 5, MAX_Y - 8, "Lives: " + cntLives + "      Score: " + cntFood + "      Time: " + time);
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
@@ -375,6 +382,16 @@ public class Map1Listener extends AnimListener {
     public void keyPressed(final KeyEvent event) {
         int keyCode = event.getKeyCode();
         keyBits.set(keyCode);
+        if (keyCode == VK_P) {
+            pause = !pause;
+            if (pause) {
+                Map1.animator.stop();
+                JOptionPane.showMessageDialog(null, "Enter P To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
+            } else {
+                Map1.animator.start();
+
+            }
+        }
     }
 
     @Override

@@ -182,7 +182,7 @@ public class Map2Listener extends AnimListener {
 
         handelLose();
         try {
-            drawString(gl, 5, MAX_Y, "Lives: " + Lives + "      Score: " + CountFood + "      Time: " + time); // Lives Score Time
+            drawString(gl, 8, 8, "Lives: " + Lives + "      Score: " + CountFood + "      Time: " + time); // Lives Score Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
