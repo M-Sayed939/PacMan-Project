@@ -357,13 +357,10 @@ public class Map3Listener extends AnimListener {
         keyBits.set(keyCode);
         if (e.getKeyCode() == KeyEvent.VK_P) {
             pause = !pause;
-            if (!pause)
-            {
+            if (!pause) {
                 timer.start();
                 Map3.animator.start();
-            }
-
-            else {
+            } else {
                 timer.stop();
                 Map3.animator.stop();
                 JOptionPane.showMessageDialog(null, "Enter P To Continue", "Attention", JOptionPane.WARNING_MESSAGE);

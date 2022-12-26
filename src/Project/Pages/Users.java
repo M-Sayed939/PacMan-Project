@@ -1,8 +1,6 @@
 package Project.Pages;
 
 
-
-
 public class Users extends javax.swing.JFrame {
 
 

@@ -35,7 +35,7 @@ public class Pacman {
         ii = trX(x);
     }
 
-    public void reset(){
+    public void reset() {
         direction = Directions.IDEAL;
         x = y = 15;
         ii = jj = trX(x);

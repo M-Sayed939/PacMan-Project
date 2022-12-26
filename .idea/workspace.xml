@@ -4,34 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="add time and pause in Map 1">
-      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map22Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Pages/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_23_2022_8_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_23_2022_8_35_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_25_2022_2_47_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_25_2022_2_47_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_31_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_31_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_51_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_51_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_23_2022_9_41_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_23_2022_9_41_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_10_30_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_10_30_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_1_41_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_1_41_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_8_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_8_35_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_12_29_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_12_29_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_2_18_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_2_18_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" afterDir="false" />
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Update Choose Map3">
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map22Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map22Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Models/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Models/Ghost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Models/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Models/Pacman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/GameOver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/GameOver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/HelpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/HelpPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/PlayerChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/PlayerChoose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/User_Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/Users.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +82,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ChooseMap">
+  <component name="RunManager" selected="Application.User_Name2">
     <configuration name="ChooseMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Project.Pages.ChooseMap" />
       <module name="PacMan-Project" />
@@ -135,12 +122,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Map3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map3.Map3" />
+    <configuration name="Play" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Play" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Maps.Map3.*" />
+          <option name="PATTERN" value="Project.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,12 +135,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Map5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map5.Map5" />
+    <configuration name="User_Name2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Pages.User_Name2" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Maps.Map5.*" />
+          <option name="PATTERN" value="Project.Pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.User_Name2" />
+        <item itemvalue="Application.Play" />
         <item itemvalue="Application.ChooseMap" />
         <item itemvalue="Application.HomePage" />
         <item itemvalue="Application.Map2" />
-        <item itemvalue="Application.Map3" />
-        <item itemvalue="Application.Map5" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +224,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672052080543</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update Choose Map3">
+      <created>1672065723068</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672065723068</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update Choose Map3">
+      <created>1672065732857</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1672065732857</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +268,7 @@
     <MESSAGE value="Add Time in Map2" />
     <MESSAGE value="add time and pause in Map 1" />
     <MESSAGE value="no" />
-    <option name="LAST_COMMIT_MESSAGE" value="no" />
+    <MESSAGE value="Update Choose Map3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Choose Map3" />
   </component>
 </project>

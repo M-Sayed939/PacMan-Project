@@ -1,7 +1,6 @@
 package Project.Maps.Map5;
 
 
-
 import com.sun.opengl.util.FPSAnimator;
 
 import javax.media.opengl.GLCanvas;

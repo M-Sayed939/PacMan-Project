@@ -40,7 +40,7 @@ public class ChooseMap extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new Dimension(715,550));
+        setMinimumSize(new Dimension(715, 550));
         setResizable(false);
         setTitle("Pac-Man Game");
         getContentPane().setLayout(null);
@@ -127,26 +127,32 @@ public class ChooseMap extends javax.swing.JFrame {
         this.dispose();
         new PlayerChoose().setVisible(true);
     }
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
         Map1.main(null);
     }
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
         Map2.main(null);
     }
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
         Map3.main(null);
     }
+
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
         Map4.main(null);
     }
+
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
         Map5.main(null);
     }
+
     public static void main(String[] args) {
 
         java.awt.EventQueue.invokeLater(() -> new ChooseMap().setVisible(true));

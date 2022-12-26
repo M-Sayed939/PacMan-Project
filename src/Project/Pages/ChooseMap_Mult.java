@@ -36,7 +36,7 @@ public class ChooseMap_Mult extends JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new Dimension(715,550));
+        setMinimumSize(new Dimension(715, 550));
         setResizable(false);
         setTitle("Pac-Man Game");
         getContentPane().setLayout(null);
