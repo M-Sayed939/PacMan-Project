@@ -4,11 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="creating map">
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="add time and pause in Map 1">
+      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map22Listener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project/Pages/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_23_2022_9_47_AM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_25_2022_2_44_PM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_23_2022_8_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_23_2022_8_35_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_25_2022_2_47_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_25_2022_2_47_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_31_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_31_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_51_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2022_3_51_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_23_2022_9_41_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_23_2022_9_41_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_10_30_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_10_30_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_1_41_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_1_41_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_8_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_25_2022_8_35_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_12_29_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_12_29_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_2_18_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_2_18_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Models/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Models/Ghost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/HomePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,20 +64,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Project/Assets/imgs" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JOGLwin/JOGLwin/lib64/jogl_cg.dll&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dell\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
+      <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\texture" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\Assets" />
       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project" />
     </key>
@@ -65,7 +95,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Map3">
+  <component name="RunManager" selected="Application.ChooseMap">
     <configuration name="ChooseMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Project.Pages.ChooseMap" />
       <module name="PacMan-Project" />
@@ -79,12 +109,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Map1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1" />
+    <configuration name="HomePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Pages.HomePage" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Maps.Map1.*" />
+          <option name="PATTERN" value="Project.Pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Map2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map2.Map2" />
+      <module name="PacMan-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Project.Maps.Map2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,25 +148,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="User_Name" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Pages.User_Name" />
+    <configuration name="Map5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map5.Map5" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Pages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="User_Name2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Pages.User_Name2" />
-      <module name="PacMan-Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Project.Pages.*" />
+          <option name="PATTERN" value="Project.Maps.Map5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Map3" />
-        <item itemvalue="Application.User_Name2" />
         <item itemvalue="Application.ChooseMap" />
-        <item itemvalue="Application.Map1" />
-        <item itemvalue="Application.User_Name" />
+        <item itemvalue="Application.HomePage" />
+        <item itemvalue="Application.Map2" />
+        <item itemvalue="Application.Map3" />
+        <item itemvalue="Application.Map5" />
       </list>
     </recent_temporary>
   </component>
@@ -165,35 +195,49 @@
       <option name="project" value="LOCAL" />
       <updated>1671589508336</updated>
     </task>
-    <task id="LOCAL-00003" summary="edite map1 matrix">
-      <created>1671990643732</created>
+    <task id="LOCAL-00003" summary="Add Score And Lives">
+      <created>1672014467857</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1671990643732</updated>
+      <updated>1672014467857</updated>
     </task>
-    <task id="LOCAL-00004" summary="add score">
-      <created>1671995927031</created>
+    <task id="LOCAL-00004" summary="Add Score And Lives">
+      <created>1672014879153</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1671995927031</updated>
+      <updated>1672014879153</updated>
     </task>
-    <task id="LOCAL-00005" summary="add lives counter">
-      <created>1671997916685</created>
+    <task id="LOCAL-00005" summary="Add Time in Map2">
+      <created>1672017939951</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1671997916685</updated>
+      <updated>1672017939951</updated>
     </task>
-    <task id="LOCAL-00006" summary="creating map">
-      <created>1672060388305</created>
+    <task id="LOCAL-00006" summary="Add Time in Map2">
+      <created>1672018121535</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1672060388305</updated>
+      <updated>1672018121535</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add time and pause in Map 1">
+      <created>1672019394132</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672019394132</updated>
+    </task>
+    <task id="LOCAL-00008" summary="no">
+      <created>1672052080543</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672052080543</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,19 +259,14 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first Pages" />
     <MESSAGE value="org. package" />
-    <MESSAGE value="edite map1 matrix" />
-    <MESSAGE value="add score" />
-    <MESSAGE value="add lives counter" />
-    <MESSAGE value="creating map" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating map" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="Add Score And Lives" />
+    <MESSAGE value="Add Time in Map2" />
+    <MESSAGE value="add time and pause in Map 1" />
+    <MESSAGE value="no" />
+    <option name="LAST_COMMIT_MESSAGE" value="no" />
   </component>
 </project>

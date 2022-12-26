@@ -19,6 +19,8 @@ public class HomePage extends JFrame {
             play = new JButton();
             play1 = new JButton();
             jLabel2 = new JLabel();
+            jButton1 = new JButton();
+
 
             setDefaultCloseOperation(EXIT_ON_CLOSE);
             setMinimumSize(new Dimension(700,520));
@@ -26,6 +28,8 @@ public class HomePage extends JFrame {
             setTitle("Pac-Man Game");
             getContentPane().setLayout(null);
             getContentPane().setLayout(null);
+
+
 
             exit.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
             exit.setText("Exit");
@@ -35,7 +39,8 @@ public class HomePage extends JFrame {
                 }
             });
             getContentPane().add(exit);
-            exit.setBounds(500, 360, 160, 50);
+            exit.setBounds(490, 370, 160, 50);
+
 
             play.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
             play.setText("Help");
@@ -45,7 +50,8 @@ public class HomePage extends JFrame {
                 }
             });
             getContentPane().add(play);
-            play.setBounds(270, 360, 160, 50);
+            play.setBounds(260, 370, 160, 50);
+
 
             play1.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
             play1.setText("Play");
@@ -56,7 +62,18 @@ public class HomePage extends JFrame {
                 }
             });
             getContentPane().add(play1);
-            play1.setBounds(30, 360, 160, 50);
+            play1.setBounds(130, 220, 200, 50);
+
+            jButton1.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
+            jButton1.setText("Users");
+            getContentPane().add(jButton1);
+            jButton1.setBounds(30, 370, 160, 50);
+            jButton1.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton1ActionPerformed(evt);
+                }
+            });
+
 
             jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project/Assets/PacManH.jpg"))); // NOI18N
             getContentPane().add(jLabel2);
@@ -78,6 +95,10 @@ public class HomePage extends JFrame {
         private void play1ActionPerformed(java.awt.event.ActionEvent evt) {
             this.dispose();
             new PlayerChoose().setVisible(true);
+        }
+        private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+            this.dispose();
+            new Users().setVisible(true);
         }
 
         /**
@@ -120,6 +141,7 @@ public class HomePage extends JFrame {
         private javax.swing.JLabel jLabel2;
         private javax.swing.JButton play;
         private javax.swing.JButton play1;
+        private javax.swing.JButton jButton1;
         // End of variables declaration
     }
 

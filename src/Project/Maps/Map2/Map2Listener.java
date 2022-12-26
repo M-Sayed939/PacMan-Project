@@ -373,9 +373,12 @@ public class Map2Listener extends AnimListener {
         keyBits.set(keyCode);
         if (event.getKeyCode() == KeyEvent.VK_P) {
             pause = !pause;
-            if (!pause)
+            if (!pause){
+                timer.start();
                 Map2.animator.start();
+            }
             else {
+                timer.stop();
                 Map2.animator.stop();
                 JOptionPane.showMessageDialog(null, "Enter P To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
 

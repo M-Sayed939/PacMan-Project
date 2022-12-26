@@ -99,7 +99,7 @@ public class ChooseMap_Mult extends JFrame {
 
     private void jButton4ActionPerformed(ActionEvent evt) {
         this.dispose();
-        new PlayerChoose().setVisible(true);
+        new User_Name2().setVisible(true);
     }
 
 

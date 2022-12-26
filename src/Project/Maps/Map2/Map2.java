@@ -8,7 +8,7 @@ import java.awt.*;
 
 public class Map2 extends JFrame {
     GLCanvas glcanvas;
-    Map2Listener listener = new Map2Listener();
+    Map22Listener listener = new Map22Listener();
     static FPSAnimator animator;
 
     public Map2() {
