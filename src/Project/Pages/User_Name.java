@@ -89,6 +89,7 @@ public class User_Name extends JFrame {
         }
 
         try {
+            FileWriter file = new FileWriter("Users.txt");
             boolean flag = false;
             Scanner input = new Scanner(new File("Users.txt"));
             while (input.hasNext()){
@@ -102,12 +103,14 @@ public class User_Name extends JFrame {
                 }
             }
             if(!flag){
-                FileWriter file = new FileWriter("Users.txt");
+
                 file.append(jTextField1.getText() + " \n");
-                file.close();
+
             }
+            file.close();
         } catch (IOException e) {
         }
+
         this.dispose();
         new ChooseMap().setVisible(true);
 

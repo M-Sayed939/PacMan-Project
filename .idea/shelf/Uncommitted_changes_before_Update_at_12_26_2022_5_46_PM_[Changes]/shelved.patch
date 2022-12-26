@@ -1,0 +1,75 @@
+Index: src/Project/Maps/Map2/Map2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Project.Maps.Map2;\r\n\r\nimport com.sun.opengl.util.FPSAnimator;\r\n\r\nimport javax.media.opengl.GLCanvas;\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\n\r\npublic class Map2 extends JFrame {\r\n    GLCanvas glcanvas;\r\n    Map22Listener listener = new Map22Listener();\r\n    static FPSAnimator animator;\r\n\r\n    public Map2() {\r\n        super(\"Map 2\");\r\n        setDefaultCloseOperation(EXIT_ON_CLOSE);\r\n        glcanvas = new GLCanvas();\r\n        glcanvas.addGLEventListener(listener);\r\n        glcanvas.addKeyListener(listener);\r\n        animator = new FPSAnimator(glcanvas, 25);\r\n\r\n        listener.frame = this;\r\n\r\n        add(glcanvas, BorderLayout.CENTER);\r\n        setSize(800, 800);\r\n        setLocationRelativeTo(this);\r\n        setVisible(true);\r\n        requestFocus();\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        new Map2();\r\n        animator.start();\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Project/Maps/Map2/Map2.java b/src/Project/Maps/Map2/Map2.java
+--- a/src/Project/Maps/Map2/Map2.java	(revision e146074b19ae83f7bedb190645f6868e91b66fb6)
++++ b/src/Project/Maps/Map2/Map2.java	(date 1672067490111)
+@@ -8,7 +8,7 @@
+ 
+ public class Map2 extends JFrame {
+     GLCanvas glcanvas;
+-    Map22Listener listener = new Map22Listener();
++    Map2Listener listener = new Map2Listener();
+     static FPSAnimator animator;
+ 
+     public Map2() {
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1901c679-ef5b-4b01-869c-8de279211f87\" name=\"Changes\" comment=\"finishing\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Moody\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2JCRDqFkG23HmnxkPLxir2jqw3w\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/src/Project/Assets/imgs\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Libraries\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\dell\\IdeaProjects\\PacMan-Project\\src\\Project\\Assets\\imgs\" />\r\n      <recent name=\"C:\\Users\\pc\\IdeaProjects\\PacMan-Project\\src\\Project\\Assets\" />\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\" />\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\\texture\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\hp\\IdeaProjects\\ms\\PacMan-Project\\src\\Project\\Assets\" />\r\n      <recent name=\"C:\\Users\\pc\\IdeaProjects\\PacMan-Project\\src\\Project\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"Project.Pages\" />\r\n      <recent name=\"Project.Map5\" />\r\n      <recent name=\"Project.Map4\" />\r\n      <recent name=\"\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.ChooseMap\">\r\n    <configuration name=\"ChooseMap\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Pages.ChooseMap\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Pages.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Map1\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Maps.Map1.Map1\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Maps.Map1.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Map3\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Maps.Map3.Map3\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Maps.Map3.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"User_Name\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Pages.User_Name\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Pages.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"User_Name2\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Project.Pages.User_Name2\" />\r\n      <module name=\"PacMan-Project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Project.Pages.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.ChooseMap\" />\r\n        <item itemvalue=\"Application.User_Name\" />\r\n        <item itemvalue=\"Application.Map3\" />\r\n        <item itemvalue=\"Application.User_Name2\" />\r\n        <item itemvalue=\"Application.Map1\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1901c679-ef5b-4b01-869c-8de279211f87\" name=\"Changes\" comment=\"\" />\r\n      <created>1671579963392</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1671579963392</updated>\r\n      <workItem from=\"1671629520497\" duration=\"1008000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"first Pages\">\r\n      <created>1671580409361</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671580409361</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"org. package\">\r\n      <created>1671589508336</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671589508336</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"edite map1 matrix\">\r\n      <created>1671990643732</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671990643732</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"add score\">\r\n      <created>1671995927031</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671995927031</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"add lives counter\">\r\n      <created>1671997916685</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671997916685</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"creating map\">\r\n      <created>1672060388305</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672060388305</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"finishing\">\r\n      <created>1672065101188</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672065101188</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"CUSTOM_BOOLEAN_PROPERTIES\">\r\n                <map>\r\n                  <entry key=\"Show.Git.Branches\" value=\"false\" />\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"first Pages\" />\r\n    <MESSAGE value=\"org. package\" />\r\n    <MESSAGE value=\"edite map1 matrix\" />\r\n    <MESSAGE value=\"add score\" />\r\n    <MESSAGE value=\"add lives counter\" />\r\n    <MESSAGE value=\"creating map\" />\r\n    <MESSAGE value=\"finishing\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"finishing\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision e146074b19ae83f7bedb190645f6868e91b66fb6)
++++ b/.idea/workspace.xml	(date 1672067490175)
+@@ -4,7 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="finishing" />
++    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Change actions">
++      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -20,7 +22,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="Moody" />
++        <entry key="$PROJECT_DIR$" value="Radwa" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -195,7 +197,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1672065101188</updated>
+     </task>
+-    <option name="localTasksCounter" value="8" />
++    <task id="LOCAL-00008" summary="Change actions">
++      <created>1672067305218</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1672067305218</updated>
++    </task>
++    <option name="localTasksCounter" value="9" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -226,7 +235,8 @@
+     <MESSAGE value="add lives counter" />
+     <MESSAGE value="creating map" />
+     <MESSAGE value="finishing" />
+-    <option name="LAST_COMMIT_MESSAGE" value="finishing" />
++    <MESSAGE value="Change actions" />
++    <option name="LAST_COMMIT_MESSAGE" value="Change actions" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
