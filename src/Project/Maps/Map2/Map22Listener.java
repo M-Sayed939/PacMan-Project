@@ -6,9 +6,7 @@ import Project.Models.Directions;
 import Project.Models.Eating;
 import Project.Models.Ghost;
 import Project.Models.Pacman;
-import Project.Pages.ChooseMap;
-import Project.Pages.GameOver;
-import Project.Pages.WinnerPage;
+import Project.Pages.*;
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
@@ -31,8 +29,8 @@ public class Map22Listener extends AnimListener {
     Clip EatingSound;
     Pacman pacman = new Pacman();
     Pacman pacman2 = new Pacman();
-    int CountFood;
-    int Lives = 3;
+    int CountFood,Count2Food;
+//    int Lives = 3;
     boolean pause = false;
     int time;
     Timer timer = new Timer(1000, e -> {
@@ -44,6 +42,7 @@ public class Map22Listener extends AnimListener {
     public static final int MAX_X = 620;
     public static final int MAX_Y = 265;
     int AnimIndexForPacman = 1;
+    int AnimIndexForPacman2= 1;
     int AnimIndexForFood = 7;
     String[] textureNames = {
             "mapp2.jpg", // 0
@@ -171,28 +170,19 @@ public class Map22Listener extends AnimListener {
             drawEating(gl);
             drawPacman(gl);
             drawGhost(gl);
-        }
-        gl.glPopMatrix();
-
-        gl.glPushMatrix();
-        gl.glTranslated(10, 200, 0);
-        gl.glScaled(0.95, 0.93, 1);
-        {
-
             drawPacman2(gl);
-
         }
         gl.glPopMatrix();
-
-
         handelPacmanMove();
         handelPacmanEating();
+        handelPacman2Move();
+        handelPacman2Eating();
 
         handelGhostMove();
 
         handelLose();
         try {
-            drawString(gl, 8, 8, "Lives: " + Lives + "      Score: " + CountFood + "      Time: " + time); // Lives Score Time
+            drawString(gl, 8, 8,  "P1 Score: " + CountFood +"      P2Score: " + Count2Food + "      Time: " + time); // Lives Score Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
@@ -210,16 +200,17 @@ public class Map22Listener extends AnimListener {
         for (Ghost g : ghosts) {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
                 if (EatingSound != null) EatingSound.stop();
-                if (--Lives == 0) {
                     frame.dispose();
-                    new GameOver().setVisible(true);
-                } else {
-                    pacman.reset();
-                }
+                    new Player2Winner().setVisible(true);
+                } else if (g.ii == pacman2.ii && g.jj == pacman2.jj) {
+                if (EatingSound != null) EatingSound.stop();
+                frame.dispose();
+                new Player1Winner().setVisible(true);
             }
         }
+        }
 
-    }
+
 
 
     private void handelGhostMove() {
@@ -267,11 +258,22 @@ public class Map22Listener extends AnimListener {
 
     private void handelWinning() {
         if (Eating.isEmpty()) {
-            System.out.println("You Win");
+            if (CountFood > Count2Food) {
+                System.out.println("Player 1 Win");
+                frame.dispose();
+                new Player1Winner().setVisible(true);
+            }else if (CountFood < Count2Food) {
+                System.out.println("Player 2 Win");
+                frame.dispose();
+                new Player2Winner().setVisible(true);
+            } else{
+                System.out.println("Draw");
+                frame.dispose();
+                new WinnerPage().setVisible(true);
+            }
             if (EatingSound != null) EatingSound.stop();
 
-            frame.dispose();
-            new WinnerPage().setVisible(true);
+
         }
     }
 
@@ -331,6 +333,9 @@ public class Map22Listener extends AnimListener {
         }
     }
 
+
+
+
     private void drawEating(GL gl) {
         for (Eating e : Eating) {
             DrawSprite(gl, (int) e.x, (int) e.y, AnimIndexForFood, textures, 12);
@@ -343,11 +348,7 @@ public class Map22Listener extends AnimListener {
         DrawSprite(gl, (int) pacman.x, (int) pacman.y, AnimIndexForPacman, textures, 15);
     }
 
-    private void drawPacman2(GL gl) {
-        changeAnimIndex();
 
-        DrawSprite(gl, (int) pacman.x, (int) pacman.y, AnimIndexForPacman, textures, 15);
-    }
 
     private void changeAnimIndex() {
         switch (pacman.direction) {
@@ -376,8 +377,94 @@ public class Map22Listener extends AnimListener {
         }
     }
 
+
     private void drawBackground(GL gl) {
         DrawSprite(gl, 0, 0, 0, textures, MAX_X - 10);
+    }
+    ////////////Player 2///////////////////////
+    private void handelPacman2Eating() {
+
+        for (int i = 0; i < Eating.size(); i++) {
+            if (pacman2.ii == Eating.get(i).ii && pacman2.jj == Eating.get(i).jj) {
+                Count2Food++;
+                System.out.println(Eating.size());
+                if (EatingSound == null || !EatingSound.isRunning()) {
+                    EatingSound = playMusic("src/Project/Assets/pacman-wakawaka.wav", false);
+                }
+                Eating.remove(i--);
+            }
+        }
+    }
+    private void handelPacman2Move() {
+        if (isKeyPressed(VK_W)) {
+            pacman2.direction = Directions.UP;
+        }
+        if (isKeyPressed(VK_S)) {
+            pacman2.direction = Directions.DOWN;
+        }
+        if (isKeyPressed(VK_D)) {
+            pacman2.direction = Directions.RIGHT;
+        }
+        if (isKeyPressed(VK_A)) {
+            pacman2.direction = Directions.LEFT;
+        }
+        if (!(isKeyPressed(VK_W) || isKeyPressed(VK_S) || isKeyPressed(VK_D) || isKeyPressed(VK_A))) {
+            pacman2.direction = Directions.IDEAL;
+        }
+
+        switch (pacman2.direction) {
+            case IDEAL -> {
+            }
+            case UP -> {
+                if (pacman2.y - pacman2.step < 0 || pacman2.jj - 1 < 0 || Map[pacman2.jj - 1][pacman2.ii] == 0) return;
+                pacman2.moveUP();
+            }
+            case DOWN -> {
+                if (pacman2.y + pacman2.step > MAX_Y || pacman2.jj + 1 >= row || Map[pacman2.jj + 1][pacman2.ii] == 0)
+                    return;
+                pacman2.moveDown();
+            }
+            case RIGHT -> {
+                if (pacman2.x + pacman2.step > MAX_X || pacman2.ii + 1 >= column || Map[pacman2.jj][pacman2.ii + 1] == 0)
+                    return;
+                pacman2.moveRight();
+            }
+            case LEFT -> {
+                if (pacman2.x - pacman2.step < 0 || pacman2.ii - 1 < 0 || Map[pacman2.jj][pacman2.ii - 1] == 0) return;
+                pacman2.moveLeft();
+            }
+        }
+    }
+    private void drawPacman2(GL gl) {
+        changeAnim2Index();
+
+        DrawSprite(gl, (int) pacman2.x, (int) pacman2.y, AnimIndexForPacman2, textures, 15);
+    }
+    private void changeAnim2Index() {
+        switch (pacman2.direction) {
+            case IDEAL -> {
+                AnimIndexForPacman2 = 1;
+            }
+            case UP -> { // 2
+                if (AnimIndexForPacman2 == 1) AnimIndexForPacman2 = 2;
+                else if (AnimIndexForPacman2 == 2) AnimIndexForPacman2 = 1;
+            }
+            case DOWN -> { // 3
+
+                if (AnimIndexForPacman2 == 1) AnimIndexForPacman2 = 3;
+                else if (AnimIndexForPacman2 == 3) AnimIndexForPacman2 = 1;
+            }
+            case RIGHT -> { // 4
+
+                if (AnimIndexForPacman2 == 1) AnimIndexForPacman2 = 4;
+                else if (AnimIndexForPacman2 == 4) AnimIndexForPacman2 = 1;
+            }
+            case LEFT -> { // 5
+
+                if (AnimIndexForPacman2 == 1) AnimIndexForPacman2 = 5;
+                else if (AnimIndexForPacman2 == 5) AnimIndexForPacman2 = 1;
+            }
+        }
     }
 
 
@@ -408,6 +495,8 @@ public class Map22Listener extends AnimListener {
         keyBits.clear(keyCode);
         switch (keyCode) {
             case VK_UP, VK_DOWN, VK_RIGHT, VK_LEFT -> pacman.direction = Directions.IDEAL;
+            case VK_W, VK_S, VK_D, VK_A -> pacman2.direction = Directions.IDEAL;
+
         }
     }
 

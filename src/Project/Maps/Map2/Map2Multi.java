@@ -6,12 +6,12 @@ import javax.media.opengl.GLCanvas;
 import javax.swing.*;
 import java.awt.*;
 
-public class Map2 extends JFrame {
+public class Map2Multi extends JFrame {
     GLCanvas glcanvas;
-    Map2Listener listener = new Map2Listener();
+    Map22Listener listener = new Map22Listener();
     static FPSAnimator animator;
 
-    public Map2() {
+    public Map2Multi() {
         super("Map 2");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         glcanvas = new GLCanvas();
@@ -29,7 +29,7 @@ public class Map2 extends JFrame {
     }
 
     public static void main(String[] args) {
-        new Map2();
+        new Map2Multi();
         animator.start();
     }
 
