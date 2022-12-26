@@ -192,11 +192,11 @@ public class MultiMap5Listener extends  AnimListener {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
                 if (eatingSound != null) eatingSound.stop();
                 frame.dispose();
-                new player2Winner().setVisible(true);
+                new Player2Winner().setVisible(true);
             } else if (g.ii == pacman2.ii && g.jj == pacman2.jj) {
                 if (eatingSound != null) eatingSound.stop();
                 frame.dispose();
-                new player1Winner().setVisible(true);
+                new Player1Winner().setVisible(true);
             }
         }
     }
@@ -249,11 +249,11 @@ public class MultiMap5Listener extends  AnimListener {
             if (cntFood > cntFood2) {
                 System.out.println("Player 1 Win");
                 frame.dispose();
-                new player1Winner().setVisible(true);
+                new Player1Winner().setVisible(true);
             }else if (cntFood < cntFood2) {
                 System.out.println("Player 2 Win");
                 frame.dispose();
-                new player2Winner().setVisible(true);
+                new Player2Winner().setVisible(true);
             } else{
                 System.out.println("Draw");
                 frame.dispose();

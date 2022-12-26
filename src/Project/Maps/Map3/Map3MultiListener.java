@@ -6,7 +6,6 @@ import Project.Models.Directions;
 import Project.Models.Eating;
 import Project.Models.Ghost;
 import Project.Models.Pacman;
-import Project.Pages.GameOver;
 import Project.Pages.Player1Winner;
 import Project.Pages.Player2Winner;
 import Project.Pages.WinnerPage;

@@ -212,22 +212,17 @@ public class Map1_MultiListener extends AnimListener {
         for (Ghost g : ghosts) {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
                 if (EatingSound != null) EatingSound.stop();
-                if (--Lives1 == 0) {
-                    frame.dispose();
-                    new GameOver().setVisible(true);
-                } else {
-                    pacman.reset();
-                }
+                frame.dispose();
+                new Player2Winner().setVisible(true);
             } else if (g.ii == pacman2.ii && g.jj == pacman2.jj) {
                 if (EatingSound != null) EatingSound.stop();
-                if (--Lives2 == 0) {
-                    frame.dispose();
-                    new GameOver().setVisible(true);
-                } else {
-                    pacman2.reset();
-                }
+                frame.dispose();
+                new Player1Winner().setVisible(true);
             }
+
+
         }
+
     }
 
 
