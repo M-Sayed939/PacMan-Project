@@ -4,35 +4,43 @@ import Project.AnimListener;
 import Project.Directions;
 import Project.Eating;
 import Project.Pacman;
+import Project.Pages.GameOver;
+import Project.Pages.WinnerPage;
 import Project.texture.TextureReader;
 import Project.*;
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
+import javax.media.opengl.GLException;
 import javax.media.opengl.glu.GLU;
-import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.BitSet;
 import javax.sound.sampled.Clip;
+import javax.swing.*;
 
 import static Project.Utils.*;
 import static java.awt.event.KeyEvent.*;
 import static java.awt.event.KeyEvent.VK_LEFT;
-import static java.lang.Math.*;
-import static java.lang.Math.toRadians;
+
 
 public class Map5Listener extends AnimListener {
-
+    JFrame frame = null;
     Pacman pacman = new Pacman();
     ArrayList<Eating> eating = new ArrayList<>();
 
-    ArrayList<Ghosts> ghosts = new ArrayList<>();
+    ArrayList<Ghost> ghosts = new ArrayList<>();
     static int GHOSTS_SIZE = 4;
-    Clip eatingSound, losingSound, winningSound;
+    Clip eatingSound;
     static final int MAX_X = 350;
     static final int MAX_Y = 250;
+    int cntFood;
+    int cntLives = 3;
+    int time;
+    Timer timer = new Timer(1000, e -> {
+        time++;
+    });
 
     String textureNames[] = {"images.png","pacman.png","up.gif","down.gif","right.gif","left.gif","ghost.gif","food.png","food2.png"};
     TextureReader.Texture texture[] = new TextureReader.Texture[textureNames.length];
@@ -109,14 +117,15 @@ public class Map5Listener extends AnimListener {
         fillEating();
 
         addGhostsToArray();
-        for (Ghosts g : ghosts) {
+        for (Ghost g : ghosts) {
             g.randMove();
         }
+        timer.start();
     }
 
     private void addGhostsToArray() {
         for (int i = 0; i < GHOSTS_SIZE; i++) {
-            ghosts.add(new Ghosts());
+            ghosts.add(new Ghost(150,150));
         }
     }
 
@@ -124,10 +133,10 @@ public class Map5Listener extends AnimListener {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 if (i % 2 == 0 && j % 3 == 0)
-                if (map[i][j] == 1) { // eat
-                    eating.add(new Eating(j, i));
+                    if (map[i][j] == 1) { // eat
+                        eating.add(new Eating(j, i));
+                    }
                 }
-            }
         }
     }
 
@@ -161,20 +170,25 @@ public class Map5Listener extends AnimListener {
         handelGhostMove();
         handelLose();
         handelWinning();
+
+        try {
+            drawString(gl, 15, MAX_Y -230, "Score: " + cntFood);  // Score
+            drawString(gl, 70, MAX_Y -230, "Lives: " + cntLives); // Lives
+            drawString(gl, 125, MAX_Y -230, "Time: " + time); // Time
+        } catch (GLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     private void handelLose() {
-        for (Ghosts g : ghosts) {
+        for (Ghost g : ghosts) {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
-                synchronized (this) {
-                    try {
-                        if (eatingSound != null) eatingSound.stop();
-                        losingSound = playMusic("src/Project/Assets/loser.wav", false);
-                        wait(3000);
-                        System.exit(0); // Show try again Frame
-                    } catch (InterruptedException e) {
-                        System.out.println(e.getMessage());
-                    }
+                if (eatingSound != null) eatingSound.stop();
+                if (--cntLives == 0) {
+                    frame.dispose();
+                    new GameOver().setVisible(true);
+                } else {
+                    pacman.reset();
                 }
             }
 
@@ -182,7 +196,7 @@ public class Map5Listener extends AnimListener {
     }
 
     private void handelGhostMove() {
-        for (Ghosts g : ghosts) {
+        for (Ghost g : ghosts) {
             switch (g.direction) {
                 case IDEAL -> {
                 }
@@ -219,7 +233,7 @@ public class Map5Listener extends AnimListener {
     }
 
     private void drawGhost(GL gl) {
-        for (Ghosts g : ghosts) {
+        for (Ghost g : ghosts) {
             DrawSprite(gl, (int) g.x, (int) g.y, 6, textures, 10);
         }
     }
@@ -228,32 +242,20 @@ public class Map5Listener extends AnimListener {
         if (eating.isEmpty()) { // Winning
             System.out.println("Win");
             if (eatingSound != null) eatingSound.stop();
-            synchronized (this) {
-                winningSound = playMusic("src/Project/Assets/pacman-victory.wav", false);
-                if (winningSound != null) {
-                    try {
-                        wait(winningSound.getMicrosecondLength() / 1000);
-                        System.exit(1); // Go Winning Frame
-                    } catch (InterruptedException e) {
-                        System.out.println(e.getMessage());
-                    }
-                }
-            }
-            System.exit(1);
+            frame.dispose();
+            new WinnerPage().setVisible(true);
         }
-    }
+        }
 
-    int cnt;
     private void handelPacmanEating() {
 
         for (int i = 0; i < eating.size(); i++) {
             if (pacman.ii == eating.get(i).ii && pacman.jj == eating.get(i).jj) {
 //                System.out.println(i);
-                System.out.println(eating.size());
-                if(cnt == 0){
-                    eatingSound = playMusic("src/Project/Assets/eating.wav",true);
+                cntFood++;
+                if (eatingSound == null || !eatingSound.isRunning()) {
+                    eatingSound = playMusic("src/Project/Assets/pacman-wakawaka.wav", false);
                 }
-                cnt++;
                 eating.remove(i--);
             }
         }
@@ -311,21 +313,6 @@ public class Map5Listener extends AnimListener {
         DrawSprite(gl, (int) pacman.x, (int) pacman.y, animIndexForPacman,textures,10);
     }
 
-//    private void drawCircle(GL gl, int r, Color color, double x, double y) {
-//        drawRegularRibs(gl, r, color, x, y);
-//    }
-//
-//    private void drawRegularRibs(GL gl, int r, Color color, double x, double y) {
-//        gl.glColor3fv(color.getColorComponents(null), 0);
-//        gl.glBegin(GL.GL_POLYGON);
-//        int step = 1;
-//        for (int i = 0; i < 360; i += step)
-//            gl.glVertex2d(x + r * cos(toRadians(i)),
-//                    y + r * sin(toRadians(i)));
-//
-//        gl.glEnd();
-//    }
-
     private void changeAnimIndex() {
         switch (pacman.direction){
             case IDEAL -> {
@@ -359,16 +346,6 @@ public class Map5Listener extends AnimListener {
     }
 
     private void drawBackground(GL gl) {
-//        for (int i = 0; i < row; i++) {
-//            for (int j = 0; j < col; j++) {
-//                if (map[i][j] == 0) { // blocks
-//                    double x = arcTrX(j) - 5, y = arcTrY(i) - 5;
-//
-//                    drawRect(gl, x, y, 10, 10, 0, 0, 1);
-//
-//                }
-//            }
-//        }
         DrawSprite(gl, 0, 0, 0, textures, MAX_X,MAX_Y);
     }
 
@@ -385,6 +362,9 @@ public class Map5Listener extends AnimListener {
     public void keyReleased(final KeyEvent event) {
         int keyCode = event.getKeyCode();
         keyBits.clear(keyCode);
+        switch (keyCode) {
+            case VK_UP, VK_DOWN, VK_RIGHT, VK_LEFT -> pacman.direction = Directions.IDEAL;
+        }
     }
 
     public boolean isKeyPressed(final int keyCode) {
