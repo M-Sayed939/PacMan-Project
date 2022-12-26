@@ -29,7 +29,7 @@ public class Map22Listener extends AnimListener {
     Clip EatingSound;
     Pacman pacman = new Pacman();
     Pacman pacman2 = new Pacman();
-    int CountFood,Count2Food;
+    int CountFood,Count2Food,HighScore;
 //    int Lives = 3;
     boolean pause = false;
     int time;
@@ -180,6 +180,7 @@ public class Map22Listener extends AnimListener {
         handelPacman2Eating();
 
         handelGhostMove();
+//        System.out.println(Eating.size());
 
         handelLose();
         try {

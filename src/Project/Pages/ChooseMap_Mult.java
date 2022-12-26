@@ -3,9 +3,11 @@ package Project.Pages;
 //import Project.Maps.Map1.Map1;
 
 import Project.Maps.Map1.Map1;
+import Project.Maps.Map1.Map1_Multi;
 import Project.Maps.Map2.Map2;
 import Project.Maps.Map2.Map2Multi;
 import Project.Maps.Map3.Map3;
+import Project.Maps.Map3.Map3Multi;
 import Project.Maps.Map4.Map4;
 import Project.Maps.Map5.Map5;
 
@@ -58,10 +60,11 @@ public class ChooseMap_Mult extends JFrame {
         jButton2.setText("Map 3");
         getContentPane().add(jButton2);
         jButton2.setBounds(500, 270, 160, 50);
+        jButton2.addActionListener(this::jButton2ActionPerformed);
 
         jButton3.setFont(new Font("Hobo Std", 0, 36)); // NOI18N
         jButton3.setText("Map 1");
-//        jButton3.addActionListener(this::jButton3ActionPerformed);
+        jButton3.addActionListener(this::jButton3ActionPerformed);
 
 
         getContentPane().add(jButton3);
@@ -108,20 +111,21 @@ public class ChooseMap_Mult extends JFrame {
         this.dispose();
         new User_Name2().setVisible(true);
     }
-//    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
-//        this.dispose();
-//        Map1.main(null);
-//    }
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+        this.dispose();
+        Map1_Multi.main(null);
+    }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
         Map2Multi.main(null);
     }
 
-//    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-//        this.dispose();
-//        Map3.main(null);
-//    }
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+        this.dispose();
+        Map3Multi.main(null);
+    }
 
 //    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
 //        this.dispose();
