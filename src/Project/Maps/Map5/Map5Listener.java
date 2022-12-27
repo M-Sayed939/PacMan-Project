@@ -179,8 +179,8 @@ public class Map5Listener extends AnimListener {
             drawString(gl, 15, MAX_Y -230, "Score: " + cntFood);  // Score
             drawString(gl, 70, MAX_Y -230, "Lives: " + cntLives); // Lives
             drawString(gl, 125, MAX_Y -230, "Time: " + time); // Time
-            drawString(gl, 180, MAX_Y -230, "HighScore: " + highScore); // Time
-            drawString(gl, 250, MAX_Y -230, "User: " + userName); // Time
+            drawString(gl, 180, MAX_Y -230, "HighScore: " + highScore);
+            drawString(gl, 260, MAX_Y -230, "User: " + userName);
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
