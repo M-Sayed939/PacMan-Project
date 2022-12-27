@@ -32,8 +32,8 @@ public class Map1_MultiListener extends AnimListener {
     public static String userName1 = "";
     public static String userName2 = "";
     int CountFood, Count2Food;
-    int Lives1 = 3;
-    int Lives2 = 3;
+//    int Lives1 = 3;
+//    int Lives2 = 3;
     boolean pause = false;
     int time;
     Timer timer = new Timer(1000, e -> {
@@ -196,7 +196,8 @@ public class Map1_MultiListener extends AnimListener {
         handelLose();
         try {
             drawString(gl, 8, MAX_Y - 8, "P1 Score: " + CountFood + "    P2 Score: " + Count2Food
-                    + "    P1 Lives: " + Lives1 + "    P2 Lives: " + Lives2 + "   Time: " + time + "   Player1: " + userName1 + "   Player2: " + userName2); // Lives Score Time
+                    + "   Time: " + time + "   Player1: " + userName1 + "   Player2: " + userName2); // Lives Score Time
+//             "    P1 Lives: " + Lives1 + "    P2 Lives: " + Lives2
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
