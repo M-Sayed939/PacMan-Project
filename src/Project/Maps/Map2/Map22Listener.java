@@ -481,10 +481,10 @@ public class Map22Listener extends AnimListener {
             pause = !pause;
             if (!pause) {
                 timer.start();
-                Map2.animator.start();
+                Map2Multi.animator.start();
             } else {
                 timer.stop();
-                Map2.animator.stop();
+                Map2Multi.animator.stop();
                 JOptionPane.showMessageDialog(null, "Enter SpaceBar To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
 
             }

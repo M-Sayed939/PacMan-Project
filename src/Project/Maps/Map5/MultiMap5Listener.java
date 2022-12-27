@@ -474,10 +474,10 @@ public class MultiMap5Listener extends AnimListener {
             pause = !pause;
             if (pause) {
                 timer.stop();
-                Map5.animator.stop();
+                MultiMap5.animator.stop();
                 JOptionPane.showMessageDialog(null, "Enter Space to Resume", "Pause", JOptionPane.WARNING_MESSAGE);
             } else {
-                Map5.animator.start();
+                MultiMap5.animator.start();
                 timer.start();
             }
         }
