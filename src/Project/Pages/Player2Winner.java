@@ -81,6 +81,7 @@ public class Player2Winner extends javax.swing.JFrame {
         private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
             this.dispose();
             new HomePage().setVisible(true);
+            HomePage.voice.start();
 
         }
 

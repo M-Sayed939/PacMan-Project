@@ -2,11 +2,13 @@ package Project.Maps.Map5;
 
 
 import Project.Maps.Map5.Map5Listener;
+import Project.Pages.HomePage;
 import com.sun.opengl.util.FPSAnimator;
 
 import javax.media.opengl.GLCanvas;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowEvent;
 
 public class MultiMap5 extends JFrame {
     GLCanvas glcanvas;
@@ -15,7 +17,6 @@ public class MultiMap5 extends JFrame {
 
     public MultiMap5() {
         super("MultiMap 5");
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         glcanvas = new GLCanvas();
         glcanvas.addGLEventListener(listener);
         glcanvas.addKeyListener(listener);
@@ -31,6 +32,17 @@ public class MultiMap5 extends JFrame {
         setVisible(true);
         setFocusable(true);
         glcanvas.requestFocus();
+    }
+
+    @Override
+    public void processWindowEvent(final WindowEvent e) {
+        super.processWindowEvent(e);
+
+        if (e.getID() == WindowEvent.WINDOW_CLOSING) {
+
+            new HomePage().setVisible(true);
+            HomePage.voice.start();
+        }
     }
 
     public static void main(String[] args) {
