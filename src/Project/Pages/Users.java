@@ -1,18 +1,34 @@
 package Project.Pages;
 
 
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class Users extends javax.swing.JFrame {
 
 
     public Users() {
         initComponents();
         setLocationRelativeTo(null);
+        try{
+            Scanner sc= new Scanner(new File("Users.txt"));
+            while(sc.hasNext()){
+                USERNAME.append(sc.nextLine());
+                USERNAME.append("\n");
+            }
+
+        }catch(IOException e){
+
+        }
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
+        USERNAME = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jLabel16 = new javax.swing.JLabel();
@@ -33,6 +49,15 @@ public class Users extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(450, 300, 220, 70);
+
+        USERNAME.setEditable(false);
+        USERNAME.setColumns(20);
+        USERNAME.setRows(5);
+        USERNAME.setFont(new Font("Hobo Std",0,24));
+        jScrollPane1.setViewportView(USERNAME);
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(10, 80, 320, 300);
 
@@ -90,10 +115,12 @@ public class Users extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify                     
+    // Variables declaration - do not modify
+    private javax.swing.JTextArea USERNAME;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration                   
 }
+

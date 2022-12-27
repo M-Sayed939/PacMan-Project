@@ -1,4 +1,4 @@
-package Project.Maps.Map2;
+package Project.Maps.Map1;
 
 import com.sun.opengl.util.FPSAnimator;
 
@@ -6,20 +6,20 @@ import javax.media.opengl.GLCanvas;
 import javax.swing.*;
 import java.awt.*;
 
-public class Map2 extends JFrame {
+public class Map1_Multi extends JFrame {
     GLCanvas glcanvas;
-    Map2Listener listener = new Map2Listener();
+    Map1_MultiListener listener = new Map1_MultiListener();
     static FPSAnimator animator;
 
-    public Map2() {
-        super("Map 2");
+    public Map1_Multi() {
+        super("Map 1");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         glcanvas = new GLCanvas();
         glcanvas.addGLEventListener(listener);
         glcanvas.addKeyListener(listener);
-        animator = new FPSAnimator(glcanvas, 25);
+        animator = new FPSAnimator(glcanvas, 15);
 
-        listener.frame = this;
+        listener.frame = this; // For closing
 
         add(glcanvas, BorderLayout.CENTER);
         setSize(800, 800);
@@ -29,7 +29,7 @@ public class Map2 extends JFrame {
     }
 
     public static void main(String[] args) {
-        new Map2();
+        new Map1_Multi();
         animator.start();
     }
 

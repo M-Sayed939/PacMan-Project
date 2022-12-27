@@ -1,31 +1,32 @@
+
 package Project.Maps.Map4;
 
-import Project.Core.AnimListener;
-import Project.Core.texture.TextureReader;
-import Project.Maps.Map5.Map5;
-import Project.Models.Directions;
-import Project.Models.Eating;
-import Project.Models.Ghost;
-import Project.Models.Pacman;
-import Project.Pages.GameOver;
-import Project.Pages.WinnerPage;
+        import Project.Core.AnimListener;
+        import Project.Core.texture.TextureReader;
+        import Project.Maps.Map5.Map5;
+        import Project.Models.Directions;
+        import Project.Models.Eating;
+        import Project.Models.Ghost;
+        import Project.Models.Pacman;
+        import Project.Pages.GameOver;
+        import Project.Pages.WinnerPage;
 
 
-import javax.media.opengl.GL;
-import javax.media.opengl.GLAutoDrawable;
-import javax.media.opengl.GLException;
-import javax.media.opengl.glu.GLU;
-import javax.sound.sampled.Clip;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.BitSet;
+        import javax.media.opengl.GL;
+        import javax.media.opengl.GLAutoDrawable;
+        import javax.media.opengl.GLException;
+        import javax.media.opengl.glu.GLU;
+        import javax.sound.sampled.Clip;
+        import javax.swing.*;
+        import java.awt.*;
+        import java.awt.event.KeyEvent;
+        import java.io.IOException;
+        import java.util.ArrayList;
+        import java.util.BitSet;
 
-import static Project.Core.Utils.*;
-import static java.awt.event.KeyEvent.*;
-import static java.lang.Math.*;
+        import static Project.Core.Utils.*;
+        import static java.awt.event.KeyEvent.*;
+        import static java.lang.Math.*;
 
 public class Map4Listener extends AnimListener {
 
@@ -195,7 +196,7 @@ public class Map4Listener extends AnimListener {
 //        } catch (GLException e) {
 //            System.out.println(e.getMessage());
 //        }
- //      }
+    //      }
 
     public void display(GLAutoDrawable gld) {
         GL gl = gld.getGL();
@@ -513,3 +514,5 @@ public class Map4Listener extends AnimListener {
 
     }
 }
+
+

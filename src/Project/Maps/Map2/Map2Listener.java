@@ -30,7 +30,7 @@ import static java.awt.event.KeyEvent.VK_LEFT;
 
 public class Map2Listener extends AnimListener {
     JFrame frame = null;
-    Clip EatingSound;
+    Clip EatingSound,LosingSound,WinningSound;
     Pacman pacman = new Pacman();
     int CountFood;
     int Lives = 3;
@@ -199,16 +199,33 @@ public class Map2Listener extends AnimListener {
     private void handelLose() {
         for (Ghost g : ghosts) {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
-                if (EatingSound != null) EatingSound.stop();
-                if (--Lives == 0) {
-                    frame.dispose();
-                    new GameOver().setVisible(true);
-                } else {
-                    pacman.reset();
+                synchronized (this) {
+                    try {
+                        if (--Lives == 0) {
+                            frame.dispose();
+                            new GameOver().setVisible(true);
+                            if (EatingSound != null) EatingSound.stop();
+                            LosingSound = playMusic("src/Project/Assets/loser.wav", false);
+                            wait(3000);
+                            System.exit(0); // Show try again Frame
+                        } else {
+                            pacman.reset();
+                        }
+
+                    } catch (InterruptedException e) {
+                        System.out.println(e.getMessage());
+                    }
+//                    if (eatingSound != null) eatingSound.stop();
+//                    if (--cntLives == 0) {
+//                        frame.dispose();
+//                        new GameOver().setVisible(true);
+//
+//                    } else {
+//                        pacman.reset();
+//                    }
                 }
             }
         }
-
     }
 
 
@@ -251,15 +268,26 @@ public class Map2Listener extends AnimListener {
 
     private void drawGhost(GL gl) {
         for (Ghost g : ghosts) {
-            DrawSprite(gl, (int) g.x, (int) g.y, 6, textures, 15);
+            DrawSprite(gl, (int) g.x, (int) g.y, 6, textures, 18);
         }
     }
 
     private void handelWinning() {
-        if (Eating.isEmpty()) {
-            System.out.println("You Win");
+        if (Eating.isEmpty()) { // Winning
+            System.out.println("Win");
             if (EatingSound != null) EatingSound.stop();
-
+            synchronized (this) {
+                WinningSound = playMusic("src/Project/Assets/pacman-victory.wav", false);
+                if (WinningSound != null) {
+                    try {
+                        wait(WinningSound.getMicrosecondLength() / 1000);
+                        System.exit(1); // Go Winning Frame
+                    } catch (InterruptedException e) {
+                        System.out.println(e.getMessage());
+                    }
+                }
+            }
+            System.exit(1);
             frame.dispose();
             new WinnerPage().setVisible(true);
         }

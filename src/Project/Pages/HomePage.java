@@ -24,14 +24,14 @@ public class HomePage extends JFrame {
 
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setMinimumSize(new Dimension(700, 520));
+        setMinimumSize(new Dimension(400, 350));
         setResizable(false);
         setTitle("Pac-Man Game");
         getContentPane().setLayout(null);
         getContentPane().setLayout(null);
 
 
-        exit.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
+        exit.setFont(new java.awt.Font("Hobo Std", 0, 24)); // NOI18N
         exit.setText("Exit");
         exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -39,10 +39,9 @@ public class HomePage extends JFrame {
             }
         });
         getContentPane().add(exit);
-        exit.setBounds(490, 370, 160, 50);
+        exit.setBounds(110, 250, 150, 40);
 
-
-        play.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
+        play.setFont(new java.awt.Font("Hobo Std", 0, 24)); // NOI18N
         play.setText("Help");
         play.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,10 +49,9 @@ public class HomePage extends JFrame {
             }
         });
         getContentPane().add(play);
-        play.setBounds(260, 370, 160, 50);
+        play.setBounds(210, 30, 130, 40);
 
-
-        play1.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
+        play1.setFont(new java.awt.Font("Hobo Std", 0, 24)); // NOI18N
         play1.setText("Play");
         play1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         play1.addActionListener(new java.awt.event.ActionListener() {
@@ -62,12 +60,12 @@ public class HomePage extends JFrame {
             }
         });
         getContentPane().add(play1);
-        play1.setBounds(130, 220, 200, 50);
+        play1.setBounds(80, 190, 210, 50);
 
-        jButton1.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Hobo Std", 0, 24)); // NOI18N
         jButton1.setText("Users");
         getContentPane().add(jButton1);
-        jButton1.setBounds(30, 370, 160, 50);
+        jButton1.setBounds(20, 30, 130, 40);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -75,9 +73,9 @@ public class HomePage extends JFrame {
         });
 
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project/Assets/PacManH.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project/Assets/giffas_pacman.gif"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, -20, 770, 540);
+        jLabel2.setBounds(0, -120, 770, 540);
 
         pack();
     }// </editor-fold>

@@ -1,15 +1,14 @@
 package Project.Maps.Map3;
 
-import Project.*;
 import Project.Core.AnimListener;
 import Project.Core.texture.TextureReader;
 import Project.Models.Directions;
 import Project.Models.Eating;
 import Project.Models.Ghost;
 import Project.Models.Pacman;
-import Project.Pages.GameOver;
+import Project.Pages.Player1Winner;
+import Project.Pages.Player2Winner;
 import Project.Pages.WinnerPage;
-
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
@@ -21,19 +20,19 @@ import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.BitSet;
-import java.util.Map;
-
 
 import static Project.Core.Utils.*;
 import static java.awt.event.KeyEvent.*;
+import static java.awt.event.KeyEvent.VK_LEFT;
 
-public class Map3Listener extends AnimListener {
+public class Map3MultiListener extends AnimListener {
     JFrame frame = null;
     Clip eatingSound;
 
     Pacman pacman = new Pacman();
-    int CalcFood;
-    int Lives_Num = 3;
+    Pacman pacman2 = new Pacman();
+    int CalcFood, Calc2Food;
+    // int Lives_Num = 3;
     int time;
     Timer timer = new Timer(1000, e -> {
         time++;
@@ -46,6 +45,7 @@ public class Map3Listener extends AnimListener {
     static final int MAX_X = 360;
     static final int MAX_Y = 150;
     int AnimIndexForPacman = 1;
+    int AnimIndexForPacman2 = 1;
     int AnimIndexForFood = 1;
 
     String[] textureNames = {"Map3.jpg", "pacman.png", "up.gif", "down.gif", "right.gif", "left.gif", "ghost.gif", "food.png"};
@@ -158,19 +158,22 @@ public class Map3Listener extends AnimListener {
         {
             drawEating(gl);
             drawPacman(gl);
+            drawPacman2(gl);
             drawGhost(gl);
         }
         gl.glPopMatrix();
 
         handelPacmanMove();
+        handelPacman2Move();
         handelPacmanEating();
+        handelPacman2Eating();
 
         handelGhostMove();
 
         handelLosing();
 
         try {
-            drawString(gl, 8, MAX_Y - 5, "Lives: " + Lives_Num + "      Score: " + CalcFood + "      Time: " + time); // Lives Score Time
+            drawString(gl, 8, MAX_Y - 5, "P1 Score: " + CalcFood + "      P2Score: " + Calc2Food + "      Time: " + time); // Lives Score Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
@@ -329,16 +332,19 @@ public class Map3Listener extends AnimListener {
         for (Ghost g : ghosts) {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
                 if (eatingSound != null) eatingSound.stop();
-                if (--Lives_Num == 0) {
-                    frame.dispose();
-                    new GameOver().setVisible(true);
-                } else {
-                    pacman.reset();
-                }
+                frame.dispose();
+                new Player2Winner().setVisible(true);
+            } else if (g.ii == pacman2.ii && g.jj == pacman2.jj) {
+                if (eatingSound != null) eatingSound.stop();
+                frame.dispose();
+                new Player1Winner().setVisible(true);
             }
 
+
         }
+
     }
+
 
     private void handelWinning() {
         if (eating.isEmpty()) { // Winning
@@ -349,6 +355,98 @@ public class Map3Listener extends AnimListener {
             new WinnerPage().setVisible(true);
         }
     }
+
+    //player2//
+    private void drawPacman2(GL gl) {
+        // check Dir for motion
+        changeAnim2Index();
+
+        DrawSprite(gl, (int) pacman2.x, (int) pacman2.y, AnimIndexForPacman2, textures, Pacman.R);
+    }
+
+    private void changeAnim2Index() {
+        switch (pacman2.direction) {
+            case IDEAL -> {
+                AnimIndexForPacman2 = 1;
+            }
+            case UP -> { // 2
+                if (AnimIndexForPacman2 == 1) AnimIndexForPacman2 = 2;
+                else if (AnimIndexForPacman2 == 2) AnimIndexForPacman2 = 1;
+            }
+            case DOWN -> { // 3
+
+                if (AnimIndexForPacman2 == 1) AnimIndexForPacman2 = 3;
+                else if (AnimIndexForPacman2 == 3) AnimIndexForPacman2 = 1;
+            }
+            case RIGHT -> { // 4
+
+                if (AnimIndexForPacman2 == 1) AnimIndexForPacman2 = 4;
+                else if (AnimIndexForPacman2 == 4) AnimIndexForPacman2 = 1;
+            }
+            case LEFT -> { // 5
+
+                if (AnimIndexForPacman2 == 1) AnimIndexForPacman2 = 5;
+                else if (AnimIndexForPacman2 == 5) AnimIndexForPacman2 = 1;
+            }
+        }
+    }
+
+
+    private void handelPacman2Move() {
+        if (isKeyPressed(VK_W)) {
+            pacman2.direction = Directions.UP;
+        }
+        if (isKeyPressed(VK_S)) {
+            pacman2.direction = Directions.DOWN;
+        }
+        if (isKeyPressed(VK_D)) {
+            pacman2.direction = Directions.RIGHT;
+        }
+        if (isKeyPressed(VK_A)) {
+            pacman2.direction = Directions.LEFT;
+        }
+        if (!(isKeyPressed(VK_W) || isKeyPressed(VK_S) || isKeyPressed(VK_D) || isKeyPressed(VK_A))) {
+            pacman2.direction = Directions.IDEAL;
+        }
+
+        switch (pacman2.direction) {
+            case IDEAL -> {
+            }
+            case UP -> {
+                if (pacman2.y - pacman2.step < 0 || pacman2.jj - 1 < 0 || MAP[pacman2.jj - 1][pacman2.ii] == 0) return;
+                pacman2.moveUP();
+            }
+            case DOWN -> {
+                if (pacman2.y + pacman2.step > MAX_Y || pacman2.jj + 1 >= row || MAP[pacman2.jj + 1][pacman2.ii] == 0)
+                    return;
+                pacman2.moveDown();
+            }
+            case RIGHT -> {
+                if (pacman2.x + pacman2.step > MAX_X || pacman2.ii + 1 >= col || MAP[pacman2.jj][pacman2.ii + 1] == 0)
+                    return;
+                pacman2.moveRight();
+            }
+            case LEFT -> {
+                if (pacman2.x - pacman2.step < 0 || pacman2.ii - 1 < 0 || MAP[pacman2.jj][pacman2.ii - 1] == 0) return;
+                pacman2.moveLeft();
+            }
+        }
+    }
+
+    private void handelPacman2Eating() {
+
+        for (int i = 0; i < eating.size(); i++) {
+            if (pacman2.ii == eating.get(i).ii && pacman2.jj == eating.get(i).jj) {
+                Calc2Food++;
+                System.out.println(eating.size());
+                if (eatingSound == null || !eatingSound.isRunning()) {
+                    eatingSound = playMusic("src/Project/Assets/pacman-wakawaka.wav", false);
+                }
+                eating.remove(i--);
+            }
+        }
+    }
+
 
     public BitSet keyBits = new BitSet(256);
 
@@ -377,6 +475,7 @@ public class Map3Listener extends AnimListener {
         keyBits.clear(keyCode);
         switch (keyCode) {
             case VK_UP, VK_DOWN, VK_RIGHT, VK_LEFT -> pacman.direction = Directions.IDEAL;
+            case VK_W, VK_S, VK_D, VK_A -> pacman2.direction = Directions.IDEAL;
         }
     }
 

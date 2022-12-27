@@ -1,35 +1,39 @@
-package Project.Maps.Map2;
+package Project.Maps.Map5;
 
+
+import Project.Maps.Map5.Map5Listener;
 import com.sun.opengl.util.FPSAnimator;
 
 import javax.media.opengl.GLCanvas;
 import javax.swing.*;
 import java.awt.*;
 
-public class Map2 extends JFrame {
+public class MultiMap5 extends JFrame {
     GLCanvas glcanvas;
-    Map2Listener listener = new Map2Listener();
+    MultiMap5Listener listener = new MultiMap5Listener();
     static FPSAnimator animator;
 
-    public Map2() {
-        super("Map 2");
+    public MultiMap5() {
+        super("MultiMap 5");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         glcanvas = new GLCanvas();
         glcanvas.addGLEventListener(listener);
         glcanvas.addKeyListener(listener);
-        animator = new FPSAnimator(glcanvas, 25);
+        glcanvas.setSize(800, 800);
+        animator = new FPSAnimator(glcanvas, 12);
 
-        listener.frame = this;
+        listener.frame = this; // For closing
 
         add(glcanvas, BorderLayout.CENTER);
-        setSize(800, 800);
-        setLocationRelativeTo(this);
-        setVisible(true);
+        setSize(700, 700);
         requestFocus();
+        setLocationRelativeTo(this);
+        setResizable(false);
+        setVisible(true);
     }
 
     public static void main(String[] args) {
-        new Map2();
+        new MultiMap5();
         animator.start();
     }
 
