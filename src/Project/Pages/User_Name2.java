@@ -11,6 +11,7 @@ import Project.Maps.Map4.Map4MultiListener;
 import Project.Maps.Map5.MultiMap5Listener;
 
 import javax.swing.*;
+import java.awt.event.WindowEvent;
 import java.io.*;
 import java.util.Scanner;
 
@@ -22,6 +23,17 @@ public class User_Name2 extends javax.swing.JFrame {
     public User_Name2() {
         initComponents();
         setLocationRelativeTo(null);
+    }
+
+    @Override
+    public void processWindowEvent(final WindowEvent e) {
+        super.processWindowEvent(e);
+
+        if (e.getID() == WindowEvent.WINDOW_CLOSING) {
+
+            new HomePage().setVisible(true);
+            HomePage.voice.start();
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -37,7 +49,6 @@ public class User_Name2 extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(700, 452));
         setResizable(false);
         setTitle("Pac-Man Game");
@@ -128,6 +139,8 @@ public class User_Name2 extends javax.swing.JFrame {
                 }
             }
             if (!flag) {
+                SaveUser(jTextField2.getText()+ " ");
+                SaveUser(jTextField1.getText()+ " ");
                 Map1_MultiListener.userName1= Map22Listener.userName1= Map3MultiListener.userName1= Map4MultiListener.userName1= MultiMap5Listener.userName1 = jTextField2.getText();
                 Map1_MultiListener.userName2= Map22Listener.userName2= Map3MultiListener.userName2= Map4MultiListener.userName2= MultiMap5Listener.userName2 = jTextField1.getText();
             }

@@ -126,7 +126,8 @@ public class Utils {
         try (FileWriter f = new FileWriter("Users.txt", true);
              BufferedWriter b = new BufferedWriter(f);
              PrintWriter p = new PrintWriter(b);) {
-            p.println(s + "0");
+            p.println(s + " ");
+            p.flush();
         } catch (IOException i) {
             i.printStackTrace();
         }

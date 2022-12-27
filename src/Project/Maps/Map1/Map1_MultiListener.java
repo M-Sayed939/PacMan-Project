@@ -499,9 +499,9 @@ public class Map1_MultiListener extends AnimListener {
         if (event.getKeyCode() == VK_SPACE) {
             pause = !pause;
             if (!pause)
-                Map1.animator.start();
+                Map1_Multi.animator.start();
             else {
-                Map1.animator.stop();
+                Map1_Multi.animator.stop();
                 JOptionPane.showMessageDialog(null, "Enter Space To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
 
             }

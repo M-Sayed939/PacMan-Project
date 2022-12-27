@@ -2,6 +2,7 @@ package Project.Pages;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowEvent;
 
 public class HelpPage extends JFrame {
 
@@ -11,6 +12,18 @@ public class HelpPage extends JFrame {
         setLocationRelativeTo(null);
     }
 
+
+
+    @Override
+    public void processWindowEvent(final WindowEvent e) {
+        super.processWindowEvent(e);
+
+        if (e.getID() == WindowEvent.WINDOW_CLOSING) {
+
+            new HomePage().setVisible(true);
+            HomePage.voice.start();
+        }
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
@@ -32,7 +45,7 @@ public class HelpPage extends JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
         setMinimumSize(new Dimension(715, 520));
         setResizable(false);
         setTitle("Pac-Man Game");

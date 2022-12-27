@@ -3,6 +3,7 @@ package Project.Pages;
 import Project.Core.Utils;
 
 import java.awt.*;
+import java.awt.event.WindowEvent;
 import javax.sound.sampled.Clip;
 import javax.swing.*;
 
@@ -17,6 +18,18 @@ public class GameOver extends JFrame {
         if (voice == null) voice = Utils.playMusic("src/Project/Assets/loser.wav", false);
     }
 
+    @Override
+    public void processWindowEvent(final WindowEvent e) {
+        super.processWindowEvent(e);
+
+        if (e.getID() == WindowEvent.WINDOW_CLOSING) {
+
+            voice.stop();
+            new HomePage().setVisible(true);
+            HomePage.voice.start();
+        }
+    }
+
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
@@ -26,7 +39,6 @@ public class GameOver extends JFrame {
         jLabel2 = new JLabel();
         jLabel1 = new JLabel();
 
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setBackground(Color.WHITE);
         setMinimumSize(new Dimension(420, 460));
         setResizable(false);

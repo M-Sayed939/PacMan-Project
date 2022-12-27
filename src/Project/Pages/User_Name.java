@@ -7,6 +7,7 @@ import Project.Maps.Map4.Map4Listener;
 import Project.Maps.Map5.Map5Listener;
 
 import javax.swing.*;
+import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -22,6 +23,17 @@ public class User_Name extends JFrame {
         setLocationRelativeTo(null);
     }
 
+    @Override
+    public void processWindowEvent(final WindowEvent e) {
+        super.processWindowEvent(e);
+
+        if (e.getID() == WindowEvent.WINDOW_CLOSING) {
+
+            new HomePage().setVisible(true);
+            HomePage.voice.start();
+        }
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
@@ -33,7 +45,7 @@ public class User_Name extends JFrame {
         jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
         setMinimumSize(new java.awt.Dimension(700, 452));
         setResizable(false);
         setTitle("Pac-Man Game");

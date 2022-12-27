@@ -4,18 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Resolve">
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Focusable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_Multi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_Multi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Multi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Multi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3Multi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3Multi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Multi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Multi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/MultiMap5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/MultiMap5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Users.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Core/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Core/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_MultiListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_MultiListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/GameOver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/GameOver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/HelpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/HelpPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/Player1Winner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/Player1Winner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/Player2Winner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/Player2Winner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/PlayerChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/PlayerChoose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/User_Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/WinnerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/WinnerPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,13 +88,13 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Map3">
-    <configuration name="Map1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1" />
+  <component name="RunManager" selected="Application.Play">
+    <configuration name="GameOver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Pages.GameOver" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Maps.Map1.*" />
+          <option name="PATTERN" value="Project.Pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,19 +128,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Map4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map4.Map4" />
-      <module name="PacMan-Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Project.Maps.Map4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Play" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Project.Play" />
       <module name="PacMan-Project" />
@@ -149,13 +141,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Player1Winner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Pages.Player1Winner" />
+      <module name="PacMan-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Project.Pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Play" />
+        <item itemvalue="Application.Player1Winner" />
+        <item itemvalue="Application.GameOver" />
         <item itemvalue="Application.Map3" />
         <item itemvalue="Application.Map2" />
-        <item itemvalue="Application.Map1" />
-        <item itemvalue="Application.Play" />
-        <item itemvalue="Application.Map4" />
       </list>
     </recent_temporary>
   </component>
@@ -305,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672146454285</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Focusable">
+      <created>1672147029684</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1672147029684</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +356,7 @@
     <MESSAGE value="Edit Map 4 Multi" />
     <MESSAGE value="Edit Pause" />
     <MESSAGE value="Resolve" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolve" />
+    <MESSAGE value="Focusable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Focusable" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 package Project.Pages;
 
 import java.awt.*;
+import java.awt.event.WindowEvent;
 import javax.swing.*;
 
 public class PlayerChoose extends JFrame {
@@ -9,6 +10,17 @@ public class PlayerChoose extends JFrame {
     public PlayerChoose() {
         initComponents();
         setLocationRelativeTo(null);
+    }
+
+    @Override
+    public void processWindowEvent(final WindowEvent e) {
+        super.processWindowEvent(e);
+
+        if (e.getID() == WindowEvent.WINDOW_CLOSING) {
+
+            new HomePage().setVisible(true);
+            HomePage.voice.start();
+        }
     }
 
 
@@ -21,7 +33,6 @@ public class PlayerChoose extends JFrame {
         play1 = new JButton();
         jLabel1 = new JLabel();
 
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setMinimumSize(new Dimension(700, 520));
         setResizable(false);
         setTitle("Pac-Man Game");

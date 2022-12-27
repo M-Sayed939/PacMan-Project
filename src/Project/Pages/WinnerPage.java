@@ -5,6 +5,8 @@ package Project.Pages;
 
 import javax.sound.sampled.Clip;
 
+import java.awt.event.WindowEvent;
+
 import static Project.Core.Utils.playMusic;
 
 public class WinnerPage extends javax.swing.JFrame {
@@ -16,6 +18,17 @@ public class WinnerPage extends javax.swing.JFrame {
         if (voice == null) voice = playMusic("src/Project/Assets/pacman-victory.wav", false);
     }
 
+    @Override
+    public void processWindowEvent(final WindowEvent e) {
+        super.processWindowEvent(e);
+
+        if (e.getID() == WindowEvent.WINDOW_CLOSING) {
+
+            voice.stop();
+            new HomePage().setVisible(true);
+            HomePage.voice.start();
+        }
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
@@ -26,7 +39,6 @@ public class WinnerPage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(635, 556));
         setResizable(false);
         setTitle("Pac-Man Game");

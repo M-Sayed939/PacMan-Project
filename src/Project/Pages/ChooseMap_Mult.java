@@ -16,6 +16,7 @@ import Project.Maps.Map5.MultiMap5;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.WindowEvent;
 
 
 public class ChooseMap_Mult extends JFrame {
@@ -27,10 +28,20 @@ public class ChooseMap_Mult extends JFrame {
 
         setFocusable(true);
         requestFocus();
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         HomePage.voice.stop();
 
+    }
+
+    @Override
+    public void processWindowEvent(final WindowEvent e) {
+        super.processWindowEvent(e);
+
+        if (e.getID() == WindowEvent.WINDOW_CLOSING) {
+
+            new HomePage().setVisible(true);
+            HomePage.voice.start();
+        }
     }
 
 
@@ -47,7 +58,7 @@ public class ChooseMap_Mult extends JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
         setMinimumSize(new Dimension(715, 550));
         setResizable(false);
         setTitle("Pac-Man Game");

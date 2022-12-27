@@ -3,6 +3,7 @@ package Project.Pages;
 import Project.Core.Utils;
 
 import javax.sound.sampled.Clip;
+import java.awt.event.WindowEvent;
 
 public class Player2Winner extends javax.swing.JFrame {
 
@@ -15,6 +16,17 @@ public class Player2Winner extends javax.swing.JFrame {
         }
 
 
+    @Override
+    public void processWindowEvent(final WindowEvent e) {
+        super.processWindowEvent(e);
+
+        if (e.getID() == WindowEvent.WINDOW_CLOSING) {
+            voice.stop();
+            new HomePage().setVisible(true);
+            HomePage.voice.start();
+        }
+    }
+
         @SuppressWarnings("unchecked")
         // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
         private void initComponents() {
@@ -24,7 +36,7 @@ public class Player2Winner extends javax.swing.JFrame {
             jLabel2 = new javax.swing.JLabel();
             jLabel1 = new javax.swing.JLabel();
 
-            setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
             setMinimumSize(new java.awt.Dimension(635, 556));
             setResizable(false);
             setTitle("Pac-Man Game");

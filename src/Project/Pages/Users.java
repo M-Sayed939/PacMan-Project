@@ -2,6 +2,7 @@ package Project.Pages;
 
 
 import java.awt.*;
+import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
@@ -24,6 +25,18 @@ public class Users extends javax.swing.JFrame {
         }
     }
 
+
+    @Override
+    public void processWindowEvent(final WindowEvent e) {
+        super.processWindowEvent(e);
+
+        if (e.getID() == WindowEvent.WINDOW_CLOSING) {
+
+            new HomePage().setVisible(true);
+            HomePage.voice.start();
+        }
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
@@ -34,7 +47,6 @@ public class Users extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(700, 452));
         setResizable(false);
         setTitle("Pac-Man Game");

@@ -13,7 +13,7 @@ public class HomePage extends JFrame {
     public HomePage() {
         initComponents();
         setLocationRelativeTo(null);
-        if (voice == null ) voice = Utils.playMusic("src/Project/Assets/wiki_home.wav", false);
+        if (voice == null ) voice = Utils.playMusic("src/Project/Assets/wiki_home.wav", true);
     }
 
 
