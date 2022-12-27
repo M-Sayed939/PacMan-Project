@@ -59,6 +59,7 @@ public class WinnerPage extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(20, 30, 530, 110);
 
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project/Assets/pacman-fortnite.gif"))); // NOI18N
         jLabel1.setMinimumSize(new java.awt.Dimension(889, 400));
         getContentPane().add(jLabel1);
