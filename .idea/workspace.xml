@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Core/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Core/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/User_Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Models/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Models/Pacman.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672107903459</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Read And Write HighScore And UserName In Map1">
+      <created>1672108977630</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1672108977630</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +265,7 @@
     <MESSAGE value="Add Actions in Choose Map Multiplayer" />
     <MESSAGE value="Edit Text" />
     <MESSAGE value="Read And Write HighScore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Read And Write HighScore" />
+    <MESSAGE value="Read And Write HighScore And UserName In Map1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Read And Write HighScore And UserName In Map1" />
   </component>
 </project>
