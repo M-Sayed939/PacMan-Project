@@ -27,6 +27,7 @@ public class ChooseMap_Mult extends JFrame {
         requestFocus();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        HomePage.voice.stop();
 
     }
 

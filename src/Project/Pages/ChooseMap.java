@@ -22,6 +22,7 @@ public class ChooseMap extends javax.swing.JFrame {
         requestFocus();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        HomePage.voice.stop();
 
     }
 

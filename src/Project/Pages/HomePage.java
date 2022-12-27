@@ -1,14 +1,19 @@
 package Project.Pages;
 
+import Project.Core.Utils;
+
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.*;
 
 public class HomePage extends JFrame {
+    public static Clip voice;
 
 
     public HomePage() {
         initComponents();
         setLocationRelativeTo(null);
+        if (voice == null ) voice = Utils.playMusic("src/Project/Assets/wiki_home.wav", false);
     }
 
 

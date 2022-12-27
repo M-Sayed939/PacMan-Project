@@ -1,16 +1,20 @@
 package Project.Pages;
 
+import Project.Core.Utils;
+
 import java.awt.*;
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 
 //import static Project.Core.Utils.playMusic;
 
 public class GameOver extends JFrame {
+    public static Clip voice;
 
     public GameOver() {
         initComponents();
         setLocationRelativeTo(null);
-//            playMusic("src/Project/Assets/loser.wav", false);
+        if (voice == null) voice = Utils.playMusic("src/Project/Assets/loser.wav", false);
     }
 
 

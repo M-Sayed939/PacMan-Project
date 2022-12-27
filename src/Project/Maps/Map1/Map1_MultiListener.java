@@ -489,13 +489,13 @@ public class Map1_MultiListener extends AnimListener {
     public void keyPressed(final KeyEvent event) {
         int keyCode = event.getKeyCode();
         keyBits.set(keyCode);
-        if (event.getKeyCode() == KeyEvent.VK_P) {
+        if (event.getKeyCode() == VK_SPACE) {
             pause = !pause;
             if (!pause)
                 Map1.animator.start();
             else {
                 Map1.animator.stop();
-                JOptionPane.showMessageDialog(null, "Enter P To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Enter Space To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
 
             }
 

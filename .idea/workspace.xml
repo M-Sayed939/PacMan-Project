@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Edit Text">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Project/Assets/wiki_home.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Core/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Core/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_MultiListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_MultiListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/GameOver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/GameOver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/Player1Winner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/Player1Winner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/Player2Winner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/Player2Winner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/User_Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/WinnerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/WinnerPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,20 +49,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/JOGLwin/lib64/jogl_cg.dll&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/hp/IdeaProjects/ms/PacMan-Project/src/Project/Assets",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Errors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\Assets" />
       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project" />
@@ -71,22 +82,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Users">
-    <configuration name="Play" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Play" />
-      <module name="PacMan-Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Project.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Player1Winner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Pages.Player1Winner" />
+  <component name="RunManager" selected="Application.Map2">
+    <configuration name="HelpPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Pages.HelpPage" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
@@ -98,8 +96,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Player2Winner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Pages.Player2Winner" />
+    <configuration name="HomePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Pages.HomePage" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
@@ -111,12 +109,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="User_Name2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Pages.User_Name2" />
+    <configuration name="Map1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Pages.*" />
+          <option name="PATTERN" value="Project.Maps.Map1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,12 +122,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Users" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Pages.Users" />
+    <configuration name="Map1_Multi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1_Multi" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Pages.*" />
+          <option name="PATTERN" value="Project.Maps.Map1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Map2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map2.Map2" />
+      <module name="PacMan-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Project.Maps.Map2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Users" />
-        <item itemvalue="Application.User_Name2" />
-        <item itemvalue="Application.Play" />
-        <item itemvalue="Application.Player2Winner" />
-        <item itemvalue="Application.Player1Winner" />
+        <item itemvalue="Application.Map2" />
+        <item itemvalue="Application.Map1_Multi" />
+        <item itemvalue="Application.HomePage" />
+        <item itemvalue="Application.HelpPage" />
+        <item itemvalue="Application.Map1" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672093325824</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add Readme.md">
+      <created>1672094820530</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1672094820530</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +269,7 @@
     <MESSAGE value="add time and pause in Map 1" />
     <MESSAGE value="Add Actions in Choose Map Multiplayer" />
     <MESSAGE value="Edit Text" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit Text" />
+    <MESSAGE value="add Readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Readme.md" />
   </component>
 </project>

@@ -3,13 +3,17 @@ package Project.Pages;
 
 //import static Project.Core.Utils.playMusic;
 
-public class WinnerPage extends javax.swing.JFrame {
+import javax.sound.sampled.Clip;
 
+import static Project.Core.Utils.playMusic;
+
+public class WinnerPage extends javax.swing.JFrame {
+    static Clip voice;
 
     public WinnerPage() {
         initComponents();
         setLocationRelativeTo(null);
-//        playMusic("src/Project/Assets/pacman-victory.wav", false);
+        if (voice == null) voice = playMusic("src/Project/Assets/pacman-victory.wav", false);
     }
 
 
