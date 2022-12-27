@@ -79,6 +79,8 @@ public class Map5Listener extends AnimListener {
     int animIndexForPacman = 1;
     int animIndexForFood = 8;
     boolean pause ;
+    int highScore = ReadHighScore();
+    public static String userName = "";
 
     public void init(GLAutoDrawable gld) {
 
@@ -177,10 +179,15 @@ public class Map5Listener extends AnimListener {
             drawString(gl, 15, MAX_Y -230, "Score: " + cntFood);  // Score
             drawString(gl, 70, MAX_Y -230, "Lives: " + cntLives); // Lives
             drawString(gl, 125, MAX_Y -230, "Time: " + time); // Time
+            drawString(gl, 180, MAX_Y -230, "HighScore: " + highScore); // Time
+            drawString(gl, 250, MAX_Y -230, "User: " + userName); // Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
-
+        if (cntFood > highScore) {
+            AddHighScore(cntFood);
+            highScore = ReadHighScore();
+        }
     }
 
     private void handelLose() {
