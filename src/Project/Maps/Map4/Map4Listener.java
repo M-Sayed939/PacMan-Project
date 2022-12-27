@@ -30,6 +30,7 @@ package Project.Maps.Map4;
 
 public class Map4Listener extends AnimListener {
 
+    public static String userName;
     Pacman pacman = new Pacman();
 
     JFrame frame = null;
@@ -232,6 +233,7 @@ public class Map4Listener extends AnimListener {
             drawString(gl, 15, MAX_Y -230, "Score: " + cntFood);  // Score
             drawString(gl, 70, MAX_Y -230, "Lives: " + cntLives); // Lives
             drawString(gl, 125, MAX_Y -230, "Time: " + time); // Time
+            drawString(gl, 150, MAX_Y -230, "UserName: " + userName); // Name
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
