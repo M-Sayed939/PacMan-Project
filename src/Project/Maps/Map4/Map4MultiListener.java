@@ -18,11 +18,15 @@ import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.BitSet;
+import java.util.Scanner;
 
 import static Project.Core.Utils.*;
+import static Project.Maps.Map4.Map4Listener.userName;
 import static java.awt.event.KeyEvent.*;
 import static java.lang.Math.*;
 
@@ -95,6 +99,31 @@ public class Map4MultiListener extends AnimListener {
     };
     int row = map.length;
     int col = map[0].length;
+
+    int highScore = ReadHighScore();
+
+    public static void AddHighScore(int score) {
+
+
+        try (FileWriter f = new FileWriter("Score.txt", false);
+             Scanner input = new Scanner(new File("Score.txt"))) {
+            int highScore = input.hasNext() ? input.nextInt() : 0;
+            if (score > highScore) highScore = score;
+            f.write(highScore + "");
+            f.flush();
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
+    }
+
+    public static int ReadHighScore() {
+        try (Scanner input = new Scanner(new File("Score.txt"));) {
+            return (input.hasNext()) ? input.nextInt() : 0;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
     boolean pause;
 
     public void init(GLAutoDrawable gld) {
@@ -229,14 +258,17 @@ public class Map4MultiListener extends AnimListener {
         handelWinning();
 
         try {
-            drawString(gl, 15, MAX_Y - 230, "  Score: " + cntFood);  // Score
-            drawString(gl, 70, MAX_Y - 230, "  Lives: " + cntLives); // Lives
-            drawString(gl, 125, MAX_Y - 230, "  Time: " + time); // Time
-            drawString(gl, 150, MAX_Y - 230, "  Player1: " + userName1); // Name
-            drawString(gl, 165, MAX_Y - 230, "  Player2: " + userName2); // Name2
-
+            drawString(gl, 15, MAX_Y -230, "Score: " + cntFood);  // Score
+            drawString(gl, 70, MAX_Y -230, "Lives: " + cntLives); // Lives
+            drawString(gl, 125, MAX_Y -230, "Time: " + time); // Time
+            drawString(gl, 155, MAX_Y -230, "HighScore: " + highScore); // Time
+            drawString(gl, 200, MAX_Y -230, "User: " + userName); // Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
+        }
+        if (cntFood > highScore) {
+            AddHighScore(cntFood);
+            highScore = ReadHighScore();
         }
 
     }

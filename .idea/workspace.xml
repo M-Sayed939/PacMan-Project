@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment=" edithighscore -Map4Listener">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib64.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment=" edit -Map4Listener">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Score.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4MultiListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4MultiListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,6 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/JOGLwin/lib64/jogl_cg.dll",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
@@ -69,12 +69,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Map4">
-    <configuration name="Map3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map3.Map3" />
+    <configuration name="Map4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map4.Map4" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Maps.Map3.*" />
+          <option name="PATTERN" value="Project.Maps.Map4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,8 +82,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Map4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map4.Map4" />
+    <configuration name="Map4Multi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map4.Map4Multi" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
@@ -137,10 +137,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Map4" />
+        <item itemvalue="Application.Map4Multi" />
         <item itemvalue="Application.Map5" />
         <item itemvalue="Application.Users" />
         <item itemvalue="Application.User_Name" />
-        <item itemvalue="Application.Map3" />
       </list>
     </recent_temporary>
   </component>
@@ -252,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672114833821</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary=" edit -Map4Listener">
+      <created>1672115058645</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1672115058645</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +296,8 @@
     <MESSAGE value=" edit -Map4Multi" />
     <MESSAGE value=" edit -Map4MultiListener" />
     <MESSAGE value=" edithighscore -Map4Listener" />
-    <option name="LAST_COMMIT_MESSAGE" value=" edithighscore -Map4Listener" />
+    <MESSAGE value=" edit -Map4Listener" />
+    <option name="LAST_COMMIT_MESSAGE" value=" edit -Map4Listener" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
