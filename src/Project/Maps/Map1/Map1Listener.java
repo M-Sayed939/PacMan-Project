@@ -37,9 +37,12 @@ public class Map1Listener extends AnimListener {
     int time;
     Timer timer = new Timer(1000, e -> {
         time++;
+        for (Ghost ghost : ghosts) {
+            ghost.randMove();
+        }
     });
 
-    ArrayList<Ghost> ghosts = new ArrayList<>();
+    static ArrayList<Ghost> ghosts = new ArrayList<>();
     static int GHOSTS_SIZE = 4;
     ArrayList<Eating> eating = new ArrayList<>();
 

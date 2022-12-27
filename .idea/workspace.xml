@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Edit Pause">
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Resolve">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Score.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Users.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_MultiListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_MultiListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map22Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map22Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3MultiListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3MultiListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4MultiListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4MultiListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/MultiMap5Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/MultiMap5Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Models/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Models/Ghost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,9 +86,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Map4">
-    <configuration name="HelpPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Pages.HelpPage" />
+  <component name="RunManager" selected="Application.Map2">
+    <configuration name="ChooseMap_Mult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Pages.ChooseMap_Mult" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
@@ -90,8 +100,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Map1_Multi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1_Multi" />
+    <configuration name="Map1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
@@ -103,12 +113,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Map4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map4.Map4" />
+    <configuration name="Map2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map2.Map2" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Maps.Map4.*" />
+          <option name="PATTERN" value="Project.Maps.Map2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,8 +126,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Map4Multi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map4.Map4Multi" />
+    <configuration name="Map4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map4.Map4" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
@@ -144,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Map4" />
+        <item itemvalue="Application.Map2" />
         <item itemvalue="Application.Play" />
-        <item itemvalue="Application.Map4Multi" />
-        <item itemvalue="Application.Map1_Multi" />
-        <item itemvalue="Application.HelpPage" />
+        <item itemvalue="Application.Map1" />
+        <item itemvalue="Application.Map4" />
+        <item itemvalue="Application.ChooseMap_Mult" />
       </list>
     </recent_temporary>
   </component>
@@ -284,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672144779059</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Resolve">
+      <created>1672145209400</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1672145209400</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +339,7 @@
     <MESSAGE value="Edit Help Page" />
     <MESSAGE value="Edit Map 4 Multi" />
     <MESSAGE value="Edit Pause" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit Pause" />
+    <MESSAGE value="Resolve" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolve" />
   </component>
 </project>

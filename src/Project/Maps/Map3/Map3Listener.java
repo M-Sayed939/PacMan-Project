@@ -38,10 +38,14 @@ public class Map3Listener extends AnimListener {
     int time;
     Timer timer = new Timer(1000, e -> {
         time++;
+        for (Ghost ghost : ghosts) {
+            ghost.randMove();
+        }
     });
+
+    static ArrayList<Ghost> ghosts = new ArrayList<>();
     boolean pause = false;
     ArrayList<Eating> eating = new ArrayList<>();
-    ArrayList<Ghost> ghosts = new ArrayList<>();
     static int Ghosts_Num = 4;
 
     static final int MAX_X = 360;

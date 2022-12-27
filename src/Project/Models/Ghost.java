@@ -7,7 +7,7 @@ import static Project.Core.Utils.trY;
 
 public class Ghost {
     Random random = new Random();
-    public int step = 4;
+    public int step = 10;
     public static final int R = 10;
     public double x = 250, y = 250;
     public int ii = trX(x), jj = trY(y);

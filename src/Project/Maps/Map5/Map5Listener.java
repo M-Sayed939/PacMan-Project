@@ -30,9 +30,9 @@ public class Map5Listener extends AnimListener {
     Pacman pacman = new Pacman();
     ArrayList<Eating> eating = new ArrayList<>();
 
-    ArrayList<Ghost> ghosts = new ArrayList<>();
+
     static int GHOSTS_SIZE = 4;
-    Clip eatingSound , losingSound , winningSound;
+    Clip eatingSound, losingSound, winningSound;
     static final int MAX_X = 350;
     static final int MAX_Y = 250;
     int cntFood;
@@ -40,10 +40,15 @@ public class Map5Listener extends AnimListener {
     int time;
     Timer timer = new Timer(1000, e -> {
         time++;
+        for (Ghost ghost : ghosts) {
+            ghost.randMove();
+        }
     });
 
+    static ArrayList<Ghost> ghosts = new ArrayList<>();
 
-    String textureNames[] = {"images.png","pacman.png","up.gif","down.gif","right.gif","left.gif","ghost.gif","food.png","food2.png"};
+
+    String textureNames[] = {"images.png", "pacman.png", "up.gif", "down.gif", "right.gif", "left.gif", "ghost.gif", "food.png", "food2.png"};
     TextureReader.Texture texture[] = new TextureReader.Texture[textureNames.length];
     int textures[] = new int[textureNames.length];
 
@@ -78,7 +83,7 @@ public class Map5Listener extends AnimListener {
     int col = map[0].length;
     int animIndexForPacman = 1;
     int animIndexForFood = 8;
-    boolean pause ;
+    boolean pause;
     int highScore = ReadHighScore();
     public static String userName = "";
 
@@ -129,7 +134,7 @@ public class Map5Listener extends AnimListener {
 
     private void addGhostsToArray() {
         for (int i = 0; i < GHOSTS_SIZE; i++) {
-            ghosts.add(new Ghost(150,150));
+            ghosts.add(new Ghost(150, 150));
         }
     }
 
@@ -158,10 +163,10 @@ public class Map5Listener extends AnimListener {
         gl.glPopMatrix();
 
         gl.glPushMatrix();
-        double f =0.967;
-        double d =10;
-        gl.glTranslated(d+0.3,d-0.5,1);
-        gl.glScaled(f,f,1);
+        double f = 0.967;
+        double d = 10;
+        gl.glTranslated(d + 0.3, d - 0.5, 1);
+        gl.glScaled(f, f, 1);
         {
             drawEating(gl);
             drawPacman(gl);
@@ -176,11 +181,11 @@ public class Map5Listener extends AnimListener {
         handelWinning();
 
         try {
-            drawString(gl, 15, MAX_Y -230, "Score: " + cntFood);  // Score
-            drawString(gl, 70, MAX_Y -230, "Lives: " + cntLives); // Lives
-            drawString(gl, 125, MAX_Y -230, "Time: " + time); // Time
-            drawString(gl, 180, MAX_Y -230, "HighScore: " + highScore);
-            drawString(gl, 260, MAX_Y -230, "User: " + userName);
+            drawString(gl, 15, MAX_Y - 230, "Score: " + cntFood);  // Score
+            drawString(gl, 70, MAX_Y - 230, "Lives: " + cntLives); // Lives
+            drawString(gl, 125, MAX_Y - 230, "Time: " + time); // Time
+            drawString(gl, 180, MAX_Y - 230, "HighScore: " + highScore);
+            drawString(gl, 260, MAX_Y - 230, "User: " + userName);
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
@@ -193,17 +198,17 @@ public class Map5Listener extends AnimListener {
     private void handelLose() {
         for (Ghost g : ghosts) {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
-                    if (eatingSound != null) eatingSound.stop();
-                    if (--cntLives == 0) {
-                        frame.dispose();
-                        new GameOver().setVisible(true);
+                if (eatingSound != null) eatingSound.stop();
+                if (--cntLives == 0) {
+                    frame.dispose();
+                    new GameOver().setVisible(true);
 
-                    } else {
-                        pacman.reset();
-                    }
+                } else {
+                    pacman.reset();
                 }
             }
         }
+    }
 
 
     private void handelGhostMove() {
@@ -327,49 +332,49 @@ public class Map5Listener extends AnimListener {
 
     private void drawEating(GL gl) {
         for (Eating e : eating) {
-            DrawSprite(gl, (int) e.x, (int) e.y, animIndexForFood,textures,10);
+            DrawSprite(gl, (int) e.x, (int) e.y, animIndexForFood, textures, 10);
         }
     }
 
     private void drawPacman(GL gl) {
         changeAnimIndex();
-        DrawSprite(gl, (int) pacman.x, (int) pacman.y, animIndexForPacman,textures,10);
+        DrawSprite(gl, (int) pacman.x, (int) pacman.y, animIndexForPacman, textures, 10);
     }
 
     private void changeAnimIndex() {
-        switch (pacman.direction){
+        switch (pacman.direction) {
             case IDEAL -> {
                 animIndexForPacman = 1;
             }
             case UP -> {
-                if(animIndexForPacman == 1)
+                if (animIndexForPacman == 1)
                     animIndexForPacman = 2;
-                else if(animIndexForPacman == 2);
+                else if (animIndexForPacman == 2) ;
                 animIndexForPacman = 1;
             }
             case DOWN -> {
-                if(animIndexForPacman == 1)
+                if (animIndexForPacman == 1)
                     animIndexForPacman = 3;
-                else if(animIndexForPacman == 3)
+                else if (animIndexForPacman == 3)
                     animIndexForPacman = 1;
             }
             case RIGHT -> {
-                if(animIndexForPacman == 1)
+                if (animIndexForPacman == 1)
                     animIndexForPacman = 4;
-                else if(animIndexForPacman == 4)
+                else if (animIndexForPacman == 4)
                     animIndexForPacman = 1;
             }
             case LEFT -> {
-                if(animIndexForPacman == 1)
+                if (animIndexForPacman == 1)
                     animIndexForPacman = 5;
-                else if(animIndexForPacman == 5)
+                else if (animIndexForPacman == 5)
                     animIndexForPacman = 1;
             }
         }
     }
 
     private void drawBackground(GL gl) {
-        DrawSprite2(gl, 0, 0, 0, textures, MAX_X,MAX_Y);
+        DrawSprite2(gl, 0, 0, 0, textures, MAX_X, MAX_Y);
     }
 
 

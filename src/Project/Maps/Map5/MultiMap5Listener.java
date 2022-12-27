@@ -31,7 +31,6 @@ public class MultiMap5Listener extends AnimListener {
     public static String userName1 = "";
     public static String userName2 = "";
     ArrayList<Eating> eating = new ArrayList<>();
-    ArrayList<Ghost> ghosts = new ArrayList<>();
     static int GHOSTS_SIZE = 4;
     Clip eatingSound;
     static final int MAX_X = 350;
@@ -42,7 +41,12 @@ public class MultiMap5Listener extends AnimListener {
     int time;
     Timer timer = new Timer(1000, e -> {
         time++;
+        for (Ghost ghost : ghosts) {
+            ghost.randMove();
+        }
     });
+
+    static ArrayList<Ghost> ghosts = new ArrayList<>();
 
     String textureNames[] = {"images.png", "pacman.png", "up.gif", "down.gif", "right.gif", "left.gif", "ghost.gif", "food.png", "food2.png"};
     TextureReader.Texture texture[] = new TextureReader.Texture[textureNames.length];

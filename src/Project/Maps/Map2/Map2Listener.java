@@ -39,9 +39,13 @@ public class Map2Listener extends AnimListener {
     int time;
     Timer timer = new Timer(1000, e -> {
         time++;
+        for (Ghost ghost : ghosts) {
+            ghost.randMove();
+        }
     });
+
+    static ArrayList<Ghost> ghosts = new ArrayList<>();
     ArrayList<Eating> Eating = new ArrayList<>();
-    ArrayList<Ghost> ghosts = new ArrayList<>();
     static int No_Of_Ghosts = 4;
     public static final int MAX_X = 620;
     public static final int MAX_Y = 265;
@@ -94,7 +98,7 @@ public class Map2Listener extends AnimListener {
     };
     int row = Map.length;
     int column = Map[0].length;
-    int HighScore=ReadHighScore();
+    int HighScore = ReadHighScore();
 
     public void init(GLAutoDrawable gld) {
         GL gl = gld.getGL();
@@ -184,9 +188,9 @@ public class Map2Listener extends AnimListener {
 
         handelLose();
         try {
-            drawString(gl, 8,  8, "Lives: " +
+            drawString(gl, 8, 8, "Lives: " +
                     Lives + "      Score: " + CountFood +
-                    "      Time: " + time + "      High Score: " + HighScore+ "      User: " + userName);
+                    "      Time: " + time + "      High Score: " + HighScore + "      User: " + userName);
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
@@ -329,14 +333,14 @@ public class Map2Listener extends AnimListener {
 
     private void drawEating(GL gl) {
         for (Eating e : Eating) {
-            DrawSprite(gl, (int) e.x, (int) e.y, AnimIndexForFood, textures, 12);
+            DrawSprite(gl, (int) e.x, (int) e.y, AnimIndexForFood, textures, 10);
         }
     }
 
     private void drawPacman(GL gl) {
         changeAnimIndex();
 
-        DrawSprite(gl, (int) pacman.x, (int) pacman.y, AnimIndexForPacman, textures, 15);
+        DrawSprite(gl, (int) pacman.x, (int) pacman.y, AnimIndexForPacman, textures, Pacman.R);
     }
 
     private void changeAnimIndex() {

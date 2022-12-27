@@ -45,13 +45,17 @@ public class Map4Listener extends AnimListener {
     int time;
     Timer timer = new Timer(1000, e -> {
         time++;
+        for (Ghost ghost : ghosts) {
+            ghost.randMove();
+        }
     });
+
+    static ArrayList<Ghost> ghosts = new ArrayList<>();
 
     ArrayList<Eating> eating = new ArrayList<>();
     static final int MAX_X = 240;
     static final int MAX_Y = 250;
 
-    ArrayList<Ghost> ghosts = new ArrayList<>();
     static int GHOSTS_SIZE = 4;
 
     int animIndexForPacman = 1;
@@ -126,6 +130,7 @@ public class Map4Listener extends AnimListener {
         }
         return 0;
     }
+
     boolean pause;
 
     public void init(GLAutoDrawable gld) {
@@ -225,11 +230,11 @@ public class Map4Listener extends AnimListener {
         handelWinning();
 
         try {
-            drawString(gl, 10, MAX_Y-3 , "Score 1: " + cntFood);  // Score
-            drawString(gl, 45, MAX_Y-3 , "Lives: " + cntLives); // Lives
-            drawString(gl, 80, MAX_Y-3 , "Time: " + time); // Time
-            drawString(gl, 110, MAX_Y-3 , "HighScore: " + highScore); // Time
-            drawString(gl, 180, MAX_Y-3 , "  P1: " + userName); // User1
+            drawString(gl, 10, MAX_Y - 3, "Score 1: " + cntFood);  // Score
+            drawString(gl, 45, MAX_Y - 3, "Lives: " + cntLives); // Lives
+            drawString(gl, 80, MAX_Y - 3, "Time: " + time); // Time
+            drawString(gl, 110, MAX_Y - 3, "HighScore: " + highScore); // Time
+            drawString(gl, 180, MAX_Y - 3, "  P1: " + userName); // User1
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
@@ -280,7 +285,7 @@ public class Map4Listener extends AnimListener {
 
     private void drawGhost(GL gl) {
         for (Ghost g : ghosts) {
-            DrawSprite(gl, (int) g.x-5, (int) g.y-5, 6, textures, Ghost.R);
+            DrawSprite(gl, (int) g.x - 5, (int) g.y - 5, 6, textures, Ghost.R);
         }
     }
 
@@ -305,7 +310,6 @@ public class Map4Listener extends AnimListener {
             new WinnerPage().setVisible(true);
         }
     }
-
 
 
     private void handelLose() {
@@ -334,8 +338,6 @@ public class Map4Listener extends AnimListener {
             }
         }
     }
-
-
 
 
     private void handelPacmanMove() {
@@ -389,7 +391,7 @@ public class Map4Listener extends AnimListener {
         // check Dir for motion
         changeAnimIndex();
 
-        DrawSprite(gl, (int) pacman.x-5, (int) pacman.y-5, animIndexForPacman, textures, Pacman.R);
+        DrawSprite(gl, (int) pacman.x - 5, (int) pacman.y - 5, animIndexForPacman, textures, Pacman.R);
     }
 
     private void changeAnimIndex() {

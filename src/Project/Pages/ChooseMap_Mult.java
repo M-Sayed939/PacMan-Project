@@ -9,7 +9,9 @@ import Project.Maps.Map2.Map2Multi;
 import Project.Maps.Map3.Map3;
 import Project.Maps.Map3.Map3Multi;
 import Project.Maps.Map4.Map4;
+import Project.Maps.Map4.Map4Multi;
 import Project.Maps.Map5.Map5;
+import Project.Maps.Map5.MultiMap5;
 
 import javax.swing.*;
 import java.awt.*;
@@ -79,12 +81,14 @@ public class ChooseMap_Mult extends JFrame {
 
         jButton5.setFont(new Font("Hobo Std", 0, 36)); // NOI18N
         jButton5.setText("Map 4");
+        jButton5.addActionListener(this::jButton5ActionPerformed);
 
         getContentPane().add(jButton5);
         jButton5.setBounds(190, 360, 160, 50);
 
         jButton6.setFont(new Font("Hobo Std", 0, 36)); // NOI18N
         jButton6.setText("Map 5");
+        jButton6.addActionListener(this::jButton6ActionPerformed);
         getContentPane().add(jButton6);
         jButton6.setBounds(390, 360, 160, 50);
 
@@ -101,6 +105,16 @@ public class ChooseMap_Mult extends JFrame {
 
         pack();
     }// </editor-fold>
+
+    private void jButton6ActionPerformed(ActionEvent evt) {
+        this.dispose();
+        MultiMap5.main(null);
+    }
+
+    private void jButton5ActionPerformed(ActionEvent evt) {
+        this.dispose();
+        Map4Multi.main(null);
+    }
 
 //    private void jButton3ActionPerformed(ActionEvent evt) {
 //        this.dispose();

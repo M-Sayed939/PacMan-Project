@@ -32,15 +32,19 @@ public class Map1_MultiListener extends AnimListener {
     public static String userName1 = "";
     public static String userName2 = "";
     int CountFood, Count2Food;
-//    int Lives1 = 3;
+    //    int Lives1 = 3;
 //    int Lives2 = 3;
     boolean pause = false;
     int time;
     Timer timer = new Timer(1000, e -> {
         time++;
+        for (Ghost ghost : ghosts) {
+            ghost.randMove();
+        }
     });
+
+    static ArrayList<Ghost> ghosts = new ArrayList<>();
     ArrayList<Project.Models.Eating> Eating = new ArrayList<>();
-    ArrayList<Ghost> ghosts = new ArrayList<>();
     static int No_Of_Ghosts = 4;
     static final int MAX_X = 400;
     static final int MAX_Y = 420;

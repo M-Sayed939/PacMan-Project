@@ -37,9 +37,13 @@ public class Map22Listener extends AnimListener {
     int time;
     Timer timer = new Timer(1000, e -> {
         time++;
+        for (Ghost ghost : ghosts) {
+            ghost.randMove();
+        }
     });
+
+    static ArrayList<Ghost> ghosts = new ArrayList<>();
     ArrayList<Project.Models.Eating> Eating = new ArrayList<>();
-    ArrayList<Ghost> ghosts = new ArrayList<>();
     static int No_Of_Ghosts = 4;
     public static final int MAX_X = 620;
     public static final int MAX_Y = 265;
@@ -254,7 +258,7 @@ public class Map22Listener extends AnimListener {
 
     private void drawGhost(GL gl) {
         for (Ghost g : ghosts) {
-            DrawSprite(gl, (int) g.x, (int) g.y, 6, textures, 15);
+            DrawSprite(gl, (int) g.x, (int) g.y, 6, textures, Ghost.R);
         }
     }
 
@@ -338,14 +342,14 @@ public class Map22Listener extends AnimListener {
 
     private void drawEating(GL gl) {
         for (Eating e : Eating) {
-            DrawSprite(gl, (int) e.x, (int) e.y, AnimIndexForFood, textures, 12);
+            DrawSprite(gl, (int) e.x, (int) e.y, AnimIndexForFood, textures, 10);
         }
     }
 
     private void drawPacman(GL gl) {
         changeAnimIndex();
 
-        DrawSprite(gl, (int) pacman.x, (int) pacman.y, AnimIndexForPacman, textures, 15);
+        DrawSprite(gl, (int) pacman.x, (int) pacman.y, AnimIndexForPacman, textures, Pacman.R);
     }
 
 
@@ -440,7 +444,7 @@ public class Map22Listener extends AnimListener {
     private void drawPacman2(GL gl) {
         changeAnim2Index();
 
-        DrawSprite(gl, (int) pacman2.x, (int) pacman2.y, AnimIndexForPacman2, textures, 15);
+        DrawSprite(gl, (int) pacman2.x, (int) pacman2.y, AnimIndexForPacman2, textures, Pacman.R);
     }
 
     private void changeAnim2Index() {
