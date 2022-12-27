@@ -1,5 +1,15 @@
 package Project.Pages;
 
+
+import Project.Maps.Map1.Map1_MultiListener;
+import Project.Maps.Map2.Map22Listener;
+
+import Project.Maps.Map3.Map3MultiListener;
+
+import Project.Maps.Map4.Map4MultiListener;
+
+import Project.Maps.Map5.MultiMap5Listener;
+
 import javax.swing.*;
 import java.io.*;
 import java.util.Scanner;
@@ -118,9 +128,8 @@ public class User_Name2 extends javax.swing.JFrame {
                 }
             }
             if (!flag) {
-                SaveUser(jTextField2.getText() + " ");
-                SaveUser( jTextField1.getText() + " ");
-
+                Map1_MultiListener.userName1= Map22Listener.userName1= Map3MultiListener.userName1= Map4MultiListener.userName1= MultiMap5Listener.userName1 = jTextField2.getText();
+                Map1_MultiListener.userName2= Map22Listener.userName2= Map3MultiListener.userName2= Map4MultiListener.userName2= MultiMap5Listener.userName2 = jTextField1.getText();
             }
         } catch (IOException e) {
         }

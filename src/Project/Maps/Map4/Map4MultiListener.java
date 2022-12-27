@@ -29,9 +29,11 @@ import static java.lang.Math.*;
 public class Map4MultiListener extends AnimListener {
 
     Pacman pacman = new Pacman();
+    public static String userName1 = "";
+    public static String userName2 = "";
 
     JFrame frame = null;
-    Clip eatingSound , losingSound , winningSound;
+    Clip eatingSound, losingSound, winningSound;
 
     int cntFood;
     int cntLives = 3;
@@ -93,7 +95,7 @@ public class Map4MultiListener extends AnimListener {
     };
     int row = map.length;
     int col = map[0].length;
-    boolean pause ;
+    boolean pause;
 
     public void init(GLAutoDrawable gld) {
 
@@ -209,10 +211,10 @@ public class Map4MultiListener extends AnimListener {
         gl.glPopMatrix();
 
         gl.glPushMatrix();
-        double f =1;
-        double d =7;
-        gl.glTranslated(d,d,1);
-        gl.glScaled(f,f,1);
+        double f = 1;
+        double d = 7;
+        gl.glTranslated(d, d, 1);
+        gl.glScaled(f, f, 1);
         {
             drawEating(gl);
             drawPacman(gl);
@@ -227,16 +229,17 @@ public class Map4MultiListener extends AnimListener {
         handelWinning();
 
         try {
-            drawString(gl, 15, MAX_Y -230, "Score: " + cntFood);  // Score
-            drawString(gl, 70, MAX_Y -230, "Lives: " + cntLives); // Lives
-            drawString(gl, 125, MAX_Y -230, "Time: " + time); // Time
+            drawString(gl, 15, MAX_Y - 230, "  Score: " + cntFood);  // Score
+            drawString(gl, 70, MAX_Y - 230, "  Lives: " + cntLives); // Lives
+            drawString(gl, 125, MAX_Y - 230, "  Time: " + time); // Time
+            drawString(gl, 150, MAX_Y - 230, "  Player1: " + userName1); // Name
+            drawString(gl, 165, MAX_Y - 230, "  Player2: " + userName2); // Name2
+
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
 
     }
-
-
 
 
     private void handelGhostMove() {

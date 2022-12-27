@@ -29,8 +29,10 @@ public class Map22Listener extends AnimListener {
     Clip EatingSound;
     Pacman pacman = new Pacman();
     Pacman pacman2 = new Pacman();
-    int CountFood,Count2Food,HighScore;
-//    int Lives = 3;
+    public static String userName1 = "";
+    public static String userName2 = "";
+    int CountFood, Count2Food, HighScore;
+    //    int Lives = 3;
     boolean pause = false;
     int time;
     Timer timer = new Timer(1000, e -> {
@@ -42,7 +44,7 @@ public class Map22Listener extends AnimListener {
     public static final int MAX_X = 620;
     public static final int MAX_Y = 265;
     int AnimIndexForPacman = 1;
-    int AnimIndexForPacman2= 1;
+    int AnimIndexForPacman2 = 1;
     int AnimIndexForFood = 7;
     String[] textureNames = {
             "mapp2.jpg", // 0
@@ -184,7 +186,7 @@ public class Map22Listener extends AnimListener {
 
         handelLose();
         try {
-            drawString(gl, 8, 8,  "P1 Score: " + CountFood +"      P2Score: " + Count2Food + "      Time: " + time); // Lives Score Time
+            drawString(gl, 8, 8, "P1 Score:" + CountFood + "   P2Score:" + Count2Food + "    Time:" + time + "   Player1:" + userName1 + "    Player2:" + userName2); // Lives Score Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
@@ -202,17 +204,15 @@ public class Map22Listener extends AnimListener {
         for (Ghost g : ghosts) {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
                 if (EatingSound != null) EatingSound.stop();
-                    frame.dispose();
-                    new Player2Winner().setVisible(true);
-                } else if (g.ii == pacman2.ii && g.jj == pacman2.jj) {
+                frame.dispose();
+                new Player2Winner().setVisible(true);
+            } else if (g.ii == pacman2.ii && g.jj == pacman2.jj) {
                 if (EatingSound != null) EatingSound.stop();
                 frame.dispose();
                 new Player1Winner().setVisible(true);
             }
         }
-        }
-
-
+    }
 
 
     private void handelGhostMove() {
@@ -264,11 +264,11 @@ public class Map22Listener extends AnimListener {
                 System.out.println("Player 1 Win");
                 frame.dispose();
                 new Player1Winner().setVisible(true);
-            }else if (CountFood < Count2Food) {
+            } else if (CountFood < Count2Food) {
                 System.out.println("Player 2 Win");
                 frame.dispose();
                 new Player2Winner().setVisible(true);
-            } else{
+            } else {
                 System.out.println("Draw");
                 frame.dispose();
                 new WinnerPage().setVisible(true);
@@ -336,8 +336,6 @@ public class Map22Listener extends AnimListener {
     }
 
 
-
-
     private void drawEating(GL gl) {
         for (Eating e : Eating) {
             DrawSprite(gl, (int) e.x, (int) e.y, AnimIndexForFood, textures, 12);
@@ -349,7 +347,6 @@ public class Map22Listener extends AnimListener {
 
         DrawSprite(gl, (int) pacman.x, (int) pacman.y, AnimIndexForPacman, textures, 15);
     }
-
 
 
     private void changeAnimIndex() {
@@ -383,6 +380,7 @@ public class Map22Listener extends AnimListener {
     private void drawBackground(GL gl) {
         DrawSprite(gl, 0, 0, 0, textures, MAX_X - 10);
     }
+
     ////////////Player 2///////////////////////
     private void handelPacman2Eating() {
 
@@ -397,6 +395,7 @@ public class Map22Listener extends AnimListener {
             }
         }
     }
+
     private void handelPacman2Move() {
         if (isKeyPressed(VK_W)) {
             pacman2.direction = Directions.UP;
@@ -437,11 +436,13 @@ public class Map22Listener extends AnimListener {
             }
         }
     }
+
     private void drawPacman2(GL gl) {
         changeAnim2Index();
 
         DrawSprite(gl, (int) pacman2.x, (int) pacman2.y, AnimIndexForPacman2, textures, 15);
     }
+
     private void changeAnim2Index() {
         switch (pacman2.direction) {
             case IDEAL -> {

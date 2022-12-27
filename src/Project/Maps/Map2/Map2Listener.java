@@ -30,8 +30,9 @@ import static java.awt.event.KeyEvent.VK_LEFT;
 
 public class Map2Listener extends AnimListener {
     JFrame frame = null;
-    Clip EatingSound,LosingSound,WinningSound;
+    Clip EatingSound;
     Pacman pacman = new Pacman();
+    public static String userName = "";
     int CountFood;
     int Lives = 3;
     boolean pause = false;
@@ -93,6 +94,7 @@ public class Map2Listener extends AnimListener {
     };
     int row = Map.length;
     int column = Map[0].length;
+    int HighScore=ReadHighScore();
 
     public void init(GLAutoDrawable gld) {
         GL gl = gld.getGL();
@@ -182,11 +184,16 @@ public class Map2Listener extends AnimListener {
 
         handelLose();
         try {
-            drawString(gl, 8, 8, "Lives: " + Lives + "      Score: " + CountFood + "      Time: " + time); // Lives Score Time
+            drawString(gl, 8,  8, "Lives: " +
+                    Lives + "      Score: " + CountFood +
+                    "      Time: " + time + "      High Score: " + HighScore+ "      User: " + userName);
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
-
+        if (CountFood > HighScore) {
+            AddHighScore(CountFood);
+            HighScore = ReadHighScore();
+        }
         handelWinning();
 
     }
@@ -259,18 +266,6 @@ public class Map2Listener extends AnimListener {
         if (Eating.isEmpty()) { // Winning
             System.out.println("Win");
             if (EatingSound != null) EatingSound.stop();
-            synchronized (this) {
-                WinningSound = playMusic("src/Project/Assets/pacman-victory.wav", false);
-                if (WinningSound != null) {
-                    try {
-                        wait(WinningSound.getMicrosecondLength() / 1000);
-                        System.exit(1); // Go Winning Frame
-                    } catch (InterruptedException e) {
-                        System.out.println(e.getMessage());
-                    }
-                }
-            }
-            System.exit(1);
             frame.dispose();
             new WinnerPage().setVisible(true);
         }

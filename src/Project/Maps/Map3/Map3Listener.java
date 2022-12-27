@@ -28,6 +28,7 @@ import static Project.Core.Utils.*;
 import static java.awt.event.KeyEvent.*;
 
 public class Map3Listener extends AnimListener {
+    public static String userName;
     JFrame frame = null;
     Clip eatingSound;
 
@@ -170,7 +171,7 @@ public class Map3Listener extends AnimListener {
         handelLosing();
 
         try {
-            drawString(gl, 8, MAX_Y - 5, "Lives: " + Lives_Num + "      Score: " + CalcFood + "      Time: " + time); // Lives Score Time
+            drawString(gl, 8, MAX_Y - 5, "Lives: " + Lives_Num + "      Score: " + CalcFood + "      Time: " + time+"      Name: "+userName); // Lives Score Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }

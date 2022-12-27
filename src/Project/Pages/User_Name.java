@@ -1,6 +1,10 @@
 package Project.Pages;
 
 import Project.Maps.Map1.Map1Listener;
+import Project.Maps.Map2.Map2Listener;
+import Project.Maps.Map3.Map3Listener;
+import Project.Maps.Map4.Map4Listener;
+import Project.Maps.Map5.Map5Listener;
 
 import javax.swing.*;
 import java.io.File;
@@ -107,7 +111,7 @@ public class User_Name extends JFrame {
             }
             if (!flag) {
                 SaveUser(jTextField1.getText() + " ");
-                Map1Listener.userName = jTextField1.getText();
+                Map1Listener.userName= Map2Listener.userName= Map3Listener.userName= Map4Listener.userName= Map5Listener.userName = jTextField1.getText();
 
             }
         } catch (IOException e) {
