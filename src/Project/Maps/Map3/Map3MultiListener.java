@@ -175,7 +175,7 @@ public class Map3MultiListener extends AnimListener {
         handelLosing();
 
         try {
-            drawString(gl, 8, MAX_Y - 5, "P1 Score: " + CalcFood + "      P2Score: " + Calc2Food + "      Time: " + time + "      Player1: " + userName1 + "      Player2: " + userName2); // Lives Score Time
+            drawString(gl, 8, MAX_Y - 5, "P1 Score: " + CalcFood + "   P2Score: " + Calc2Food + "   Time: " + time + "   Player1: " + userName1 + "   Player2: " + userName2); // Lives Score Time
 
         } catch (GLException e) {
             System.out.println(e.getMessage());

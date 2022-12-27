@@ -177,7 +177,7 @@ public class MultiMap5Listener extends AnimListener {
         handelGhostMove();
         handelLose();
         try {
-            drawString(gl, 8, 8, "P1 Score: " + cntFood + "      P2Score: " + cntFood2 + "      Time: " + time + "      Player1: " + userName1 + "      Player2: " + userName2); // Lives Score Time
+            drawString(gl, 8, 8, "P1 Score: " + cntFood + "   P2Score: " + cntFood2 + "   Time: " + time + "   Player1: " + userName1 + "   Player2: " + userName2); // Lives Score Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }

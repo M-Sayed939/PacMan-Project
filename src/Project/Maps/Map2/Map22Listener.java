@@ -186,7 +186,7 @@ public class Map22Listener extends AnimListener {
 
         handelLose();
         try {
-            drawString(gl, 8, 8, "P1 Score: " + CountFood + "      P2Score: " + Count2Food + "      Time: " + time + "      Player1: " + userName1 + "      Player2: " + userName2); // Lives Score Time
+            drawString(gl, 8, 8, "P1 Score:" + CountFood + "   P2Score:" + Count2Food + "    Time:" + time + "   Player1:" + userName1 + "    Player2:" + userName2); // Lives Score Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
