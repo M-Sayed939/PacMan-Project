@@ -461,10 +461,10 @@ public class Map3MultiListener extends AnimListener {
             pause = !pause;
             if (!pause) {
                 timer.start();
-                Map3.animator.start();
+                Map3Multi.animator.start();
             } else {
                 timer.stop();
-                Map3.animator.stop();
+                Map3Multi.animator.stop();
                 JOptionPane.showMessageDialog(null, "Enter Space To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
 
             }
