@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Core/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Core/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/User_Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +73,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Map1">
+  <component name="RunManager" selected="Application.Play">
     <configuration name="Map1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1" />
       <module name="PacMan-Project" />
@@ -141,10 +141,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Play" />
         <item itemvalue="Application.Map1" />
         <item itemvalue="Application.Users" />
         <item itemvalue="Application.User_Name2" />
-        <item itemvalue="Application.Play" />
         <item itemvalue="Application.Player2Winner" />
       </list>
     </recent_temporary>
@@ -222,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672093325824</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Read And Write HighScore">
+      <created>1672107903459</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1672107903459</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +260,7 @@
     <MESSAGE value="add time and pause in Map 1" />
     <MESSAGE value="Add Actions in Choose Map Multiplayer" />
     <MESSAGE value="Edit Text" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit Text" />
+    <MESSAGE value="Read And Write HighScore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Read And Write HighScore" />
   </component>
 </project>

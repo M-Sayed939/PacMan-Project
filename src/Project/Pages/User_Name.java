@@ -1,5 +1,7 @@
 package Project.Pages;
 
+import Project.Maps.Map1.Map1Listener;
+
 import javax.swing.*;
 import java.io.File;
 import java.io.FileWriter;
@@ -10,7 +12,6 @@ import static Project.Core.Utils.SaveUser;
 
 public class User_Name extends JFrame {
 
-    public static String userName = "";
 
     public User_Name() {
         initComponents();
@@ -106,7 +107,7 @@ public class User_Name extends JFrame {
             }
             if (!flag) {
                 SaveUser(jTextField1.getText() + " ");
-                userName = jTextField1.getText();
+                Map1Listener.userName = jTextField1.getText();
 
             }
         } catch (IOException e) {

@@ -30,6 +30,7 @@ public class Map1Listener extends AnimListener {
     Clip eatingSound;
 
     Pacman pacman = new Pacman();
+    public static String userName = "";
     int score;
     int cntLives = 3;
     boolean pause;
@@ -105,7 +106,7 @@ public class Map1Listener extends AnimListener {
     };
     int row = map.length;
     int col = map[0].length;
-    int highScore=ReadHighScore();
+    int highScore = ReadHighScore();
 
 
     public void init(GLAutoDrawable gld) {
@@ -205,7 +206,7 @@ public class Map1Listener extends AnimListener {
         try {
             drawString(gl, 5, MAX_Y - 8, "Lives: " +
                     cntLives + "      Score: " + score +
-                    "      Time: " + time + "      High Score: " + highScore);
+                    "      Time: " + time + "      High Score: " + highScore + "      User: " + userName);
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }

@@ -167,8 +167,8 @@ public class Utils {
     public static void AddHighScore(int score) {
 
 
-        try (Scanner input = new Scanner(new File("Score.txt"));
-             FileWriter f = new FileWriter("Score.txt", false)) {
+        try (FileWriter f = new FileWriter("Score.txt", false);
+             Scanner input = new Scanner(new File("Score.txt"))) {
             int highScore = input.hasNext() ? input.nextInt() : 0;
             if (score > highScore) highScore = score;
             f.write(highScore + "");

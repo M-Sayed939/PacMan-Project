@@ -68,7 +68,7 @@ public class ChooseMap extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
         jButton3.setText("Map 1");
-        jButton3.addActionListener(this::jButton3ActionPerformed);
+//        jButton3.addActionListener(this::jButton3ActionPerformed);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
