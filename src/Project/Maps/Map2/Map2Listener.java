@@ -382,7 +382,7 @@ public class Map2Listener extends AnimListener {
     public void keyPressed(final KeyEvent event) {
         int keyCode = event.getKeyCode();
         keyBits.set(keyCode);
-        if (event.getKeyCode() == KeyEvent.VK_P) {
+        if (event.getKeyCode() == VK_SPACE) {
             pause = !pause;
             if (!pause) {
                 timer.start();
@@ -390,7 +390,7 @@ public class Map2Listener extends AnimListener {
             } else {
                 timer.stop();
                 Map2.animator.stop();
-                JOptionPane.showMessageDialog(null, "Enter P To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Enter SpaceBar To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
 
             }
 
