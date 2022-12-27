@@ -18,11 +18,15 @@ import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.BitSet;
+import java.util.Scanner;
 
 import static Project.Core.Utils.*;
+import static Project.Maps.Map4.Map4Listener.userName;
 import static java.awt.event.KeyEvent.*;
 import static java.lang.Math.*;
 
@@ -95,6 +99,31 @@ public class Map4MultiListener extends AnimListener {
     };
     int row = map.length;
     int col = map[0].length;
+
+    int highScore = ReadHighScore();
+
+    public static void AddHighScore(int score) {
+
+
+        try (FileWriter f = new FileWriter("Score.txt", false);
+             Scanner input = new Scanner(new File("Score.txt"))) {
+            int highScore = input.hasNext() ? input.nextInt() : 0;
+            if (score > highScore) highScore = score;
+            f.write(highScore + "");
+            f.flush();
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
+    }
+
+    public static int ReadHighScore() {
+        try (Scanner input = new Scanner(new File("Score.txt"));) {
+            return (input.hasNext()) ? input.nextInt() : 0;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
     boolean pause;
 
     public void init(GLAutoDrawable gld) {
@@ -229,14 +258,17 @@ public class Map4MultiListener extends AnimListener {
         handelWinning();
 
         try {
-            drawString(gl, 15, MAX_Y - 230, "  Score: " + cntFood);  // Score
-            drawString(gl, 70, MAX_Y - 230, "  Lives: " + cntLives); // Lives
-            drawString(gl, 125, MAX_Y - 230, "  Time: " + time); // Time
-            drawString(gl, 150, MAX_Y - 230, "  Player1: " + userName1); // Name
-            drawString(gl, 165, MAX_Y - 230, "  Player2: " + userName2); // Name2
-
+            drawString(gl, 15, MAX_Y -230, "Score: " + cntFood);  // Score
+            drawString(gl, 70, MAX_Y -230, "Lives: " + cntLives); // Lives
+            drawString(gl, 125, MAX_Y -230, "Time: " + time); // Time
+            drawString(gl, 155, MAX_Y -230, "HighScore: " + highScore); // Time
+            drawString(gl, 200, MAX_Y -230, "User: " + userName); // Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
+        }
+        if (cntFood > highScore) {
+            AddHighScore(cntFood);
+            highScore = ReadHighScore();
         }
 
     }
@@ -365,6 +397,45 @@ public class Map4MultiListener extends AnimListener {
     }
 
 
+//    private void handelPacmanMove() {
+//        if (isKeyPressed(VK_UP)) {
+//            pacman.direction = Directions.UP;
+//        }
+//        if (isKeyPressed(VK_DOWN)) {
+//            pacman.direction = Directions.DOWN;
+//        }
+//        if (isKeyPressed(VK_RIGHT)) {
+//            pacman.direction = Directions.RIGHT;
+//        }
+//        if (isKeyPressed(VK_LEFT)) {
+//            pacman.direction = Directions.LEFT;
+//        }
+//        if (!(isKeyPressed(VK_UP) || isKeyPressed(VK_DOWN) || isKeyPressed(VK_RIGHT) || isKeyPressed(VK_LEFT))) {
+//            pacman.direction = Directions.IDEAL;
+//        }
+//
+//        switch (pacman.direction) {
+//            case IDEAL -> {
+//            }
+//            case UP -> {
+//                if (pacman.y - pacman.step < 0 || map[pacman.ii][pacman.jj - 1] == 0) return;
+//                pacman.moveUP();
+//            }
+//            case DOWN -> {
+//                if (pacman.y + pacman.step > 100 || map[pacman.ii][pacman.jj + 1] == 0) return;
+//                pacman.moveDown();
+//            }
+//            case RIGHT -> {
+//                if (pacman.x + pacman.step > 100 || map[pacman.ii + 1][pacman.jj] == 0) return;
+//                pacman.moveRight();
+//            }
+//            case LEFT -> {
+//                if (pacman.x - pacman.step < 0 || map[pacman.ii - 1][pacman.jj] == 0) return;
+//                pacman.moveLeft();
+//            }
+//        }
+//    }
+
     private void handelPacmanMove() {
         if (isKeyPressed(VK_UP)) {
             pacman.direction = Directions.UP;
@@ -386,19 +457,21 @@ public class Map4MultiListener extends AnimListener {
             case IDEAL -> {
             }
             case UP -> {
-                if (pacman.y - pacman.step < 0 || map[pacman.ii][pacman.jj - 1] == 0) return;
+                if (pacman.y - pacman.step < 0 || pacman.jj - 1 < 0 || map[pacman.jj - 1][pacman.ii] == 0) return;
                 pacman.moveUP();
             }
             case DOWN -> {
-                if (pacman.y + pacman.step > 100 || map[pacman.ii][pacman.jj + 1] == 0) return;
+                if (pacman.y + pacman.step > MAX_Y || pacman.jj + 1 >= row || map[pacman.jj + 1][pacman.ii] == 0)
+                    return;
                 pacman.moveDown();
             }
             case RIGHT -> {
-                if (pacman.x + pacman.step > 100 || map[pacman.ii + 1][pacman.jj] == 0) return;
+                if (pacman.x + pacman.step > MAX_X || pacman.ii + 1 >= col || map[pacman.jj][pacman.ii + 1] == 0)
+                    return;
                 pacman.moveRight();
             }
             case LEFT -> {
-                if (pacman.x - pacman.step < 0 || map[pacman.ii - 1][pacman.jj] == 0) return;
+                if (pacman.x - pacman.step < 0 || pacman.ii - 1 < 0 || map[pacman.jj][pacman.ii - 1] == 0) return;
                 pacman.moveLeft();
             }
         }
