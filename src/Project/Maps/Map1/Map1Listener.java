@@ -1,6 +1,7 @@
 package Project.Maps.Map1;
 
 import Project.Core.AnimListener;
+import Project.Core.Utils;
 import Project.Models.Directions;
 import Project.Models.Eating;
 import Project.Models.Ghost;
@@ -104,6 +105,7 @@ public class Map1Listener extends AnimListener {
     };
     int row = map.length;
     int col = map[0].length;
+    int highScore=ReadHighScore();
 
 
     public void init(GLAutoDrawable gld) {
@@ -201,9 +203,15 @@ public class Map1Listener extends AnimListener {
         handelWinning();
 
         try {
-            drawString(gl, 5, MAX_Y - 8, "Lives: " + cntLives + "      Score: " + score + "      Time: " + time);
+            drawString(gl, 5, MAX_Y - 8, "Lives: " +
+                    cntLives + "      Score: " + score +
+                    "      Time: " + time + "      High Score: " + highScore);
         } catch (GLException e) {
             System.out.println(e.getMessage());
+        }
+        if (score > highScore) {
+            AddHighScore(score);
+            highScore = ReadHighScore();
         }
 
     }
@@ -272,7 +280,7 @@ public class Map1Listener extends AnimListener {
             System.out.println("Winner");
             if (eatingSound != null) eatingSound.stop();
 
-            SaveUser(User_Name.userName, score);
+
             frame.dispose();
             new WinnerPage().setVisible(true);
         }
