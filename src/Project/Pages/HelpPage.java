@@ -50,7 +50,7 @@ public class HelpPage extends JFrame {
 
         jLabel12.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel12.setText("Press p to pause");
+        jLabel12.setText("Press SbaceBar to pause");
         getContentPane().add(jLabel12);
         jLabel12.setBounds(50, 440, 440, 40);
 
