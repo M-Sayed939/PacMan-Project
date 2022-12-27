@@ -72,6 +72,7 @@ public class Map3Listener extends AnimListener {
     };
     int row = MAP.length;
     int col = MAP[0].length;
+    int highScore = ReadHighScore();
 
     @Override
     public void init(GLAutoDrawable gld) {
@@ -170,13 +171,20 @@ public class Map3Listener extends AnimListener {
 
         handelLosing();
 
+
+        handelWinning();
+
         try {
-            drawString(gl, 8, MAX_Y - 5, "Lives: " + Lives_Num + "      Score: " + CalcFood + "      Time: " + time+"      Name: "+userName); // Lives Score Time
+            drawString(gl, 5, MAX_Y - 8, "Lives: " +
+                    Lives_Num + "      Score: " + CalcFood +
+                    "      Time: " + time + "      High Score: " + highScore + "      User: " + userName);
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
-
-        handelWinning();
+        if (CalcFood > highScore) {
+            AddHighScore(CalcFood);
+            highScore = ReadHighScore();
+        }
 
     }
 
