@@ -4,36 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="edit - Map4">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_5_46_PM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_5_46_PM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_6_53_PM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_6_53_PM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Assets/giffas_pacman.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_Multi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_MultiListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Multi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3Multi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3MultiListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/MultiMap5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/MultiMap5Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Pages/Player1Winner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/Pages/Player2Winner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Core/AnimListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Core/AnimListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Core/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Core/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map22Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map22Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/ChooseMap_Mult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/User_Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/Users.java" afterDir="false" />
-    </list>
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="edit - Map4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
