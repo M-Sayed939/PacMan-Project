@@ -199,32 +199,15 @@ public class Map2Listener extends AnimListener {
     private void handelLose() {
         for (Ghost g : ghosts) {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
-                synchronized (this) {
-                    try {
-                        if (--Lives == 0) {
-                            frame.dispose();
-                            new GameOver().setVisible(true);
-                            if (EatingSound != null) EatingSound.stop();
-                            LosingSound = playMusic("src/Project/Assets/loser.wav", false);
-                            wait(3000);
-                            System.exit(0); // Show try again Frame
-                        } else {
-                            pacman.reset();
-                        }
-
-                    } catch (InterruptedException e) {
-                        System.out.println(e.getMessage());
-                    }
-//                    if (eatingSound != null) eatingSound.stop();
-//                    if (--cntLives == 0) {
-//                        frame.dispose();
-//                        new GameOver().setVisible(true);
-//
-//                    } else {
-//                        pacman.reset();
-//                    }
+                if (EatingSound != null) EatingSound.stop();
+                if (--Lives == 0) {
+                    frame.dispose();
+                    new GameOver().setVisible(true);
+                } else {
+                    pacman.reset();
                 }
             }
+
         }
     }
 
