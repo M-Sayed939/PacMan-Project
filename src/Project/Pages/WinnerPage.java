@@ -3,13 +3,17 @@ package Project.Pages;
 
 //import static Project.Core.Utils.playMusic;
 
-public class WinnerPage extends javax.swing.JFrame {
+import javax.sound.sampled.Clip;
 
+import static Project.Core.Utils.playMusic;
+
+public class WinnerPage extends javax.swing.JFrame {
+    static Clip voice;
 
     public WinnerPage() {
         initComponents();
         setLocationRelativeTo(null);
-//        playMusic("src/Project/Assets/pacman-victory.wav", false);
+        if (voice == null) voice = playMusic("src/Project/Assets/pacman-victory.wav", false);
     }
 
 
@@ -54,6 +58,7 @@ public class WinnerPage extends javax.swing.JFrame {
         jLabel2.setText("You Win :)");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(20, 30, 530, 110);
+
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project/Assets/pacman-fortnite.gif"))); // NOI18N
         jLabel1.setMinimumSize(new java.awt.Dimension(889, 400));

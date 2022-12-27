@@ -1,11 +1,17 @@
 package Project.Pages;
 
+import Project.Core.Utils;
+
+import javax.sound.sampled.Clip;
+
 public class Player2Winner extends javax.swing.JFrame {
 
-
+    static Clip voice;
         public Player2Winner() {
             initComponents();
             setLocationRelativeTo(null);
+            if (voice == null) voice = Utils.playMusic("src/Project/Assets/pacman-victory.wav", false);
+
         }
 
 

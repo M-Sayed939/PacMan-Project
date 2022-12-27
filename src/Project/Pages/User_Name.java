@@ -10,6 +10,7 @@ import static Project.Core.Utils.SaveUser;
 
 public class User_Name extends JFrame {
 
+    public static String userName = "";
 
     public User_Name() {
         initComponents();
@@ -96,7 +97,7 @@ public class User_Name extends JFrame {
             while (input.hasNext()) {
                 String name = jTextField1.getText();
                 String name2 = input.nextLine();
-                name2 = name2.substring(0, name2.indexOf(' ') == -1 ? name2.length() : name2.indexOf( ' '));
+                name2 = name2.substring(0, name2.indexOf(' ') == -1 ? name2.length() : name2.indexOf(' '));
 
                 if (name.equals(name2)) {
                     flag = true;
@@ -105,6 +106,7 @@ public class User_Name extends JFrame {
             }
             if (!flag) {
                 SaveUser(jTextField1.getText() + " ");
+                userName = jTextField1.getText();
 
             }
         } catch (IOException e) {

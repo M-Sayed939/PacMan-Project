@@ -8,6 +8,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.awt.*;
 import java.io.*;
+import java.util.Scanner;
 
 
 import static java.lang.Math.*;
@@ -154,10 +155,60 @@ public class Utils {
         try (FileWriter f = new FileWriter("Users.txt", true);
              BufferedWriter b = new BufferedWriter(f);
              PrintWriter p = new PrintWriter(b);) {
-            p.println(s);
+            p.println(s + "0");
         } catch (IOException i) {
             i.printStackTrace();
         }
     }
 
+    public static void SaveUser(String s, int score) {
+
+        try {
+            StringBuilder text = new StringBuilder();
+            String line = "";
+            boolean isFound = false;
+            Scanner input = new Scanner(new File("Users.txt"));
+            while (input.hasNext()) {
+
+                String name2 = input.nextLine();
+
+                line = name2;
+                text.append(name2).append("\n");
+
+                name2 = name2.substring(0, name2.indexOf(' ') == -1 ? name2.length() : name2.indexOf(' '));
+
+                if (s.equals(name2)) {
+                    isFound = true;
+                    break;
+                }
+            }
+
+            try (FileWriter f = new FileWriter("Users.txt", true);
+                 BufferedWriter b = new BufferedWriter(f);
+                 PrintWriter p = new PrintWriter(b);) {
+                if (isFound) {
+                    int oldScore = Integer.parseInt(text.substring(text.indexOf(s) + s.length() + 1,
+                            line.length() - s.length() - 1));
+                    if (oldScore > score) return; // Safe Condition
+
+                    text.delete(text.indexOf(s), line.length());
+                    line = s + " " + (score);
+                    text.append(line).append("\n");
+
+                    while (input.hasNext())
+                        text.append(input.nextLine());
+
+                    p.write(text.append("\n").toString());
+                } else {
+                    p.println(s + " " + score);
+                }
+            } catch (IOException i) {
+                i.printStackTrace();
+            }
+
+
+        } catch (IOException ignored) {
+        }
+
+    }
 }

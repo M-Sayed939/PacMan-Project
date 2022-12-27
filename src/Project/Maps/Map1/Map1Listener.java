@@ -1,12 +1,12 @@
 package Project.Maps.Map1;
 
 import Project.Core.AnimListener;
-import Project.Maps.Map2.Map2;
 import Project.Models.Directions;
 import Project.Models.Eating;
 import Project.Models.Ghost;
 import Project.Models.Pacman;
 import Project.Pages.GameOver;
+import Project.Pages.User_Name;
 import Project.Pages.WinnerPage;
 import Project.Core.texture.TextureReader;
 
@@ -29,7 +29,7 @@ public class Map1Listener extends AnimListener {
     Clip eatingSound;
 
     Pacman pacman = new Pacman();
-    int cntFood;
+    int score;
     int cntLives = 3;
     boolean pause;
     int time;
@@ -201,7 +201,7 @@ public class Map1Listener extends AnimListener {
         handelWinning();
 
         try {
-            drawString(gl, 5, MAX_Y - 8, "Lives: " + cntLives + "      Score: " + cntFood + "      Time: " + time);
+            drawString(gl, 5, MAX_Y - 8, "Lives: " + cntLives + "      Score: " + score + "      Time: " + time);
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
@@ -272,6 +272,7 @@ public class Map1Listener extends AnimListener {
             System.out.println("Winner");
             if (eatingSound != null) eatingSound.stop();
 
+            SaveUser(User_Name.userName, score);
             frame.dispose();
             new WinnerPage().setVisible(true);
         }
@@ -281,7 +282,7 @@ public class Map1Listener extends AnimListener {
     private void handelPacmanEating() {
         for (int i = 0; i < eating.size(); i++) {
             if (pacman.ii == eating.get(i).ii && pacman.jj == eating.get(i).jj) {
-                cntFood++;
+                score++;
                 if (eatingSound == null || !eatingSound.isRunning()) {
                     eatingSound = playMusic("src/Project/Assets/pacman-wakawaka.wav", false);
                 }
@@ -382,12 +383,12 @@ public class Map1Listener extends AnimListener {
     public void keyPressed(final KeyEvent event) {
         int keyCode = event.getKeyCode();
         keyBits.set(keyCode);
-        if (keyCode == VK_P) {
+        if (keyCode == VK_SPACE) {
             pause = !pause;
             if (pause) {
                 timer.stop();
                 Map1.animator.stop();
-                JOptionPane.showMessageDialog(null, "Enter P To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Enter Space To Continue", "Attention", JOptionPane.WARNING_MESSAGE);
             } else {
                 Map1.animator.start();
                 timer.start();
