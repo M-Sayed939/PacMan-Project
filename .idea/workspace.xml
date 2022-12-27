@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="">
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Add High Score">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Models/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Models/Pacman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_MultiListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_MultiListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map22Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map22Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3MultiListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3MultiListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4MultiListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4MultiListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/MultiMap5Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/MultiMap5Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +153,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="" />
@@ -233,7 +242,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672108977630</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add High Score">
+      <created>1672110978049</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1672110978049</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add High Score">
+      <created>1672111056476</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1672111056476</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +289,7 @@
     <MESSAGE value="Edit Text" />
     <MESSAGE value="Read And Write HighScore" />
     <MESSAGE value="Read And Write HighScore And UserName In Map1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Read And Write HighScore And UserName In Map1" />
+    <MESSAGE value="Add High Score" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add High Score" />
   </component>
 </project>

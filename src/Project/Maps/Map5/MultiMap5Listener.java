@@ -24,10 +24,12 @@ import static Project.Core.Utils.DrawSprite;
 import static java.awt.event.KeyEvent.*;
 import static java.awt.event.KeyEvent.VK_LEFT;
 
-public class MultiMap5Listener extends  AnimListener {
+public class MultiMap5Listener extends AnimListener {
     JFrame frame = null;
     Pacman pacman = new Pacman();
     Pacman pacman2 = new Pacman();
+    public static String userName1 = "";
+    public static String userName2 = "";
     ArrayList<Eating> eating = new ArrayList<>();
     ArrayList<Ghost> ghosts = new ArrayList<>();
     static int GHOSTS_SIZE = 4;
@@ -42,7 +44,7 @@ public class MultiMap5Listener extends  AnimListener {
         time++;
     });
 
-    String textureNames[] = {"images.png","pacman.png","up.gif","down.gif","right.gif","left.gif","ghost.gif","food.png","food2.png"};
+    String textureNames[] = {"images.png", "pacman.png", "up.gif", "down.gif", "right.gif", "left.gif", "ghost.gif", "food.png", "food2.png"};
     TextureReader.Texture texture[] = new TextureReader.Texture[textureNames.length];
     int textures[] = new int[textureNames.length];
 
@@ -127,7 +129,7 @@ public class MultiMap5Listener extends  AnimListener {
 
     private void addGhostsToArray() {
         for (int i = 0; i < GHOSTS_SIZE; i++) {
-            ghosts.add(new Ghost(150,150));
+            ghosts.add(new Ghost(150, 150));
         }
     }
 
@@ -156,10 +158,10 @@ public class MultiMap5Listener extends  AnimListener {
         gl.glPopMatrix();
 
         gl.glPushMatrix();
-        double f =0.967;
-        double d =10;
-        gl.glTranslated(d+0.3,d-0.5,1);
-        gl.glScaled(f,f,1);
+        double f = 0.967;
+        double d = 10;
+        gl.glTranslated(d + 0.3, d - 0.5, 1);
+        gl.glScaled(f, f, 1);
         {
             drawEating(gl);
             drawPacman(gl);
@@ -175,7 +177,7 @@ public class MultiMap5Listener extends  AnimListener {
         handelGhostMove();
         handelLose();
         try {
-            drawString(gl, 8, 8,  "P1 Score: " + cntFood +"      P2Score: " + cntFood2 + "      Time: " + time); // Lives Score Time
+            drawString(gl, 8, 8, "P1 Score: " + cntFood + "      P2Score: " + cntFood2 + "      Time: " + time + "      Player1: " + userName1 + "      Player2: " + userName2); // Lives Score Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
@@ -250,11 +252,11 @@ public class MultiMap5Listener extends  AnimListener {
                 System.out.println("Player 1 Win");
                 frame.dispose();
                 new Player1Winner().setVisible(true);
-            }else if (cntFood < cntFood2) {
+            } else if (cntFood < cntFood2) {
                 System.out.println("Player 2 Win");
                 frame.dispose();
                 new Player2Winner().setVisible(true);
-            } else{
+            } else {
                 System.out.println("Draw");
                 frame.dispose();
                 new WinnerPage().setVisible(true);
@@ -320,49 +322,49 @@ public class MultiMap5Listener extends  AnimListener {
 
     private void drawEating(GL gl) {
         for (Eating e : eating) {
-            DrawSprite(gl, (int) e.x, (int) e.y, animIndexForFood,textures,10);
+            DrawSprite(gl, (int) e.x, (int) e.y, animIndexForFood, textures, 10);
         }
     }
 
     private void drawPacman(GL gl) {
         changeAnimIndex();
-        DrawSprite(gl, (int) pacman.x, (int) pacman.y, animIndexForPacman,textures,10);
+        DrawSprite(gl, (int) pacman.x, (int) pacman.y, animIndexForPacman, textures, 10);
     }
 
     private void changeAnimIndex() {
-        switch (pacman.direction){
+        switch (pacman.direction) {
             case IDEAL -> {
                 animIndexForPacman = 1;
             }
             case UP -> {
-                if(animIndexForPacman == 1)
+                if (animIndexForPacman == 1)
                     animIndexForPacman = 2;
-                else if(animIndexForPacman == 2);
+                else if (animIndexForPacman == 2) ;
                 animIndexForPacman = 1;
             }
             case DOWN -> {
-                if(animIndexForPacman == 1)
+                if (animIndexForPacman == 1)
                     animIndexForPacman = 3;
-                else if(animIndexForPacman == 3)
+                else if (animIndexForPacman == 3)
                     animIndexForPacman = 1;
             }
             case RIGHT -> {
-                if(animIndexForPacman == 1)
+                if (animIndexForPacman == 1)
                     animIndexForPacman = 4;
-                else if(animIndexForPacman == 4)
+                else if (animIndexForPacman == 4)
                     animIndexForPacman = 1;
             }
             case LEFT -> {
-                if(animIndexForPacman == 1)
+                if (animIndexForPacman == 1)
                     animIndexForPacman = 5;
-                else if(animIndexForPacman == 5)
+                else if (animIndexForPacman == 5)
                     animIndexForPacman = 1;
             }
         }
     }
 
     private void drawBackground(GL gl) {
-        DrawSprite2(gl, 0, 0, 0, textures, MAX_X,MAX_Y);
+        DrawSprite2(gl, 0, 0, 0, textures, MAX_X, MAX_Y);
     }
 
 
@@ -379,6 +381,7 @@ public class MultiMap5Listener extends  AnimListener {
             }
         }
     }
+
     private void handelPacman2Move() {
         if (isKeyPressed(VK_W)) {
             pacman2.direction = Directions.UP;
@@ -419,11 +422,13 @@ public class MultiMap5Listener extends  AnimListener {
             }
         }
     }
+
     private void drawPacman2(GL gl) {
         changeAnim2Index();
 
         DrawSprite(gl, (int) pacman2.x, (int) pacman2.y, animIndexForPacman2, textures, 10);
     }
+
     private void changeAnim2Index() {
         switch (pacman2.direction) {
             case IDEAL -> {
