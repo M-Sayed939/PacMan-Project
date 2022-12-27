@@ -19,6 +19,7 @@ public class Map4Multi extends JFrame {
         glcanvas.addKeyListener(listener);
         glcanvas.setSize(800, 800);
         animator = new FPSAnimator(glcanvas, 12);
+        listener.frame = this; // For closing
 
         add(glcanvas, BorderLayout.CENTER);
         setSize(800, 800);
