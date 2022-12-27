@@ -25,10 +25,11 @@ public class Map3 extends JFrame {
 
         add(glcanvas, BorderLayout.CENTER);
         setSize(800, 459);
-        requestFocus();
         setLocationRelativeTo(this);
         setResizable(false);
         setVisible(true);
+        setFocusable(true);
+        glcanvas.requestFocus();
 
         listener.frame = this;
     }

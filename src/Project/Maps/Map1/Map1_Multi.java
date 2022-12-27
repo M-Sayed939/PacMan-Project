@@ -24,8 +24,10 @@ public class Map1_Multi extends JFrame {
         add(glcanvas, BorderLayout.CENTER);
         setSize(800, 800);
         setLocationRelativeTo(this);
+        setResizable(false);
         setVisible(true);
-        requestFocus();
+        setFocusable(true);
+        glcanvas.requestFocus();
     }
 
     public static void main(String[] args) {

@@ -25,10 +25,11 @@ public class Map5 extends JFrame {
 
         add(glcanvas, BorderLayout.CENTER);
         setSize(700, 700);
-        requestFocus();
         setLocationRelativeTo(this);
         setResizable(false);
         setVisible(true);
+        setFocusable(true);
+        glcanvas.requestFocus();
     }
 
     public static void main(String[] args) {

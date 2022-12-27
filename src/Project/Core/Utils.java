@@ -38,37 +38,6 @@ public class Utils {
         return (j + 1) * 10.0 - r;
     }
 
-    public static void drawRect(GL gl, double x, double y, int w, int h, float r, float g, float b) {
-        gl.glClearColor(r, g, b, 1);
-        gl.glColor3f(r, g, b);
-        gl.glBegin(GL_POLYGON);
-        x -= r;
-        y -= r;
-
-        gl.glVertex2d(x, y);
-        gl.glVertex2d(x + w, y);
-
-        gl.glVertex2d(x + w, y + h);
-        gl.glVertex2d(x, y + h);
-
-        gl.glEnd();
-    }
-
-    public static void drawRegularRibs(GL gl, int r, Color color, double x, double y) {
-        gl.glColor3fv(color.getColorComponents(null), 0);
-        gl.glBegin(GL.GL_POLYGON);
-        int step = 1;
-        for (int i = 0; i < 360; i += step)
-            gl.glVertex2d(x + r * cos(toRadians(i)),
-                    y + r * sin(toRadians(i)));
-
-        gl.glEnd();
-    }
-
-    public static void drawCircle(GL gl, int r, Color color, double x, double y) {
-        drawRegularRibs(gl, r, color, x, y);
-    }
-
     public static Clip playMusic(String location, boolean loop) {
 
         try {

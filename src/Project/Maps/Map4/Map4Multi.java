@@ -23,10 +23,11 @@ public class Map4Multi extends JFrame {
 
         add(glcanvas, BorderLayout.CENTER);
         setSize(800, 800);
-        requestFocus();
         setLocationRelativeTo(this);
         setResizable(false);
         setVisible(true);
+        setFocusable(true);
+        glcanvas.requestFocus();
     }
 
     public static void main(String[] args) {

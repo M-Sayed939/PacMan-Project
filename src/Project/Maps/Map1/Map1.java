@@ -13,6 +13,7 @@ public class Map1 extends JFrame {
 
     public Map1() {
         super("Map 1");
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         glcanvas = new GLCanvas();
         glcanvas.addGLEventListener(listener);
@@ -24,8 +25,10 @@ public class Map1 extends JFrame {
         add(glcanvas, BorderLayout.CENTER);
         setSize(800, 800);
         setLocationRelativeTo(this);
+        setResizable(false);
         setVisible(true);
-        requestFocus();
+        setFocusable(true);
+        glcanvas.requestFocus();
     }
 
     public static void main(String[] args) {
