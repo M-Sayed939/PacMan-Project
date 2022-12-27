@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Add High Score">
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment=" edit -Map4MultiListener">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_27_2022_12_11_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_27_2022_12_11_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_11_56_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_26_2022_11_56_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_2022_12_47_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_2022_12_47_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_2022_2_42_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_2022_2_42_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_2022_3_23_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_2022_3_23_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_2022_4_25_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_2022_4_25_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_2022_5_04_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_2022_5_04_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_2022_5_15_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_2022_5_15_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_MultiListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_MultiListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map22Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map22Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3MultiListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3MultiListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4MultiListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4MultiListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/MultiMap5Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/MultiMap5Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +32,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Moody" />
+        <entry key="$PROJECT_DIR$" value="Menna_Akram" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,43 +50,39 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/JOGLwin/lib64/jogl_cg.dll&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects/PacMan-Project/src/Project/Assets/imgs&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
+      <recent name="C:\Users\HP\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
+      <recent name="C:\Users\dell\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\texture" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project\Assets\imgs" />
       <recent name="C:\Users\hp\IdeaProjects\ms\PacMan-Project\src\Project\Assets" />
       <recent name="C:\Users\pc\IdeaProjects\PacMan-Project\src\Project" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Project.Maps.Map1" />
       <recent name="Project.Pages" />
       <recent name="Project.Map5" />
       <recent name="Project.Map4" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Play">
-    <configuration name="Map1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map1.Map1" />
+  <component name="RunManager" selected="Application.Map4">
+    <configuration name="Map3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map3.Map3" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Maps.Map1.*" />
+          <option name="PATTERN" value="Project.Maps.Map3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,12 +90,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Play" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Play" />
+    <configuration name="Map4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map4.Map4" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.*" />
+          <option name="PATTERN" value="Project.Maps.Map4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,12 +103,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Player2Winner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Pages.Player2Winner" />
+    <configuration name="Map5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map5.Map5" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.Pages.*" />
+          <option name="PATTERN" value="Project.Maps.Map5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,8 +116,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="User_Name2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Pages.User_Name2" />
+    <configuration name="User_Name" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Pages.User_Name" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
@@ -144,18 +144,15 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Play" />
-        <item itemvalue="Application.Map1" />
+        <item itemvalue="Application.Map4" />
+        <item itemvalue="Application.Map5" />
         <item itemvalue="Application.Users" />
-        <item itemvalue="Application.User_Name2" />
-        <item itemvalue="Application.Player2Winner" />
+        <item itemvalue="Application.User_Name" />
+        <item itemvalue="Application.Map3" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="" />
@@ -179,82 +176,82 @@
       <option name="project" value="LOCAL" />
       <updated>1671589508336</updated>
     </task>
-    <task id="LOCAL-00003" summary="Add Score And Lives">
-      <created>1672014467857</created>
+    <task id="LOCAL-00003" summary="edite map1 matrix">
+      <created>1671990643732</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1672014467857</updated>
+      <updated>1671990643732</updated>
     </task>
-    <task id="LOCAL-00004" summary="Add Score And Lives">
-      <created>1672014879153</created>
+    <task id="LOCAL-00004" summary="add score">
+      <created>1671995927031</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1672014879153</updated>
+      <updated>1671995927031</updated>
     </task>
-    <task id="LOCAL-00005" summary="Add Time in Map2">
-      <created>1672017939951</created>
+    <task id="LOCAL-00005" summary="add lives counter">
+      <created>1671997916685</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1672017939951</updated>
+      <updated>1671997916685</updated>
     </task>
-    <task id="LOCAL-00006" summary="Add Time in Map2">
-      <created>1672018121535</created>
+    <task id="LOCAL-00006" summary="creating map">
+      <created>1672060388305</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1672018121535</updated>
+      <updated>1672060388305</updated>
     </task>
-    <task id="LOCAL-00007" summary="add time and pause in Map 1">
-      <created>1672019394132</created>
+    <task id="LOCAL-00007" summary="finishing">
+      <created>1672065101188</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1672019394132</updated>
+      <updated>1672065101188</updated>
     </task>
-    <task id="LOCAL-00008" summary="Add Actions in Choose Map Multiplayer">
-      <created>1672093019759</created>
+    <task id="LOCAL-00008" summary="no">
+      <created>1672069002311</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1672093019759</updated>
+      <updated>1672069002311</updated>
     </task>
-    <task id="LOCAL-00009" summary="Edit Text">
-      <created>1672093325824</created>
+    <task id="LOCAL-00009" summary="edit for Map4">
+      <created>1672075445506</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1672093325824</updated>
+      <updated>1672075445506</updated>
     </task>
-    <task id="LOCAL-00010" summary="Read And Write HighScore">
-      <created>1672107903459</created>
+    <task id="LOCAL-00010" summary="edit for Map4">
+      <created>1672075887129</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1672107903459</updated>
+      <updated>1672075887129</updated>
     </task>
-    <task id="LOCAL-00011" summary="Read And Write HighScore And UserName In Map1">
-      <created>1672108977630</created>
+    <task id="LOCAL-00011" summary="edit - Map4">
+      <created>1672092206014</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1672108977630</updated>
+      <updated>1672092206014</updated>
     </task>
-    <task id="LOCAL-00012" summary="Add High Score">
-      <created>1672110978049</created>
+    <task id="LOCAL-00012" summary=" edit -Map4Multi">
+      <created>1672101745990</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1672110978049</updated>
+      <updated>1672101745990</updated>
     </task>
-    <task id="LOCAL-00013" summary="Add High Score">
-      <created>1672111056476</created>
+    <task id="LOCAL-00013" summary=" edit -Map4MultiListener">
+      <created>1672101788754</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1672111056476</updated>
+      <updated>1672101788754</updated>
     </task>
     <option name="localTasksCounter" value="14" />
     <servers />
@@ -282,14 +279,20 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first Pages" />
     <MESSAGE value="org. package" />
-    <MESSAGE value="Add Score And Lives" />
-    <MESSAGE value="Add Time in Map2" />
-    <MESSAGE value="add time and pause in Map 1" />
-    <MESSAGE value="Add Actions in Choose Map Multiplayer" />
-    <MESSAGE value="Edit Text" />
-    <MESSAGE value="Read And Write HighScore" />
-    <MESSAGE value="Read And Write HighScore And UserName In Map1" />
-    <MESSAGE value="Add High Score" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add High Score" />
+    <MESSAGE value="edite map1 matrix" />
+    <MESSAGE value="add score" />
+    <MESSAGE value="add lives counter" />
+    <MESSAGE value="creating map" />
+    <MESSAGE value="finishing" />
+    <MESSAGE value="no" />
+    <MESSAGE value="edit for Map4" />
+    <MESSAGE value="edit - Map4" />
+    <MESSAGE value=" edit -Map4Multi" />
+    <MESSAGE value=" edit -Map4MultiListener" />
+    <option name="LAST_COMMIT_MESSAGE" value=" edit -Map4MultiListener" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

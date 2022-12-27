@@ -365,6 +365,45 @@ public class Map4MultiListener extends AnimListener {
     }
 
 
+//    private void handelPacmanMove() {
+//        if (isKeyPressed(VK_UP)) {
+//            pacman.direction = Directions.UP;
+//        }
+//        if (isKeyPressed(VK_DOWN)) {
+//            pacman.direction = Directions.DOWN;
+//        }
+//        if (isKeyPressed(VK_RIGHT)) {
+//            pacman.direction = Directions.RIGHT;
+//        }
+//        if (isKeyPressed(VK_LEFT)) {
+//            pacman.direction = Directions.LEFT;
+//        }
+//        if (!(isKeyPressed(VK_UP) || isKeyPressed(VK_DOWN) || isKeyPressed(VK_RIGHT) || isKeyPressed(VK_LEFT))) {
+//            pacman.direction = Directions.IDEAL;
+//        }
+//
+//        switch (pacman.direction) {
+//            case IDEAL -> {
+//            }
+//            case UP -> {
+//                if (pacman.y - pacman.step < 0 || map[pacman.ii][pacman.jj - 1] == 0) return;
+//                pacman.moveUP();
+//            }
+//            case DOWN -> {
+//                if (pacman.y + pacman.step > 100 || map[pacman.ii][pacman.jj + 1] == 0) return;
+//                pacman.moveDown();
+//            }
+//            case RIGHT -> {
+//                if (pacman.x + pacman.step > 100 || map[pacman.ii + 1][pacman.jj] == 0) return;
+//                pacman.moveRight();
+//            }
+//            case LEFT -> {
+//                if (pacman.x - pacman.step < 0 || map[pacman.ii - 1][pacman.jj] == 0) return;
+//                pacman.moveLeft();
+//            }
+//        }
+//    }
+
     private void handelPacmanMove() {
         if (isKeyPressed(VK_UP)) {
             pacman.direction = Directions.UP;
@@ -386,19 +425,21 @@ public class Map4MultiListener extends AnimListener {
             case IDEAL -> {
             }
             case UP -> {
-                if (pacman.y - pacman.step < 0 || map[pacman.ii][pacman.jj - 1] == 0) return;
+                if (pacman.y - pacman.step < 0 || pacman.jj - 1 < 0 || map[pacman.jj - 1][pacman.ii] == 0) return;
                 pacman.moveUP();
             }
             case DOWN -> {
-                if (pacman.y + pacman.step > 100 || map[pacman.ii][pacman.jj + 1] == 0) return;
+                if (pacman.y + pacman.step > MAX_Y || pacman.jj + 1 >= row || map[pacman.jj + 1][pacman.ii] == 0)
+                    return;
                 pacman.moveDown();
             }
             case RIGHT -> {
-                if (pacman.x + pacman.step > 100 || map[pacman.ii + 1][pacman.jj] == 0) return;
+                if (pacman.x + pacman.step > MAX_X || pacman.ii + 1 >= col || map[pacman.jj][pacman.ii + 1] == 0)
+                    return;
                 pacman.moveRight();
             }
             case LEFT -> {
-                if (pacman.x - pacman.step < 0 || map[pacman.ii - 1][pacman.jj] == 0) return;
+                if (pacman.x - pacman.step < 0 || pacman.ii - 1 < 0 || map[pacman.jj][pacman.ii - 1] == 0) return;
                 pacman.moveLeft();
             }
         }

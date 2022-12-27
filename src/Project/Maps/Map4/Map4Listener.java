@@ -1,32 +1,35 @@
 
 package Project.Maps.Map4;
 
-        import Project.Core.AnimListener;
-        import Project.Core.texture.TextureReader;
-        import Project.Maps.Map4.Map4;
-        import Project.Models.Directions;
-        import Project.Models.Eating;
-        import Project.Models.Ghost;
-        import Project.Models.Pacman;
-        import Project.Pages.GameOver;
-        import Project.Pages.WinnerPage;
+import Project.Core.AnimListener;
+import Project.Core.texture.TextureReader;
+import Project.Maps.Map4.Map4;
+import Project.Models.Directions;
+import Project.Models.Eating;
+import Project.Models.Ghost;
+import Project.Models.Pacman;
+import Project.Pages.GameOver;
+import Project.Pages.WinnerPage;
 
 
-        import javax.media.opengl.GL;
-        import javax.media.opengl.GLAutoDrawable;
-        import javax.media.opengl.GLException;
-        import javax.media.opengl.glu.GLU;
-        import javax.sound.sampled.Clip;
-        import javax.swing.*;
-        import java.awt.*;
-        import java.awt.event.KeyEvent;
-        import java.io.IOException;
-        import java.util.ArrayList;
-        import java.util.BitSet;
+import javax.media.opengl.GL;
+import javax.media.opengl.GLAutoDrawable;
+import javax.media.opengl.GLException;
+import javax.media.opengl.glu.GLU;
+import javax.sound.sampled.Clip;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.BitSet;
+import java.util.Scanner;
 
-        import static Project.Core.Utils.*;
-        import static java.awt.event.KeyEvent.*;
-        import static java.lang.Math.*;
+import static Project.Core.Utils.*;
+import static java.awt.event.KeyEvent.*;
+import static java.lang.Math.*;
 
 public class Map4Listener extends AnimListener {
 
@@ -34,7 +37,7 @@ public class Map4Listener extends AnimListener {
     Pacman pacman = new Pacman();
 
     JFrame frame = null;
-    Clip eatingSound , losingSound , winningSound;
+    Clip eatingSound, losingSound, winningSound;
 
     int cntFood;
     int cntLives = 3;
@@ -69,20 +72,21 @@ public class Map4Listener extends AnimListener {
     int[] textures = new int[textureNames.length];
 
     int[][] map = new int[][]{
+//            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
+            {0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
+            {0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0},
+            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+            {0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1},
+            {0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1},
+            {0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1},
+            {0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1},
             {0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
-            {0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
-            {0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0},
-            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-            {0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1},
-            {0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1},
-            {0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1},
-            {0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1},
-            {0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
-            {0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0},
+            {0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0},
             {0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1},
             {0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1},
             {0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1},
-            {0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0},
+            {0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0},
             {0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0},
             {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0},
             {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
@@ -92,11 +96,36 @@ public class Map4Listener extends AnimListener {
             {0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1},
             {0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1},
             {0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1},
-            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+//            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
     };
     int row = map.length;
     int col = map[0].length;
-    boolean pause ;
+
+    int highScore = ReadHighScore();
+    public static void AddHighScore(int score) {
+
+
+        try (FileWriter f = new FileWriter("Score.txt", false);
+             Scanner input = new Scanner(new File("Score.txt"))) {
+            int highScore = input.hasNext() ? input.nextInt() : 0;
+            if (score > highScore) highScore = score;
+            f.write(highScore + "");
+            f.flush();
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
+    }
+
+    public static int ReadHighScore() {
+        try (Scanner input = new Scanner(new File("Score.txt"));) {
+            return (input.hasNext()) ? input.nextInt() : 0;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+    boolean pause;
 
     public void init(GLAutoDrawable gld) {
 
@@ -161,6 +190,7 @@ public class Map4Listener extends AnimListener {
     }
 
 
+
     @Override
 //    public void display(GLAutoDrawable gld) {
 //        GL gl = gld.getGL();
@@ -212,10 +242,10 @@ public class Map4Listener extends AnimListener {
         gl.glPopMatrix();
 
         gl.glPushMatrix();
-        double f =1;
-        double d =7;
-        gl.glTranslated(d,d,1);
-        gl.glScaled(f,f,1);
+        double f = 1;
+        double d = 10;
+        gl.glTranslated(d, d, 1);
+        gl.glScaled(f, f, 1);
         {
             drawEating(gl);
             drawPacman(gl);
@@ -229,18 +259,22 @@ public class Map4Listener extends AnimListener {
         handelLose();
         handelWinning();
 
+
         try {
             drawString(gl, 15, MAX_Y -230, "Score: " + cntFood);  // Score
             drawString(gl, 70, MAX_Y -230, "Lives: " + cntLives); // Lives
             drawString(gl, 125, MAX_Y -230, "Time: " + time); // Time
-            drawString(gl, 150, MAX_Y -230, "UserName: " + userName); // Name
+            drawString(gl, 155, MAX_Y -230, "HighScore: " + highScore); // Time
+            drawString(gl, 200, MAX_Y -230, "User: " + userName); // Time
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
+        if (cntFood > highScore) {
+            AddHighScore(cntFood);
+            highScore = ReadHighScore();
+        }
 
     }
-
-
 
 
     private void handelGhostMove() {
@@ -366,6 +400,45 @@ public class Map4Listener extends AnimListener {
     }
 
 
+//    private void handelPacmanMove() {
+//        if (isKeyPressed(VK_UP)) {
+//            pacman.direction = Directions.UP;
+//        }
+//        if (isKeyPressed(VK_DOWN)) {
+//            pacman.direction = Directions.DOWN;
+//        }
+//        if (isKeyPressed(VK_RIGHT)) {
+//            pacman.direction = Directions.RIGHT;
+//        }
+//        if (isKeyPressed(VK_LEFT)) {
+//            pacman.direction = Directions.LEFT;
+//        }
+//        if (!(isKeyPressed(VK_UP) || isKeyPressed(VK_DOWN) || isKeyPressed(VK_RIGHT) || isKeyPressed(VK_LEFT))) {
+//            pacman.direction = Directions.IDEAL;
+//        }
+//
+//        switch (pacman.direction) {
+//            case IDEAL -> {
+//            }
+//            case UP -> {
+//                if (pacman.y - pacman.step < 0 || map[pacman.ii][pacman.jj - 1] == 0) return;
+//                pacman.moveUP();
+//            }
+//            case DOWN -> {
+//                if (pacman.y + pacman.step > 100 || map[pacman.ii][pacman.jj + 1] == 0) return;
+//                pacman.moveDown();
+//            }
+//            case RIGHT -> {
+//                if (pacman.x + pacman.step > 100 || map[pacman.ii + 1][pacman.jj] == 0) return;
+//                pacman.moveRight();
+//            }
+//            case LEFT -> {
+//                if (pacman.x - pacman.step < 0 || map[pacman.ii - 1][pacman.jj] == 0) return;
+//                pacman.moveLeft();
+//            }
+//        }
+//    }
+
     private void handelPacmanMove() {
         if (isKeyPressed(VK_UP)) {
             pacman.direction = Directions.UP;
@@ -387,19 +460,21 @@ public class Map4Listener extends AnimListener {
             case IDEAL -> {
             }
             case UP -> {
-                if (pacman.y - pacman.step < 0 || map[pacman.ii][pacman.jj - 1] == 0) return;
+                if (pacman.y - pacman.step < 0 || pacman.jj - 1 < 0 || map[pacman.jj - 1][pacman.ii] == 0) return;
                 pacman.moveUP();
             }
             case DOWN -> {
-                if (pacman.y + pacman.step > 100 || map[pacman.ii][pacman.jj + 1] == 0) return;
+                if (pacman.y + pacman.step > MAX_Y || pacman.jj + 1 >= row || map[pacman.jj + 1][pacman.ii] == 0)
+                    return;
                 pacman.moveDown();
             }
             case RIGHT -> {
-                if (pacman.x + pacman.step > 100 || map[pacman.ii + 1][pacman.jj] == 0) return;
+                if (pacman.x + pacman.step > MAX_X || pacman.ii + 1 >= col || map[pacman.jj][pacman.ii + 1] == 0)
+                    return;
                 pacman.moveRight();
             }
             case LEFT -> {
-                if (pacman.x - pacman.step < 0 || map[pacman.ii - 1][pacman.jj] == 0) return;
+                if (pacman.x - pacman.step < 0 || pacman.ii - 1 < 0 || map[pacman.jj][pacman.ii - 1] == 0) return;
                 pacman.moveLeft();
             }
         }
@@ -462,7 +537,7 @@ public class Map4Listener extends AnimListener {
 
 
     private void drawBackground(GL gl) {
-        DrawSprite(gl, (int) 0.5, (int) 0.5, 0, textures, MAX_X);
+        DrawSprite(gl, (int) 1.5, (int) 1.5, 0, textures, MAX_X);
 
     }
 
