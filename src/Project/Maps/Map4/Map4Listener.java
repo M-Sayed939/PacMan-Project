@@ -73,36 +73,37 @@ public class Map4Listener extends AnimListener {
 
     int[][] map = new int[][]{
 //            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
-            {0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
+            {1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
+            {1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
             {0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0},
-            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-            {0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1},
-            {0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1},
-            {0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1},
-            {0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1},
-            {0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
-            {0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0},
-            {0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1},
-            {0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1},
-            {0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1},
-            {0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0},
-            {0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0},
-            {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0},
-            {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-            {0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0},
-            {0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
-            {0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0},
-            {0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1},
-            {0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1},
-            {0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1},
-            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+            {1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1},
+            {1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1},
+            {1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1},
+            {1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1},
+            {1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
+            {0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0},
+            {1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1},
+            {1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1},
+            {1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1},
+            {0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0},
+            {0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0},
+            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0},
+            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+            {0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0},
+            {1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1},
+            {0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0},
+            {1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1},
+            {1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1},
+            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1},
+            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 //            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
     };
     int row = map.length;
     int col = map[0].length;
 
     int highScore = ReadHighScore();
+
     public static void AddHighScore(int score) {
 
 
@@ -190,51 +191,14 @@ public class Map4Listener extends AnimListener {
     }
 
 
-
     @Override
-//    public void display(GLAutoDrawable gld) {
-//        GL gl = gld.getGL();
-//        gl.glClear(GL.GL_COLOR_BUFFER_BIT);
-//
-//
-//        drawBackground(gl);
-//
-//
-//        gl.glPushMatrix();
-//        gl.glTranslated(-2.5, 5, 0);
-//        gl.glScaled(1.07, 0.99, 1);
-//        {
-//
-//            drawEating(gl);
-//            drawPacman(gl);
-//            drawGhost(gl);
-//        }
-//        gl.glPopMatrix();
-//
-//
-//        handelPacmanMove();
-//        handelPacmanEating();
-//
-//        handelGhostMove();
-//
-//        handelLose();
-//
-//        handelWinning();
-//
-//        try {
-//            drawString(gl, 5, MAX_Y - 8, "Score: " + cntFood);  // Score
-//            drawString(gl, 60, MAX_Y - 8, "Lives: " + cntLives); // Lives
-//        } catch (GLException e) {
-//            System.out.println(e.getMessage());
-//        }
-    //      }
 
     public void display(GLAutoDrawable gld) {
         GL gl = gld.getGL();
         gl.glClear(GL.GL_COLOR_BUFFER_BIT);
 
         gl.glPushMatrix();
-        int move = 10;
+        int move = 3;
         gl.glTranslated(move, move, 0);
         {
             drawBackground(gl);
@@ -243,12 +207,13 @@ public class Map4Listener extends AnimListener {
 
         gl.glPushMatrix();
         double f = 1;
-        double d = 10;
+        double d = 3;
         gl.glTranslated(d, d, 1);
         gl.glScaled(f, f, 1);
         {
             drawEating(gl);
             drawPacman(gl);
+
             drawGhost(gl);
         }
         gl.glPopMatrix();
@@ -259,13 +224,12 @@ public class Map4Listener extends AnimListener {
         handelLose();
         handelWinning();
 
-
         try {
-            drawString(gl, 15, MAX_Y -230, "Score: " + cntFood);  // Score
-            drawString(gl, 70, MAX_Y -230, "Lives: " + cntLives); // Lives
-            drawString(gl, 125, MAX_Y -230, "Time: " + time); // Time
-            drawString(gl, 155, MAX_Y -230, "HighScore: " + highScore); // Time
-            drawString(gl, 200, MAX_Y -230, "User: " + userName); // Time
+            drawString(gl, 10, MAX_Y-3 , "Score 1: " + cntFood);  // Score
+            drawString(gl, 45, MAX_Y-3 , "Lives: " + cntLives); // Lives
+            drawString(gl, 80, MAX_Y-3 , "Time: " + time); // Time
+            drawString(gl, 110, MAX_Y-3 , "HighScore: " + highScore); // Time
+            drawString(gl, 180, MAX_Y-3 , "  P1: " + userName); // User1
         } catch (GLException e) {
             System.out.println(e.getMessage());
         }
@@ -316,16 +280,10 @@ public class Map4Listener extends AnimListener {
 
     private void drawGhost(GL gl) {
         for (Ghost g : ghosts) {
-            DrawSprite(gl, (int) g.x, (int) g.y, 6, textures, Ghost.R);
+            DrawSprite(gl, (int) g.x-5, (int) g.y-5, 6, textures, Ghost.R);
         }
     }
 
-//    private void handelWinning() {
-//        if (eating.isEmpty()) { // Winning
-//            System.out.println("Win");
-////            System.exit(0);
-//        }
-//    }
 
     private void handelWinning() {
         if (eating.isEmpty()) { // Winning
@@ -348,40 +306,18 @@ public class Map4Listener extends AnimListener {
         }
     }
 
-//    private void handelLose() {
-//        for (Ghost g : ghosts) {
-//            if (g.ii == pacman.ii && g.jj == pacman.jj) {
-//                if (eatingSound != null) eatingSound.stop();
-//                if (--cntLives == 0) {
-//                    frame.dispose();
-//                    new GameOver().setVisible(true);
-//                } else {
-//                    pacman.reset();
-//                }
-//            }
-//
-//        }
-//    }
+
 
     private void handelLose() {
         for (Ghost g : ghosts) {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
-                synchronized (this) {
-                    try {
-                        if (--cntLives == 0) {
-                            frame.dispose();
-                            new GameOver().setVisible(true);
-                            if (eatingSound != null) eatingSound.stop();
-                            losingSound = playMusic("src/Project/Assets/loser.wav", false);
-                            wait(3000);
-                            System.exit(0); // Show try again Frame
-                        } else {
-                            pacman.reset();
-                        }
+                if (eatingSound != null) eatingSound.stop();
+                if (--cntLives == 0) {
+                    frame.dispose();
+                    new GameOver().setVisible(true);
 
-                    } catch (InterruptedException e) {
-                        System.out.println(e.getMessage());
-                    }
+                } else {
+                    pacman.reset();
                 }
             }
         }
@@ -400,44 +336,7 @@ public class Map4Listener extends AnimListener {
     }
 
 
-//    private void handelPacmanMove() {
-//        if (isKeyPressed(VK_UP)) {
-//            pacman.direction = Directions.UP;
-//        }
-//        if (isKeyPressed(VK_DOWN)) {
-//            pacman.direction = Directions.DOWN;
-//        }
-//        if (isKeyPressed(VK_RIGHT)) {
-//            pacman.direction = Directions.RIGHT;
-//        }
-//        if (isKeyPressed(VK_LEFT)) {
-//            pacman.direction = Directions.LEFT;
-//        }
-//        if (!(isKeyPressed(VK_UP) || isKeyPressed(VK_DOWN) || isKeyPressed(VK_RIGHT) || isKeyPressed(VK_LEFT))) {
-//            pacman.direction = Directions.IDEAL;
-//        }
-//
-//        switch (pacman.direction) {
-//            case IDEAL -> {
-//            }
-//            case UP -> {
-//                if (pacman.y - pacman.step < 0 || map[pacman.ii][pacman.jj - 1] == 0) return;
-//                pacman.moveUP();
-//            }
-//            case DOWN -> {
-//                if (pacman.y + pacman.step > 100 || map[pacman.ii][pacman.jj + 1] == 0) return;
-//                pacman.moveDown();
-//            }
-//            case RIGHT -> {
-//                if (pacman.x + pacman.step > 100 || map[pacman.ii + 1][pacman.jj] == 0) return;
-//                pacman.moveRight();
-//            }
-//            case LEFT -> {
-//                if (pacman.x - pacman.step < 0 || map[pacman.ii - 1][pacman.jj] == 0) return;
-//                pacman.moveLeft();
-//            }
-//        }
-//    }
+
 
     private void handelPacmanMove() {
         if (isKeyPressed(VK_UP)) {
@@ -490,7 +389,7 @@ public class Map4Listener extends AnimListener {
         // check Dir for motion
         changeAnimIndex();
 
-        DrawSprite(gl, (int) pacman.x, (int) pacman.y, animIndexForPacman, textures, Pacman.R);
+        DrawSprite(gl, (int) pacman.x-5, (int) pacman.y-5, animIndexForPacman, textures, Pacman.R);
     }
 
     private void changeAnimIndex() {
@@ -537,7 +436,7 @@ public class Map4Listener extends AnimListener {
 
 
     private void drawBackground(GL gl) {
-        DrawSprite(gl, (int) 1.5, (int) 1.5, 0, textures, MAX_X);
+        DrawSprite(gl, (int) 0.5, (int) 0.5, 0, textures, MAX_X);
 
     }
 

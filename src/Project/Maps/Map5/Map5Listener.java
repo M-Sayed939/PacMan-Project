@@ -193,34 +193,18 @@ public class Map5Listener extends AnimListener {
     private void handelLose() {
         for (Ghost g : ghosts) {
             if (g.ii == pacman.ii && g.jj == pacman.jj) {
-                synchronized (this) {
-                    try {
-                        if (--cntLives == 0) {
-                            frame.dispose();
-                            new GameOver().setVisible(true);
-                            if (eatingSound != null) eatingSound.stop();
-                            losingSound = playMusic("src/Project/Assets/loser.wav", false);
-                            wait(3000);
-                            System.exit(0); // Show try again Frame
-                        } else {
-                            pacman.reset();
-                        }
+                    if (eatingSound != null) eatingSound.stop();
+                    if (--cntLives == 0) {
+                        frame.dispose();
+                        new GameOver().setVisible(true);
 
-                    } catch (InterruptedException e) {
-                        System.out.println(e.getMessage());
+                    } else {
+                        pacman.reset();
                     }
-//                    if (eatingSound != null) eatingSound.stop();
-//                    if (--cntLives == 0) {
-//                        frame.dispose();
-//                        new GameOver().setVisible(true);
-//
-//                    } else {
-//                        pacman.reset();
-//                    }
                 }
             }
         }
-    }
+
 
     private void handelGhostMove() {
         for (Ghost g : ghosts) {

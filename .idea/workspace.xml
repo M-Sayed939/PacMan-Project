@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Edit Map 4 Multi" />
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Edit Pause">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Score.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5Listener.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,10 +145,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Map4" />
+        <item itemvalue="Application.Play" />
         <item itemvalue="Application.Map4Multi" />
         <item itemvalue="Application.Map1_Multi" />
         <item itemvalue="Application.HelpPage" />
-        <item itemvalue="Application.Play" />
       </list>
     </recent_temporary>
   </component>
@@ -272,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672144565429</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Edit Pause">
+      <created>1672144779059</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1672144779059</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +321,7 @@
     <MESSAGE value="Change" />
     <MESSAGE value="Edit Help Page" />
     <MESSAGE value="Edit Map 4 Multi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit Map 4 Multi" />
+    <MESSAGE value="Edit Pause" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit Pause" />
   </component>
 </project>
