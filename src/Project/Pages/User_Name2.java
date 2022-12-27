@@ -42,6 +42,11 @@ public class User_Name2 extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        Instruction = new javax.swing.JLabel();
+        UP = new javax.swing.JLabel();
+        RIGHT = new javax.swing.JLabel();
+        LEFT = new javax.swing.JLabel();
+        DOWN = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -73,6 +78,37 @@ public class User_Name2 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2);
         jButton2.setBounds(10, 360, 220, 40);
+
+        Instruction.setFont(new java.awt.Font("Hobo Std", 0, 18)); // NOI18N
+        Instruction.setForeground(new java.awt.Color(255, 255, 255));
+        Instruction.setText("Instruction For Player 2");
+        getContentPane().add(Instruction);
+        Instruction.setBounds(400, 50, 230, 40);
+
+        UP.setFont(new java.awt.Font("Hobo Std", 0, 18)); // NOI18N
+        UP.setForeground(new java.awt.Color(255, 255, 255));
+        UP.setText("Press W for UP");
+        getContentPane().add(UP);
+        UP.setBounds(400, 110, 230, 30);
+
+        RIGHT.setFont(new java.awt.Font("Hobo Std", 0, 18)); // NOI18N
+        RIGHT.setForeground(new java.awt.Color(255, 255, 255));
+        RIGHT.setText("Press D for RIGHT");
+        getContentPane().add(RIGHT);
+        RIGHT.setBounds(400, 200, 230, 23);
+
+        LEFT.setFont(new java.awt.Font("Hobo Std", 0, 18)); // NOI18N
+        LEFT.setForeground(new java.awt.Color(255, 255, 255));
+        LEFT.setText("Press A for LEFT");
+        getContentPane().add(LEFT);
+        LEFT.setBounds(400, 250, 230, 23);
+
+        DOWN.setFont(new java.awt.Font("Hobo Std", 0, 18)); // NOI18N
+        DOWN.setForeground(new java.awt.Color(255, 255, 255));
+        DOWN.setText("Press S for DOWN");
+        getContentPane().add(DOWN);
+        DOWN.setBounds(400, 150, 230, 40);
+
 
         jLabel16.setFont(new java.awt.Font("Hobo Std", 0, 36)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
@@ -194,6 +230,11 @@ public class User_Name2 extends javax.swing.JFrame {
     // Variables declaration - do not modify
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel DOWN;
+    private javax.swing.JLabel Instruction;
+    private javax.swing.JLabel LEFT;
+    private javax.swing.JLabel RIGHT;
+    private javax.swing.JLabel UP;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;

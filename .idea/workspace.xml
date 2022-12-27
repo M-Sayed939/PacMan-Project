@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="edit frame follow">
-      <change beforePath="$PROJECT_DIR$/Users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Users.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_Multi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map1/Map1_Multi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Multi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map2/Map2Multi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3Multi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map3/Map3Multi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Multi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map4/Map4Multi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/Map5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Maps/Map5/MultiMap5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Maps/Map5/MultiMap5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/Player1Winner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/Player1Winner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/Player2Winner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/Player2Winner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/Pages/WinnerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/WinnerPage.java" afterDir="false" />
+    <list default="true" id="1901c679-ef5b-4b01-869c-8de279211f87" name="Changes" comment="Edit Frames">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Pages/User_Name2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,26 +74,13 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Play">
+  <component name="RunManager" selected="Application.User_Name2">
     <configuration name="GameOver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Project.Pages.GameOver" />
       <module name="PacMan-Project" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Project.Pages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Map2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.Maps.Map2.Map2" />
-      <module name="PacMan-Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Project.Maps.Map2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,13 +127,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="User_Name2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.Pages.User_Name2" />
+      <module name="PacMan-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Project.Pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.User_Name2" />
         <item itemvalue="Application.Play" />
         <item itemvalue="Application.Player1Winner" />
         <item itemvalue="Application.GameOver" />
         <item itemvalue="Application.Map3" />
-        <item itemvalue="Application.Map2" />
       </list>
     </recent_temporary>
   </component>
@@ -322,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672149568987</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Edit Frames">
+      <created>1672150051755</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1672150051755</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,6 +358,7 @@
     <MESSAGE value="Resolve" />
     <MESSAGE value="Focusable" />
     <MESSAGE value="edit frame follow" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit frame follow" />
+    <MESSAGE value="Edit Frames" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit Frames" />
   </component>
 </project>
